@@ -1,0 +1,264 @@
+html,body {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+.jumbotron {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* Picture Container Begins */
+.jumbotron .algorithms,
+.jumbotron .ds {
+    padding-top: 8%;  
+    background-color: white !important;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black; 
+    font-family: 'Varela Round', sans-serif;
+
+}
+.jumbotron .ds {
+    padding-bottom: 8%;
+}
+
+.algorithms .header,
+.ds .header{
+    text-align: center;
+}
+
+.pictureContainer {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.pictureContainer img {
+    transition: transform .3s ease-in-out;
+    margin-right: 1%;
+}
+
+.pictureContainer img:hover {
+    transform: translate3d(0px, -150px, 0px);
+}
+.algo-hr, 
+.ds-hr {
+    border-top: 1px solid black;
+    width: 70%;
+}
+/* Picture Container Ends */
+
+
+/*Footer Jumbotron Begins*/
+.footer {
+    background-color: #24292e !important;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    margin-top: 1px;
+
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+.footericon {
+    
+    padding: 15px;
+    font-size: 30px;
+    width: 42px;
+    text-align: center;
+    text-decoration: none;
+    border-radius:50%;
+}
+.fa:hover {
+    opacity: 0.7;
+    color: white;
+    text-decoration: none !important;
+}
+.footerdivicon{
+    padding-left:6%;
+    color:white;
+
+}
+.footerpad{
+    padding-left: 3%;
+}
+.footer-text {
+    margin-left: 5%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:20px;
+}
+.footer .ulfooter {
+    list-style-type: none;
+
+}
+.footer .footerheadpad{
+    padding-left: 21%;
+    color:#EEE;
+    font-family: 'Ubuntu', sans-serif;
+}
+.ulfooter li a{
+    color: #787980;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;  
+}
+.footericonpad{
+    padding-top: 5%;
+}
+.footercwu{
+    padding-top: 1%;
+    color:#EEE;
+}
+.footercopyright{
+    font-size: 90%;
+    padding-top: 12%;
+    padding-bottom: 0%;
+    padding-left: 35%;
+    color:#EEE;
+}
+
+/*Footer Jumbotron Ends*/
+/*Footer for Mobile Devices Begins*/
+
+/*Smartphones*/
+@media only screen and (max-width:767px) {
+    .footer{
+        text-align: center;
+        padding-right: 13%;
+    }
+    .footerheadpad{
+        padding-right:8%;
+    }
+    .footer-text{
+        padding-left:11%;
+    }
+    .footericonpad{
+        padding-left: 10%;
+        padding-top: 2%;
+    }
+    .footercopyright{
+        padding-left:17%;
+        padding-top:3%;
+    }
+}
+/*Tablets*/
+@media only screen and (min-width:768px) {
+    .ulfooter {
+        padding-left:20%;
+    }
+}
+
+/*Footer for Mobile Devices Ends*/
+
+/*Navbar Begins*/
+.nav {
+    min-height: 80px;
+}
+.navbar-brand {
+    line-height: 60px;
+    height: 60px;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+.navbar-brand-mobile {
+    display: none;
+}
+.navbar-nav li a {
+    line-height: 60px;
+    height: 60px;
+    padding-top: 10px;
+    color: white !important;
+}
+.navbar-nav li a:hover {
+    color: #bcbec1 !important;
+}
+.input-group {
+    padding-top: 6%;
+}
+.navbar-default {
+    background-color: #24292e;
+    border-color: black;
+}
+.navbar-nav .active a{
+    background-color: #191c20 !important;
+    min-height: 80px;
+}
+/*Navbar for Mobile Devices Begins*/
+/*Smartphones*/
+@media only screen and (max-width:767px) {
+    .navbar-brand{
+        display: none;
+    }
+    .navbar-brand-mobile {
+        display: block;
+    }
+}
+/*Tablets*/
+@media only screen and (min-width:768px) {
+    .search {
+        float: right;
+        width: 10%;
+    }
+}
+/*Desktop Screens*/
+@media only screen and (min-width:1024px) {
+    .search {
+        display: block;
+    }
+}
+/*Navbar for Mobile Devices Ends*/
+
+/*Navbar Ends*/
+
+/*Sign In Modal Begins*/
+.loginbutt{
+    margin-top: 3%;
+}
+.modal-header {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: black;
+    border-color: gainsboro;
+}
+.modal-body {
+    padding-top: 5%;
+    border-color: gainsboro;
+}
+.signin-hr{
+    margin-top: 10%;
+    margin-bottom: 2%;
+    border-top: 1px solid #8c8b8b;
+    width: 80%;
+}
+.modal-body .input-group {
+    padding: 0px;
+    margin: 0px;
+}
+/*Sign In Modal Ends*/
