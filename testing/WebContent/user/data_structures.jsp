@@ -91,36 +91,36 @@
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#ds_modal_arrays">
                         <div class="grid-element">
-                            <img src="theory_icons/ds_array.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Arrays</h3>
+                            <img src="../theory_icons/ds_array.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Arrays</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#ds_modal_ll">
                         <div class="grid-element">
-                            <img src="theory_icons/ds_ll.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Linked Lists</h3>
+                            <img src="../theory_icons/ds_ll.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Linked Lists</h3>
                         </div>
                     </a>
                 </div>
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#ds_modal_stack">
                         <div class="grid-element">
-                            <img src="theory_icons/ds_stack.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Stack</h3>
+                            <img src="../theory_icons/ds_stack.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Stack</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#ds_modal_queue">
                         <div class="grid-element">
-                            <img src="theory_icons/ds_queue.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Queue</h3>
+                            <img src="../theory_icons/ds_queue.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Queue</h3>
                         </div>
                     </a>
                 </div>  
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#ds_modal_trees">
                         <div class="grid-element">
-                            <img src="theory_icons/ds_trees.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Trees</h3>
+                            <img src="../theory_icons/ds_trees.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Trees</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#ds_modal_graphs">
                         <div class="grid-element">
-                            <img src="theory_icons/ds_graphs.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Graphs</h3>
+                            <img src="../theory_icons/ds_graphs.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Graphs</h3>
                         </div>
                     </a>
                     <!--<center><hr class="element-hr"></center>-->

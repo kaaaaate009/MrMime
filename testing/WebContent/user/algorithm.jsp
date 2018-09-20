@@ -91,34 +91,34 @@
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#algo_modal_searching">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_search.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Searching</h3>
+                            <img src="../theory_icons/algo_search.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Searching</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_sorting">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_sort.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Sorting</h3>
+                            <img src="../theory_icons/algo_sort.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Sorting</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_strings">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_string.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Strings</h3>
+                            <img src="../theory_icons/algo_string.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Strings</h3>
                         </div>
                     </a>
                 </div>
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#algo_modal_greedy">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_greedy.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Greedy</h3>
+                            <img src="../theory_icons/algo_greedy.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Greedy</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_graph">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_graph.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Graph Theory</h3>
+                            <img src="../theory_icons/algo_graph.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Graph Theory</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_dp">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_dp.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">DP</h3>
+                            <img src="../theory_icons/algo_dp.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">DP</h3>
                         </div>
                     </a>
                 </div>
@@ -126,17 +126,17 @@
                     <!--<center><hr class="element-hr"></center>-->
                     <a href="#" data-toggle="modal" data-target="#algo_modal_constructive">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_constructive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Constructive</h3>
+                            <img src="../theory_icons/algo_constructive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Constructive</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_bm">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_bits.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; padding-left: 10px; margin-top: 15px;">Bit<br>Manipulation</h3>
+                            <img src="../theory_icons/algo_bits.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; padding-left: 10px; margin-top: 15px;">Bit<br>Manipulation</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_recursion">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_recursive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Recursion</h3>
+                            <img src="../theory_icons/algo_recursive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Recursion</h3>
                         </div>
                     </a>
                 </div>
