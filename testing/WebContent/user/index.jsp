@@ -80,6 +80,7 @@
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
+					<li><a href="getstarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>

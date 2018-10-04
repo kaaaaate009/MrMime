@@ -43,31 +43,33 @@
     <body>
         <!--NavBar-->
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
-                    </button>
-                    <a class="navbar-brand" href="index.jsp"><img src="homepageLogo1.png"></a>
-                    <a class="navbar-brand-mobile" href="index.jsp"><img src="homepageLogo1.png"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                   <ul class="nav navbar-nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.jsp"><img
+					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
+					href="index.jsp"><img src="homepageLogo1.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
+					<li><a href="getstarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
-					<li class="active"><a href="problems.jsp">MCQs</a></li>
+					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
-					
-					
+
 				</ul>
-                    <ul class="nav navbar-nav navbar-right ">
-                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
-                    </ul>
-                    <!--<div class = "search">
+				<ul class="nav navbar-nav navbar-right ">
+					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
+							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+				</ul>
+				<!--<div class = "search">
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search algranth">
@@ -79,9 +81,9 @@
                             </div>
                         </form>
                     </div>-->
-                </div>
-            </div>
-        </nav>
+			</div>
+		</div>
+	</nav>
         <!-- First Year -->
         <div class="subjects">
             <div class="header">
@@ -207,7 +209,7 @@
                     <!--<center><hr class="element-hr"></center>-->
                     <a href="#" data-toggle="modal" data-target="#algo_modal_constructive">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_constructive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FCCN</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FCCN</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_bm">
