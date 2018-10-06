@@ -90,27 +90,27 @@
         	<hr class = "getStarted-hr">
         	<div class = "getStarted">
         		<div class = "row">
-        			<center><h2>Dive into <a href = #>algorithms!</a></h2></center>
+        			<center><h2>Dive into <a href = alorithm.jsp>algorithms!</a></h2></center>
         		</div>
         	</div>
         	<hr class = "getStarted-hr">
         	<div class = "getStarted">
         		<div class = "row">
-        			<center><h2>Begin with <a href = #>data structures!</a></h2></center>
+        			<center><h2>Begin with <a href = data_structures.jsp>data structures!</a></h2></center>
         		</div>
         	</div>
         	<hr class = "getStarted-hr">
         	<div class = "getStarted">
         		<div class = "row">
         			<center><h2>Searching for the solution to a problem? 
-        						<br>Get it <a href = #>here!</a></h2></center>
+        						<br>Get it <a href = forum.jsp>here!</a></h2></center>
         		</div>
         	</div>
         	<hr class = "getStarted-hr">
         	<div class = "getStarted">
         		<div class = "row">
-        			<center><h2>Want to share your unique code?<br>
-        						Here you <a href = #>go!</a></h2></center>
+        			<center><h2>Want to test your skills?<br>
+        						Take a test <a href = mcq.jsp>go!</a></h2></center>
         		</div>
         	</div>
         	<hr class = "getStarted-hr">

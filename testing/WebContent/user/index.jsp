@@ -6,21 +6,16 @@
 <title>ALGranth</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="../css/bootstrap.min.css">
-<script
-	src="../css/jquery.min.js"></script>
-<script
-	src="../css/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../css/jquery.min.js"></script>
+<script src="../css/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
-<link href="../css/bootstrap1.css"
-	rel="stylesheet">
+<link href="../css/bootstrap1.css" rel="stylesheet">
 <link rel="stylesheet"
-	href="bootstrap-social-gh-pages/bootstrap-social.css">
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="../css/bootstrap2.css"
-	rel="stylesheet">
-<link rel="shortcut icon" href="../favicon.ico">
+	href="../bootstrap-social-gh-pages/bootstrap-social.css">
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+<link href="../css/bootstrap2.css" rel="stylesheet">
+<link rel="shortcut icon" href="../favicon/favicon.ico">
 <link rel="icon" sizes="16x16 32x32 64x64" href="../favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="196x196"
 	href="../favicon/favicon-192.png">
@@ -52,7 +47,8 @@
 <link rel="apple-touch-icon" sizes="180x180"
 	href="../favicon/favicon-180.png">
 <meta name="msapplication-TileColor" content="#FFFFFF">
-<meta name="msapplication-TileImage" content="../favicon/favicon-144.png">
+<meta name="msapplication-TileImage"
+	content="../favicon/favicon-144.png">
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <!-- Chrome, Firefox OS and Opera -->
@@ -80,6 +76,7 @@
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
+					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
@@ -111,7 +108,7 @@
 			<center>
 				<h3>Register</h3>
 				<br>
-			</center> 
+			</center>
 			<form action="../controller/login_register/register.jsp"
 				method="post" class="form-horizontal">
 				<div class="form-group">
@@ -132,7 +129,8 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-								class="form-control" id="email" placeholder="Email" name="email_id">
+								class="form-control" id="email" placeholder="Email"
+								name="email_id">
 						</div>
 					</div>
 				</div>
@@ -385,14 +383,15 @@
 					</center>
 				</div>
 				<div class="modal-body">
-					<form acrion="../controller/login_register/login.jsp" class="form-horizontal">
+					<form acrion="../controller/login_register/login.jsp"
+						class="form-horizontal">
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-										class="form-control" id="email"
-										placeholder="Email ID " name="email_id">
+										class="form-control" id="email" placeholder="Email ID "
+										name="email_id">
 								</div>
 							</div>
 						</div>
@@ -401,7 +400,8 @@
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="glyphicon glyphicon-lock"></i></span> <input type="password"
-										class="form-control" id="pwd" placeholder="Password" name="pwd">
+										class="form-control" id="pwd" placeholder="Password"
+										name="pwd">
 								</div>
 							</div>
 						</div>
@@ -417,8 +417,8 @@
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<center>
-									<button type="submit" class="btn btn-primary btn-block" name="btn_login">Sign
-										in</button>
+									<button type="submit" class="btn btn-primary btn-block"
+										name="btn_login">Sign in</button>
 								</center>
 							</div>
 							<hr class="signin-hr">

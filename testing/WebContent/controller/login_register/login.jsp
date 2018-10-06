@@ -33,7 +33,7 @@
 									//out.println("welcome " + userid);
 									//out.println("<a href='logout.jsp'>Log out</a>");
 									System.out.print("-----Login Successful-----");
-									response.sendRedirect("../../user/homepage.jsp");
+									response.sendRedirect("../../user/getStarted.jsp");
 								}else {
 									System.out.print("-----Login Unccessful-----");
 									response.sendRedirect("../../user/index.jsp");
