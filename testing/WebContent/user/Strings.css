@@ -10,12 +10,12 @@ html,body {
     margin-top: 0px;
 }
 
-/*algorithm Div Begins*/
-.algorithm {
+/*strings Div Begins*/
+.strings {
     padding-left: 5%;
     font-family: 'Varela Round', sans-serif;
 }
-.algorithm .header {
+.strings .header {
     padding-top: 8%;
 }
 .sub-hr {
@@ -51,26 +51,26 @@ html,body {
     border-top: 1px dashed darkgray;
 }
 
-/*algorithm Div for mobile devices begins */
+/*strings Div for mobile devices begins */
 /*Smartphones*/
 @media only screen and (max-width:767px){
-    .algorithm .header {
+    .strings .header {
         padding-top: 60px;
     }
 }
 /*Tablets*/
 @media only screen and (min-width:768px){
-    .algorithm .header {
+    .strings .header {
         padding-top: 12%;
     }    
 }
 /*Desktop Screens*/
 @media only screen and (min-width:1024px){
-    .algorithm .header {
+    .strings .header {
         padding-top: 8%;
     }
 }
-/*algorithm Div for mobile devices ends*/
+/*strings Div for mobile devices ends*/
 .grid a {
     color:black;
     text-decoration: none;
@@ -87,9 +87,49 @@ html,body {
 }
 
 
-/*algorithm Div Ends*/
+/*strings Div Ends*/
 
+/*Data Structures Div Begins*/
+.ds {
+    padding-left: 5%;
+    font-family: 'Varela Round', sans-serif;
+}
+.ds .header {
+    padding-top: 8%;
+}
+.ds-modal {
+    font-family: 'Varela Round', sans-serif;
+}
+.ds-modal .modal-header {
+    background-color: #24292e;
+    color: white !important;
+}
+.ds-modal .modal-footer {
+    margin: 0px;
+}
 
+/*Data Structures Div Ends*/
+
+/*DS Div for mobile devices begins */
+/*Smartphones*/
+@media only screen and (max-width:767px){
+    .ds .header {
+        padding-top: 60px;
+    }
+}
+/*Tablets*/
+@media only screen and (min-width:768px){
+    .ds .header {
+        padding-top: 12%;
+    }    
+}
+/*Desktop Screens*/
+@media only screen and (min-width:1024px){
+    .ds .header {
+        padding-top: 8%;
+    }
+}
+/*DS Div for mobile devices ends*/
 /*Navbar Begins*/
 .nav {
     min-height: 80px;
@@ -163,7 +203,6 @@ html,body {
 .modal-body {
     padding-top: 5%;
     border-color: gainsboro;
-	font-size : 100%;
 }
 .signin-hr{
     margin-top: 10%;
