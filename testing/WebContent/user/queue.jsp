@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Searching.css">
+        <link rel="stylesheet" href="queue.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -60,8 +60,8 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li class="active"><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
+					<li ><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 
@@ -86,32 +86,36 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="searching">
+        <div class="queue">
             <div class="header">
             
-                <h2>Searching Algorithms</h2>
+                <h2>Queue</h2>
                 
                  <hr>
-                <p style="font-size :25px;	">There is so much data stored that whenever a user asks for some data, computer has to search it's memory to look for the data and make it available to the user. And the computer has it's own techniques to search through it's memory fast.</p>
+                <p style="font-size :25px;	">A Queue is a linear structure which follows a particular order in which the operations are performed. The order is First In First Out (FIFO). A good example of a queue is any queue of consumers for a resource where the consumer that came first is served first. The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
+                
                 <hr>
-                <p style="font-size :25px;	">Search algorithms can be classified based on their mechanism of searching. Linear search algorithms check every record for the one associated with a target key in a linear fashion. Binary, or half interval searches, repeatedly target the center of the search structure and divide the search space in half. Comparison search algorithms improve on linear searching by successively eliminating records based on comparisons of the keys until the target record is found, and can be applied on data structures with a defined order. Digital search algorithms work based on the properties of digits in data structures that use numerical keys. Finally, hashing directly maps keys to records based on a hash function. Searches outside a linear search require that the data be sorted in some way.
-<hr>
- <p style="font-size :25px;	">Search functions are also evaluated on the basis of their complexity, or maximum theoretical run time. Binary search functions, for example, have a maximum complexity of O(log n), or logarithmic time. This means that the maximum number of operations needed to find the search target is a logarithmic function of the size of the search space.</p>
-<hr>
-<p style="font-size :25px;	">Searching Algorithms :</p>
+                <p style="font-size :25px;	">The difference between stacks and queues is in removing. In a stack we remove the item the most recently added; in a queue, we remove the item the least recently added.
+                
+                <hr>
+                <p style="font-size :25px;	">Operations on Queue:</p>
+				<p style="font-size :25px;	">Mainly the following four basic operations are performed on queue:
+				<p style="font-size :25px;	">Enqueue: Adds an item to the queue. If the queue is full, then it is said to be an Overflow condition.
+				<p style="font-size :25px;	">Dequeue: Removes an item from the queue. The items are popped in the same order in which they are pushed. If the queue is empty, then it is said to be an Underflow condition.</p>
+				<p style="font-size :25px;	">Front: Get the front item from queue.
+				<p style="font-size :25px;	">Rear: Get the last item from queue.
+		
+		        <hr>
+		        <p style="font-size :25px;	">Applications of Queue:
+		        <p style="font-size :25px;	">Queue is used when things don’t have to be processed immediatly, but have to be processed in First InFirst Out order like Breadth First Search. This property of Queue makes it also useful in following kind of scenarios.
+                <p style="font-size :25px;	">1) When a resource is shared among multiple consumers. Examples include CPU scheduling, Disk Scheduling.
+                <p style="font-size :25px;	">2) When data is transferred asynchronously (data not necessarily received at same rate as sent) between two processes. Examples include IO Buffers, pipes, file IO, etc.
 
-<p  style="font-size :25px;	">1.Linear Search</p>
-<p style="font-size :25px;	">2.Binary Search</p>
-<p style="font-size :25px;	">3.Jump Search</p>
-<p style="font-size :25px;	">4.Interpolation Search</p>
-<p style="font-size :25px;	">5.Exponential Search</p>
-<p style="font-size :25px;	">6.Sublist Search (Search a linked list in another list)</p>
-<p style="font-size :25px;	">7.Fibonacci Search</p>
-<p style="font-size :25px;	">8.The Ubiquitous Binary Search</p>
-<p style="font-size :25px;	">9.Recursive program to linearly search an element in a given array</p>
-<p style="font-size :25px;	">10.Recursive function to do substring search</p>
-<p style="font-size :25px;	">11.Unbounded Binary Search( Example: Find the point where a monotonically increasing function becomes positive)</p>
-                 
+                <hr>
+                <p style="font-size :25px;	">Array implementation Of Queue:
+				<p style="font-size :25px;	">For implementing queue, we need to keep track of two indices, front and rear. We enqueue an item at the rear and dequeue an item from front. If we simply increment front and rear indices, then there may be problems, front may reach end of the array. The solution to this problem is to increase front and rear in circular manner.
+
+		
                 
                 <p>
                 

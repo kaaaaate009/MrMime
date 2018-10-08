@@ -243,10 +243,11 @@
                             <center><h4 class="modal-title">Searching Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        In computer science, a search algorithm is any algorithm which solves the search problem, namely, to retrieve information stored within some data structure, or calculated in the search space of a problem domain. Examples of such structures include but are not limited to a linked list, an array data structure, or a search tree.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="Searching.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -280,10 +281,11 @@
                             <center><h4 class="modal-title">String Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        A string is traditionally a sequence of characters, either as a literal constant or as some kind of variable. The latter may allow its elements to be mutated and the length changed, or it may be fixed (after creation). A string is generally considered a data type and is often implemented as an array data structure of bytes (or words) that stores a sequence of elements, typically characters, using some character encoding.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="Strings.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -298,10 +300,11 @@
                             <center><h4 class="modal-title">Greedy Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        A greedy algorithm, as the name suggests, always makes the choice that seems to be the best at that moment. This means that it makes a locally-optimal choice in the hope that this choice will lead to a globally-optimal solution.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="Greedy.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -316,10 +319,11 @@
                             <center><h4 class="modal-title">Graph Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        Graphs are used to represent networks of communication, data organization, computational devices, the flow of computation. A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as vertices and the edges are lines or arcs that connect any two nodes in the graph.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="GraphTheory.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -334,10 +338,11 @@
                             <center><h4 class="modal-title">Dynamic Programming Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        Dynamic programming (usually referred to as DP ) is a very powerful technique to solve a particular class of problems. It demands very elegant formulation of the approach and simple thinking and the coding part is very easy. The idea is very simple, If you have solved a problem with the given input, then save the result for future reference, so as to avoid solving the same problem again.. shortly 'Remember your Past'.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="dp.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -352,10 +357,11 @@
                             <center><h4 class="modal-title">Constructive Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        It's an algorithm which builds something. A graph, an array, a matrix etc. It's what test generators use to build test cases.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="constructive.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -370,10 +376,11 @@
                             <center><h4 class="modal-title">Bit Manipulation Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        Working on bytes, or data types comprising of bytes like ints, floats, doubles or even data structures which stores large amount of bytes is normal for a programmer. In some cases, a programmer needs to go beyond this - that is to say that in a deeper level where the importance of bits is realized.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="bit.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -388,10 +395,11 @@
                             <center><h4 class="modal-title">Recursive Algorithms</h4></center>
                         </div>
                         <div class="modal-body">
+                        A recursive algorithm is an algorithm which calls itself with "smaller (or simpler)" input values, and which obtains the result for the current input by applying simple operations to the returned value for the smaller (or simpler) input. More generally if a problem can be solved utilizing solutions to smaller versions of the same problem, and the smaller versions reduce to easily solvable cases, then one can use a recursive algorithm to solve that problem. For example, the elements of a recursively defined set, or the value of a recursively defined function can be obtained by a recursive algorithm. 
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="recursion.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>

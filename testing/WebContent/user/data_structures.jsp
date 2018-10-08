@@ -410,10 +410,11 @@
                             <center><h4 class="modal-title">Arrays</h4></center>
                         </div>
                         <div class="modal-body">
+                        An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="array.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -428,10 +429,11 @@
                             <center><h4 class="modal-title">Linked Lists</h4></center>
                         </div>
                         <div class="modal-body">
+                        A linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence. In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. 
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="ll.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -446,10 +448,11 @@
                             <center><h4 class="modal-title">Stack</h4></center>
                         </div>
                         <div class="modal-body">
+                        Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).There are many real-life examples of a stack.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="stack.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -464,10 +467,11 @@
                             <center><h4 class="modal-title">Queue</h4></center>
                         </div>
                         <div class="modal-body">
+                        Queue is an abstract data structure, somewhat similar to Stacks. Unlike stacks, a queue is open at both its ends. One end is always used to insert data (enqueue) and the other is used to remove data (dequeue). Queue follows First-In-First-Out methodology, i.e., the data item stored first will be accessed first.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="queue.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -482,10 +486,11 @@
                             <center><h4 class="modal-title">Trees</h4></center>
                         </div>
                         <div class="modal-body">
+                         A tree is a widely used abstract data type (ADT),or data structure implementing this ADT-that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="tree.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>
@@ -500,10 +505,13 @@
                             <center><h4 class="modal-title">Graphs</h4></center>
                         </div>
                         <div class="modal-body">
+                        A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as vertices and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph can be defined as,
+
+A Graph consists of a finite set of vertices(or nodes) and set of Edges which connect a pair of nodes.
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="graph.jsp"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
                         </div>
                     </div>     
                 </div>

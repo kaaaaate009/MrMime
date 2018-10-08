@@ -10,13 +10,12 @@ html,body {
     margin-top: 0px;
 }
 
-/*searching Div Begins*/
-.searching {
+/*dp Div Begins*/
+.dp {
     padding-left: 5%;
-    padding-right: 5%;
     font-family: 'Varela Round', sans-serif;
 }
-.searching .header {
+.dp .header {
     padding-top: 8%;
 }
 .sub-hr {
@@ -52,26 +51,26 @@ html,body {
     border-top: 1px dashed darkgray;
 }
 
-/*searching Div for mobile devices begins */
+/*dp Div for mobile devices begins */
 /*Smartphones*/
 @media only screen and (max-width:767px){
-    .searching .header {
+    .dp .header {
         padding-top: 60px;
     }
 }
 /*Tablets*/
 @media only screen and (min-width:768px){
-    .searching .header {
+    .dp .header {
         padding-top: 12%;
     }    
 }
 /*Desktop Screens*/
 @media only screen and (min-width:1024px){
-    .searching .header {
+    .dp .header {
         padding-top: 8%;
     }
 }
-/*searching Div for mobile devices ends*/
+/*dp Div for mobile devices ends*/
 .grid a {
     color:black;
     text-decoration: none;
@@ -88,7 +87,7 @@ html,body {
 }
 
 
-/*searching Div Ends*/
+/*dp Div Ends*/
 
 /*Data Structures Div Begins*/
 .ds {

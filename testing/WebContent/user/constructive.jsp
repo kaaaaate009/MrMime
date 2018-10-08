@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Greedy.css">
+        <link rel="stylesheet" href="constructive.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -39,6 +39,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <style>div.searching{text-align:justify}</style>
     </head>
     <body>
         <!--NavBar-->
@@ -74,38 +75,40 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="greedy">
+        <div class="const">
             <div class="header">
-                <h2>Greedy Algorithms</h2>
+                <h2>Constructive Algorithms</h2>
                 <hr>
-                <p style="font-size :25px;	">Greedy algorithms have some advantages and disadvantages:</p>
+                <p style="font-size :25px;	">
 
-<p style="font-size :25px;	">It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem. Analyzing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number of sub-problems increases.</p>
-<p style="font-size :25px;	">The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It involves a lot of creativity.</p>
+A algorithm is constructive if its initial
+states consist of free constructors, plus
+operations (inductively) constructed in the
+same way.
+
+
+It's just like some proofs in math: there are non-constructive ones which show that some property holds (or some object exists) without constructing the actual object, satisfying this property. Usually such proofs are proofs by contradiction or ones using the axiom of choice.</p>
 <hr>
-<p style="font-size :25px;	">Greedy algorithms can be characterized as being 'short sighted', and also as 'non-recoverable'. They are ideal only for problems which have 'optimal substructure'. Despite this, for many simple problems, the best suited algorithms are greedy algorithms. It is important, however, to note that the greedy algorithm can be used as a selection algorithm to prioritize options within a search, or branch-and-bound algorithm. There are a few variations to the greedy algorithm:</p>
-
-<p style="font-size :25px;	">Pure greedy algorithms</p>
-<p style="font-size :25px;	">Orthogonal greedy algorithms</p>
-<p style="font-size :25px;	">Relaxed greedy algorithms</p>
+<p style="font-size :25px;	">How to solve a construction problem
+<p style="font-size :25px;	">Step 1: Identify it as a construction problem
+<p style="font-size :25px;	">Step 2a: Look for concepts related to this problem
+<p style="font-size :25px;	">Step 2b: Try small examples, observe a pattern
+<p style="font-size :25px;	">Step 3: Make a guess
+<p style="font-size :25px;	">Step 4: Convince yourself that it is correct
+<p style="font-size :25px;	">Step 5: Code! 
 <hr>
-<p style="font-size :25px;	">Greedy algorithms mostly (but not always) fail to find the globally optimal solution because they usually do not operate exhaustively on all the data. They can make commitments to certain choices too early which prevent them from finding the best overall solution later. For example, all known greedy coloring algorithms for the graph coloring problem and all other NP-complete problems do not consistently find optimum solutions. Nevertheless, they are useful because they are quick to think up and often give good approximations to the optimum.</p>
 
-<hr>
-<p style="font-size :25px;	">Standard Greedy Algorithms :</p>
+<p style="font-size :25px;	">Constructive Algorithms Examples:</p>
+<p style="font-size :25px;	">	1..Company Acquisitions 
+<p style="font-size :25px;	">	2.Sequence Transformation 
+	<p style="font-size :25px;	">3.Euler tour 
+<p style="font-size :25px;	">	4.Array Product 
+<p style="font-size :25px;	">	5.Tree Reconstruction 
+<p style="font-size :25px;	">	6.Non-Coprime Partition 
+<p style="font-size :25px;	">	7.Restore Array
 
-<p style="font-size :25px;	">1.Activity Selection Problem
-<p style="font-size :25px;	">2.Egyptian Fraction
-<p style="font-size :25px;	">3.Job Sequencing Problem
-<p style="font-size :25px;	">4.Job Sequencing Problem (Using Disjoint Set)
-<p style="font-size :25px;	">5.Job Sequencing Problem – Loss Minimization
-<p style="font-size :25px;	">6.Huffman Coding</p>
-<p style="font-size :25px;	">7.Efficient Huffman Coding for sorted input</p>
-<p style="font-size :25px;	">8.Huffman Decoding</p>
-<p style="font-size :25px;	">9.Water Connection Problem</p>
-<p style="font-size :25px;	">10.Minimum Swaps for Bracket Balancing</p>
-<p style="font-size :25px;	">11.Fitting Shelves Problem</p>
-                
+                 </p>
+              
                 <p>
                 
                 </p>

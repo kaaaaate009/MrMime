@@ -13,6 +13,7 @@ html,body {
 /*strings Div Begins*/
 .strings {
     padding-left: 5%;
+    padding-right: 5%;
     font-family: 'Varela Round', sans-serif;
 }
 .strings .header {
