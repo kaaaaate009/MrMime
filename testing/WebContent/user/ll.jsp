@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Searching.css">
+        <link rel="stylesheet" href="ll.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -60,8 +60,8 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li class="active"><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
+					<li ><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 
@@ -86,32 +86,36 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="searching">
+        <div class="ll">
             <div class="header">
             
-                <h2>Searching Algorithms</h2>
+                <h2>Linked Lists</h2>
                 
                  <hr>
-                <p style="font-size :25px;	">There is so much data stored that whenever a user asks for some data, computer has to search it's memory to look for the data and make it available to the user. And the computer has it's own techniques to search through it's memory fast.</p>
+                <p style="font-size :25px;	">Like arrays, Linked List is a linear data structure. Unlike arrays, linked list elements are not stored at contiguous location; the elements are linked using pointers.
                 <hr>
-                <p style="font-size :25px;	">Search algorithms can be classified based on their mechanism of searching. Linear search algorithms check every record for the one associated with a target key in a linear fashion. Binary, or half interval searches, repeatedly target the center of the search structure and divide the search space in half. Comparison search algorithms improve on linear searching by successively eliminating records based on comparisons of the keys until the target record is found, and can be applied on data structures with a defined order. Digital search algorithms work based on the properties of digits in data structures that use numerical keys. Finally, hashing directly maps keys to records based on a hash function. Searches outside a linear search require that the data be sorted in some way.
-<hr>
- <p style="font-size :25px;	">Search functions are also evaluated on the basis of their complexity, or maximum theoretical run time. Binary search functions, for example, have a maximum complexity of O(log n), or logarithmic time. This means that the maximum number of operations needed to find the search target is a logarithmic function of the size of the search space.</p>
-<hr>
-<p style="font-size :25px;	">Searching Algorithms :</p>
-
-<p  style="font-size :25px;	">1.Linear Search</p>
-<p style="font-size :25px;	">2.Binary Search</p>
-<p style="font-size :25px;	">3.Jump Search</p>
-<p style="font-size :25px;	">4.Interpolation Search</p>
-<p style="font-size :25px;	">5.Exponential Search</p>
-<p style="font-size :25px;	">6.Sublist Search (Search a linked list in another list)</p>
-<p style="font-size :25px;	">7.Fibonacci Search</p>
-<p style="font-size :25px;	">8.The Ubiquitous Binary Search</p>
-<p style="font-size :25px;	">9.Recursive program to linearly search an element in a given array</p>
-<p style="font-size :25px;	">10.Recursive function to do substring search</p>
-<p style="font-size :25px;	">11.Unbounded Binary Search( Example: Find the point where a monotonically increasing function becomes positive)</p>
-                 
+                <p style="font-size :25px;	">Why Linked List?
+                <p style="font-size :25px;	">Arrays can be used to store linear data of similar types, but arrays have following limitations:</p>
+				<p style="font-size :25px;	">1) The size of the arrays is fixed: So we must know the upper limit on the number of elements in advance. Also, generally, the allocated memory is equal to the upper limit irrespective of the usage.
+				<p style="font-size :25px;	">2) Inserting a new element in an array of elements is expensive, because room has to be created for the new elements and to create room existing elements have to shifted.
+				<hr>
+				<p style="font-size :25px;	">Advantages Over Arrays:</p>
+				<p style="font-size :25px;	">1) Dynamic size
+				<p style="font-size :25px;	">2) Ease of insertion/deletion
+		        <hr>
+		        <p style="font-size :25px;	">Drawbacks:
+		        <p style="font-size :25px;	">1) Random access is not allowed. We have to access elements sequentially starting from the first node. So we cannot do binary search with linked lists efficiently with its default implementation. Read about it here.
+                <p style="font-size :25px;	">2) Extra memory space for a pointer is required with each element of the list.
+                <p style="font-size :25px;	">3) Not cache friendly. Since array elements are contiguous locations, there is locality of reference which is not there in case of linked lists.	
+                <hr>
+                <p style="font-size :25px;	">Representation:
+				<p style="font-size :25px;	">A linked list is represented by a pointer to the first node of the linked list. The first node is called head. If the linked list is empty, then value of head is NULL.				
+				<p style="font-size :25px;	">Each node in a list consists of at least two parts:
+				<p style="font-size :25px;	">1) data
+				<p style="font-size :25px;	">2) Pointer (Or Reference) to the next node
+				<hr>
+				<p style="font-size :25px;	">In C, we can represent a node using structures. In Java, LinkedList can be represented as a class and a Node as a separate class. The LinkedList class contains a reference of Node class type.
+		
                 
                 <p>
                 

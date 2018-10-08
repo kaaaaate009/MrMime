@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Searching.css">
+        <link rel="stylesheet" href="GraphTheory.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -88,6 +88,32 @@
         <div class="graph">
             <div class="header">
                 <h2>Graph Theory Algorithms</h2>
+                <hr>
+                <p style="font-size :25px;	">Graphs are used to solve many real-life problems. Graphs are used to represent networks. The networks may include paths in a city or telephone network or circuit network. Graphs are also used in social networks like linkedIn, Facebook. For example, in Facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender, locale etc.</p>
+
+
+
+<hr>
+<p style="font-size :25px;	">Graph Theory Algorithms:</p>
+<p style="font-size :25px;	">1.Eulerian path algorithm</p>
+<p style="font-size :25px;	">2.Depth First Search algorithm
+<p style="font-size :25px;	">3.Breadth First Search algorithm
+<p style="font-size :25px;	">4.Breadth First Search grid shortest path
+<p style="font-size :25px;	">5.Dijkstra's shortest path algorithm
+<p style="font-size :25px;	">6.Dijkstra's shortest path algorithm
+<p style="font-size :25px;	">7.Topological sort algorithm
+<p style="font-size :25px;	">8.Shortest/longest path on a Directed Acyclic Graph (DAG)
+<p style="font-size :25px;	">9.Bellman-Ford algorithm
+<p style="font-size :25px;	">10.Floyd-Warshall all pairs shortest path algorithm
+<p style="font-size :25px;	">11.Bridges & Articulation points
+<p style="font-size :25px;	">12.Tarjan's strongly connected components algorithm
+<p style="font-size :25px;	">13.Travelling Salesman problem
+<p style="font-size :25px;	">14.Existence of Eulerian path and circuits
+
+            
+                <p>
+                
+                </p>
             </div>
         </div>
        

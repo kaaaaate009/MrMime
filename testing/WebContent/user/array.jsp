@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Searching.css">
+        <link rel="stylesheet" href="array.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -60,8 +60,8 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li class="active"><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
+					<li ><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 
@@ -86,32 +86,34 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="searching">
+        <div class="array">
             <div class="header">
             
-                <h2>Searching Algorithms</h2>
+                <h2>Arrays</h2>
                 
                  <hr>
-                <p style="font-size :25px;	">There is so much data stored that whenever a user asks for some data, computer has to search it's memory to look for the data and make it available to the user. And the computer has it's own techniques to search through it's memory fast.</p>
-                <hr>
-                <p style="font-size :25px;	">Search algorithms can be classified based on their mechanism of searching. Linear search algorithms check every record for the one associated with a target key in a linear fashion. Binary, or half interval searches, repeatedly target the center of the search structure and divide the search space in half. Comparison search algorithms improve on linear searching by successively eliminating records based on comparisons of the keys until the target record is found, and can be applied on data structures with a defined order. Digital search algorithms work based on the properties of digits in data structures that use numerical keys. Finally, hashing directly maps keys to records based on a hash function. Searches outside a linear search require that the data be sorted in some way.
-<hr>
- <p style="font-size :25px;	">Search functions are also evaluated on the basis of their complexity, or maximum theoretical run time. Binary search functions, for example, have a maximum complexity of O(log n), or logarithmic time. This means that the maximum number of operations needed to find the search target is a logarithmic function of the size of the search space.</p>
-<hr>
-<p style="font-size :25px;	">Searching Algorithms :</p>
+                <p style="font-size :25px;	">In Array, each element can be uniquely identified by their index in the array (in a similar way as you could identify your friends by the step on which they were on in the above example).  
+                <hr><p style="font-size :25px;	">Types of indexing in array:
 
-<p  style="font-size :25px;	">1.Linear Search</p>
-<p style="font-size :25px;	">2.Binary Search</p>
-<p style="font-size :25px;	">3.Jump Search</p>
-<p style="font-size :25px;	">4.Interpolation Search</p>
-<p style="font-size :25px;	">5.Exponential Search</p>
-<p style="font-size :25px;	">6.Sublist Search (Search a linked list in another list)</p>
-<p style="font-size :25px;	">7.Fibonacci Search</p>
-<p style="font-size :25px;	">8.The Ubiquitous Binary Search</p>
-<p style="font-size :25px;	">9.Recursive program to linearly search an element in a given array</p>
-<p style="font-size :25px;	">10.Recursive function to do substring search</p>
-<p style="font-size :25px;	">11.Unbounded Binary Search( Example: Find the point where a monotonically increasing function becomes positive)</p>
-                 
+<ul style="font-size :25px;	"><li>0 (zero-based indexing): The first element of the array is indexed by subscript of 0</li>
+<li>1 (one-based indexing): The first element of the array is indexed by subscript of 1</li>
+<li>n (n-based indexing): The base index of an array can be freely chosen. Usually programming languages allowing n-based indexing also allow negative index values and other scalar data types like enumerations, or characters may be used as an array index.</ul>
+      <hr><p style="font-size :25px;	">Advantages of using arrays:</p>
+
+<ul  style="font-size :25px;	" ><li>Arrays allow random access of elements. This makes accessing elements by position faster.</li>
+<li>Arrays have better cache locality that can make a pretty big difference in performance.            </li></ul>
+                <p style="font-size :25px;	">Usually, an array of characters is called a 'string', whereas an array of ints or floats is called simply an array.
+  <hr><p style="font-size :25px;	">Basic Array Operations:</p>
+    <ul style="font-size :25px;	"><li>Traverse - print all the array elements one by one.</li>
+
+<li>Insertion - Adds an element at the given index.</li>
+
+<li>Deletion - Deletes an element at the given index.</li>
+
+<li>Search - Searches an element using the given index or by the value.</li>
+
+<li>Update - Updates an element at the given index.</li></ul>
+                  
                 
                 <p>
                 

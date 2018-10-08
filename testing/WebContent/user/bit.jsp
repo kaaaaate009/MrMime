@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Greedy.css">
+        <link rel="stylesheet" href="bit.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -39,6 +39,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <style>div.searching{text-align:justify}</style>
     </head>
     <body>
         <!--NavBar-->
@@ -74,37 +75,43 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="greedy">
+        <div class="bit">
             <div class="header">
-                <h2>Greedy Algorithms</h2>
+                <h2>Bit Manipulation Algorithms</h2>
                 <hr>
-                <p style="font-size :25px;	">Greedy algorithms have some advantages and disadvantages:</p>
-
-<p style="font-size :25px;	">It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem. Analyzing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number of sub-problems increases.</p>
-<p style="font-size :25px;	">The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It involves a lot of creativity.</p>
+                <p style="font-size :25px;	">
+Operations with bits are used in Data compression (data is compressed by converting it from one representation to another, to reduce the space) ,Exclusive-Or Encryption (an algorithm to encrypt the data for safety issues). In order to encode, decode or compress files we have to extract the data at bit level. Bitwise Operations are faster and closer to the system and sometimes optimize the program to a good level.</p>
 <hr>
-<p style="font-size :25px;	">Greedy algorithms can be characterized as being 'short sighted', and also as 'non-recoverable'. They are ideal only for problems which have 'optimal substructure'. Despite this, for many simple problems, the best suited algorithms are greedy algorithms. It is important, however, to note that the greedy algorithm can be used as a selection algorithm to prioritize options within a search, or branch-and-bound algorithm. There are a few variations to the greedy algorithm:</p>
+<p style="font-size :25px;	">Bitwise Operators:
 
-<p style="font-size :25px;	">Pure greedy algorithms</p>
-<p style="font-size :25px;	">Orthogonal greedy algorithms</p>
-<p style="font-size :25px;	">Relaxed greedy algorithms</p>
+There are different bitwise operations used in the bit manipulation. These bit operations operate on the individual bits of the bit patterns. Bit operations are fast and can be used in optimizing time complexity. Some common bit operators are:</p>
+
+<p style="font-size :25px;	">NOT ( ~ ): Bitwise NOT is an unary operator that flips the bits of the number 
+<p style="font-size :25px;	">AND ( & ): Bitwise AND is a binary operator that operates on two equal-length bit patterns. 
+<p style="font-size :25px;	">OR ( | ): Bitwise OR is also a binary operator that operates on two equal-length bit patterns
+<p style="font-size :25px;	">XOR ( ^ ): Bitwise XOR also takes two equal-length bit patterns. If both bits in the compared position of the bit patterns are 0 or 1, the bit in the resulting bit pattern is 0, otherwise 1.
+
+<p style="font-size :25px;	">Left Shift ( << ): Left shift operator is a binary operator which shift the some number of bits, in the given bit pattern, to the left and append 0 at the end. Left shift is equivalent to multiplying the bit pattern with 2k ( if we are shifting k bits ).
+
+
+<p style="font-size :25px;	">Right Shift ( >> ): Right shift operator is a binary operator which shift the some number of bits, in the given bit pattern, to the right and append 1 at the end. Right shift is equivalent to dividing the bit pattern with 2k ( if we are shifting k bits ).
+
 <hr>
-<p style="font-size :25px;	">Greedy algorithms mostly (but not always) fail to find the globally optimal solution because they usually do not operate exhaustively on all the data. They can make commitments to certain choices too early which prevent them from finding the best overall solution later. For example, all known greedy coloring algorithms for the graph coloring problem and all other NP-complete problems do not consistently find optimum solutions. Nevertheless, they are useful because they are quick to think up and often give good approximations to the optimum.</p>
-
-<hr>
-<p style="font-size :25px;	">Standard Greedy Algorithms :</p>
-
-<p style="font-size :25px;	">1.Activity Selection Problem
-<p style="font-size :25px;	">2.Egyptian Fraction
-<p style="font-size :25px;	">3.Job Sequencing Problem
-<p style="font-size :25px;	">4.Job Sequencing Problem (Using Disjoint Set)
-<p style="font-size :25px;	">5.Job Sequencing Problem – Loss Minimization
-<p style="font-size :25px;	">6.Huffman Coding</p>
-<p style="font-size :25px;	">7.Efficient Huffman Coding for sorted input</p>
-<p style="font-size :25px;	">8.Huffman Decoding</p>
-<p style="font-size :25px;	">9.Water Connection Problem</p>
-<p style="font-size :25px;	">10.Minimum Swaps for Bracket Balancing</p>
-<p style="font-size :25px;	">11.Fitting Shelves Problem</p>
+<p style="font-size :25px;	">Examples:
+<p style="font-size :25px;	">1.Detect if two integers have opposite signs
+<p style="font-size :25px;	">2.Add 1 to a given number
+<p style="font-size :25px;	">3.Multiply a given Integer with 3.5
+<p style="font-size :25px;	">4.Turn off the rightmost set bit
+<p style="font-size :25px;	">5.Find whether a given number is a power of 4 or not
+<p style="font-size :25px;	">6.Compute modulus division by a power-of-2-number
+<p style="font-size :25px;	">7.Rotate bits of a number
+<p style="font-size :25px;	">8.Find the Number Occurring Odd Number of Times
+<p style="font-size :25px;	">9.Check for Integer Overflow
+<p style="font-size :25px;	">10.Count set bits in an integer
+<p style="font-size :25px;	">11.Count number of bits to be flipped to convert A to B
+<p style="font-size :25px;	">12.Efficient way to multiply with 7
+<p style="font-size :25px;	">13.Program to find whether a no is power of two
+<p style="font-size :25px;	">14.Find XOR of two number without using XOR operator </p>
                 
                 <p>
                 

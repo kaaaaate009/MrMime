@@ -39,6 +39,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <style>div.strings{text-align:justify}</style>
     </head>
     <body>
         <!--NavBar-->
@@ -59,7 +60,7 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
@@ -77,6 +78,35 @@
         <div class="strings">
             <div class="header">
                 <h2>String manipulation Algorithms</h2>
+                
+                 <hr>
+                <p style="font-size :25px;	">String denote more general arrays or other sequence (or list) data types and structures.
+
+ The length of a string s is the number of symbols in s (the length of the sequence) and can be any non-negative integer; it is often denoted as |s|. The empty string is the unique string over S of length 0.</p>
+
+ <p style="font-size :25px;	">A string s is said to be a substring or factor of t if there exist (possibly empty) strings u and v such that t = usv. The relation "is a substring of" defines a partial order on S*, the least element of which is the empty string.
+
+A string s is said to be a prefix of t if there exists a string u such that t = su. If u is nonempty, s is said to be a proper prefix of t. Symmetrically, a string s is said to be a suffix of t if there exists a string u such that t = us. If u is nonempty, s is said to be a proper suffix of t. Suffixes and prefixes are substrings of t. Both the relations "is a prefix of" and "is a suffix of" are prefix orders.</p>
+<hr>
+ <p style="font-size :25px;	">String functions-
+ <p style="font-size :25px;	">1.Function to copy string
+ <p style="font-size :25px;	">2.Pangram Checking
+ <p style="font-size :25px;	">3.Missing characters to make a string Pangram
+ <p style="font-size :25px;	">4.Check if a string is Pangrammatic Lipogram
+ <p style="font-size :25px;	">5.Removing punctuations from a given string
+ <p style="font-size :25px;	">6.Rearrange characters in a string such that no two adjacent are same
+ <p style="font-size :25px;	">7.Program to check if input is an integer or a string
+ <p style="font-size :25px;	">8.Quick way to check if all the characters of a string are same
+ <p style="font-size :25px;	">9.Program to find the initials of a name
+ <p style="font-size :25px;	">10.Check Whether a number is Duck Number or not
+ <p style="font-size :25px;	">11.Round the given number to nearest multiple of 10
+ <p style="font-size :25px;	">12.Change string to a new character set
+ <p style="font-size :25px;	">13.Find one extra character in a string
+               
+                
+                <p>
+                
+                </p>
             </div>
         </div>
        

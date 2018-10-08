@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Searching.css">
+        <link rel="stylesheet" href="graph.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -60,8 +60,8 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li class="active"><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
+					<li ><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 
@@ -86,32 +86,33 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="searching">
+        <div class="graph">
             <div class="header">
             
-                <h2>Searching Algorithms</h2>
+                <h2>Graphs</h2>
                 
                  <hr>
-                <p style="font-size :25px;	">There is so much data stored that whenever a user asks for some data, computer has to search it's memory to look for the data and make it available to the user. And the computer has it's own techniques to search through it's memory fast.</p>
-                <hr>
-                <p style="font-size :25px;	">Search algorithms can be classified based on their mechanism of searching. Linear search algorithms check every record for the one associated with a target key in a linear fashion. Binary, or half interval searches, repeatedly target the center of the search structure and divide the search space in half. Comparison search algorithms improve on linear searching by successively eliminating records based on comparisons of the keys until the target record is found, and can be applied on data structures with a defined order. Digital search algorithms work based on the properties of digits in data structures that use numerical keys. Finally, hashing directly maps keys to records based on a hash function. Searches outside a linear search require that the data be sorted in some way.
-<hr>
- <p style="font-size :25px;	">Search functions are also evaluated on the basis of their complexity, or maximum theoretical run time. Binary search functions, for example, have a maximum complexity of O(log n), or logarithmic time. This means that the maximum number of operations needed to find the search target is a logarithmic function of the size of the search space.</p>
-<hr>
-<p style="font-size :25px;	">Searching Algorithms :</p>
+                <p style="font-size :25px;	">A graph is a pictorial representation of a set of objects where some pairs of objects are connected by links. The interconnected objects are represented by points termed as vertices, and the links that connect the vertices are called edges.
+                <p style="font-size :25px;	">Formally, a graph is a pair of sets (V, E), where V is the set of vertices and E is the set of edges, connecting the pairs of vertices. For Example-V = {a, b, c, d, e}
 
-<p  style="font-size :25px;	">1.Linear Search</p>
-<p style="font-size :25px;	">2.Binary Search</p>
-<p style="font-size :25px;	">3.Jump Search</p>
-<p style="font-size :25px;	">4.Interpolation Search</p>
-<p style="font-size :25px;	">5.Exponential Search</p>
-<p style="font-size :25px;	">6.Sublist Search (Search a linked list in another list)</p>
-<p style="font-size :25px;	">7.Fibonacci Search</p>
-<p style="font-size :25px;	">8.The Ubiquitous Binary Search</p>
-<p style="font-size :25px;	">9.Recursive program to linearly search an element in a given array</p>
-<p style="font-size :25px;	">10.Recursive function to do substring search</p>
-<p style="font-size :25px;	">11.Unbounded Binary Search( Example: Find the point where a monotonically increasing function becomes positive)</p>
-                 
+E = {ab, ac, bd, cd, de}</p>
+				
+				<hr>
+				<p style="font-size :25px;	">Graph Data Structure:</p>
+				<p style="font-size :25px;	">Mathematical graphs can be represented in data structure. We can represent a graph using an array of vertices and a two-dimensional array of edges. Before we proceed further, let's familiarize ourselves with some important terms:
+
+				<ul style="font-size :25px;	"><li>Vertex - Each node of the graph is represented as a vertex. In the following example, the labeled circle represents vertices. Thus, A to G are vertices. We can represent them using an array as shown in the following image. Here A can be identified by index 0. B can be identified using index 1 and so on.
+				<li>Edge - Edge represents a path between two vertices or a line between two vertices. In the following example, the lines from A to B, B to C, and so on represents edges. We can use a two-dimensional array to represent an array as shown in the following image. Here AB can be represented as 1 at row 0, column 1, BC as 1 at row 1, column 2 and so on, keeping other combinations as 0.
+				<li>Adjacency - Two node or vertices are adjacent if they are connected to each other through an edge. In the following example, B is adjacent to A, C is adjacent to B, and so on.
+				<li>Path - Path represents a sequence of edges between the two vertices.</li></ul>          
+                
+                <hr>
+                <p style="font-size :25px;	">Basic Operations:</p>
+                <p style="font-size :25px;	">Following are basic primary operations of a Graph:</p>
+				<ul style="font-size :25px;	"><li>Add Vertex - Adds a vertex to the graph.
+				<li>Add Edge - Adds an edge between the two vertices of the graph.
+				<li>Display Vertex - Displays a vertex of the graph.</li></ul>
+                
                 
                 <p>
                 

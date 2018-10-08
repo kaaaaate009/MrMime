@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Greedy.css">
+        <link rel="stylesheet" href="recursion.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -39,6 +39,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <style>div.searching{text-align:justify}</style>
     </head>
     <body>
         <!--NavBar-->
@@ -74,38 +75,26 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="greedy">
+        <div class="recur">
             <div class="header">
-                <h2>Greedy Algorithms</h2>
+                <h2>Recursive Algorithms</h2>
                 <hr>
-                <p style="font-size :25px;	">Greedy algorithms have some advantages and disadvantages:</p>
+                <p style="font-size :25px;	">
+If a set or a function is defined recursively, then a recursive algorithm to compute its members or values mirrors the definition. Initial steps of the recursive algorithm correspond to the basis clause of the recursive definition and they identify the basis elements. They are then followed by steps corresponding to the inductive clause, which reduce the computation for an element of one generation to that of elements of the immediately preceding generation. </p>
 
-<p style="font-size :25px;	">It is quite easy to come up with a greedy algorithm (or even multiple greedy algorithms) for a problem. Analyzing the run time for greedy algorithms will generally be much easier than for other techniques (like Divide and conquer). For the Divide and conquer technique, it is not clear whether the technique is fast or slow. This is because at each level of recursion the size of gets smaller and the number of sub-problems increases.</p>
-<p style="font-size :25px;	">The difficult part is that for greedy algorithms you have to work much harder to understand correctness issues. Even with the correct algorithm, it is hard to prove why it is correct. Proving that a greedy algorithm is correct is more of an art than a science. It involves a lot of creativity.</p>
+<p style="font-size :25px;	">In general, recursive computer programs require more memory and computation compared with iterative algorithms, but they are simpler and for many cases a natural way of thinking about the problem. 
 <hr>
-<p style="font-size :25px;	">Greedy algorithms can be characterized as being 'short sighted', and also as 'non-recoverable'. They are ideal only for problems which have 'optimal substructure'. Despite this, for many simple problems, the best suited algorithms are greedy algorithms. It is important, however, to note that the greedy algorithm can be used as a selection algorithm to prioritize options within a search, or branch-and-bound algorithm. There are a few variations to the greedy algorithm:</p>
-
-<p style="font-size :25px;	">Pure greedy algorithms</p>
-<p style="font-size :25px;	">Orthogonal greedy algorithms</p>
-<p style="font-size :25px;	">Relaxed greedy algorithms</p>
-<hr>
-<p style="font-size :25px;	">Greedy algorithms mostly (but not always) fail to find the globally optimal solution because they usually do not operate exhaustively on all the data. They can make commitments to certain choices too early which prevent them from finding the best overall solution later. For example, all known greedy coloring algorithms for the graph coloring problem and all other NP-complete problems do not consistently find optimum solutions. Nevertheless, they are useful because they are quick to think up and often give good approximations to the optimum.</p>
+<p style="font-size :25px;	">For Example : Algorithm for finding the k-th even natural number 
+Note here that this can be solved very easily by simply outputting 2*(k - 1) for a given k . The purpose here, however, is to illustrate the basic idea of recursion rather than solving the problem. 
 
 <hr>
-<p style="font-size :25px;	">Standard Greedy Algorithms :</p>
-
-<p style="font-size :25px;	">1.Activity Selection Problem
-<p style="font-size :25px;	">2.Egyptian Fraction
-<p style="font-size :25px;	">3.Job Sequencing Problem
-<p style="font-size :25px;	">4.Job Sequencing Problem (Using Disjoint Set)
-<p style="font-size :25px;	">5.Job Sequencing Problem – Loss Minimization
-<p style="font-size :25px;	">6.Huffman Coding</p>
-<p style="font-size :25px;	">7.Efficient Huffman Coding for sorted input</p>
-<p style="font-size :25px;	">8.Huffman Decoding</p>
-<p style="font-size :25px;	">9.Water Connection Problem</p>
-<p style="font-size :25px;	">10.Minimum Swaps for Bracket Balancing</p>
-<p style="font-size :25px;	">11.Fitting Shelves Problem</p>
-                
+<p style="font-size :25px;	">Examples:
+<p style="font-size :25px;	">Fast Exponentiation 
+<p style="font-size :25px;	">Greatest Common Divisor (Euclid’s Algorithm) 
+<p style="font-size :25px;	">Fibonacci Numbers 
+<p style="font-size :25px;	">Rank Search 
+<p style="font-size :25px;	">Height of a Binary Tree  </p>
+              
                 <p>
                 
                 </p>

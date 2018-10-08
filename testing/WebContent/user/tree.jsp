@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="Searching.css">
+        <link rel="stylesheet" href="tree.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round" rel="stylesheet">
         <link rel="stylesheet" href="bootstrap-social-gh-pages/bootstrap-social.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -60,8 +60,8 @@
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li class="active"><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
+					<li ><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 
@@ -86,33 +86,44 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="searching">
+        <div class="tree">
             <div class="header">
             
-                <h2>Searching Algorithms</h2>
+                <h2>Trees</h2>
                 
                  <hr>
-                <p style="font-size :25px;	">There is so much data stored that whenever a user asks for some data, computer has to search it's memory to look for the data and make it available to the user. And the computer has it's own techniques to search through it's memory fast.</p>
-                <hr>
-                <p style="font-size :25px;	">Search algorithms can be classified based on their mechanism of searching. Linear search algorithms check every record for the one associated with a target key in a linear fashion. Binary, or half interval searches, repeatedly target the center of the search structure and divide the search space in half. Comparison search algorithms improve on linear searching by successively eliminating records based on comparisons of the keys until the target record is found, and can be applied on data structures with a defined order. Digital search algorithms work based on the properties of digits in data structures that use numerical keys. Finally, hashing directly maps keys to records based on a hash function. Searches outside a linear search require that the data be sorted in some way.
-<hr>
- <p style="font-size :25px;	">Search functions are also evaluated on the basis of their complexity, or maximum theoretical run time. Binary search functions, for example, have a maximum complexity of O(log n), or logarithmic time. This means that the maximum number of operations needed to find the search target is a logarithmic function of the size of the search space.</p>
-<hr>
-<p style="font-size :25px;	">Searching Algorithms :</p>
-
-<p  style="font-size :25px;	">1.Linear Search</p>
-<p style="font-size :25px;	">2.Binary Search</p>
-<p style="font-size :25px;	">3.Jump Search</p>
-<p style="font-size :25px;	">4.Interpolation Search</p>
-<p style="font-size :25px;	">5.Exponential Search</p>
-<p style="font-size :25px;	">6.Sublist Search (Search a linked list in another list)</p>
-<p style="font-size :25px;	">7.Fibonacci Search</p>
-<p style="font-size :25px;	">8.The Ubiquitous Binary Search</p>
-<p style="font-size :25px;	">9.Recursive program to linearly search an element in a given array</p>
-<p style="font-size :25px;	">10.Recursive function to do substring search</p>
-<p style="font-size :25px;	">11.Unbounded Binary Search( Example: Find the point where a monotonically increasing function becomes positive)</p>
-                 
+                <p style="font-size :25px;	">A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and none points to the root.</p>
                 
+                <hr>
+                <p style="font-size :25px;	">Binary Tree is a special datastructure used for data storage purposes. A binary tree has a special condition that each node can have a maximum of two children. A binary tree has the benefits of both an ordered array and a linked list as search is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.</p>
+				
+				<hr>
+				<p style="font-size :30px;	">Important Terms:</p>
+				<p style="font-size :25px;	">Following are the important terms with respect to trees:</p>
+
+<ul style="font-size :25px;	"><li>Path - Path refers to the sequence of nodes along the edges of a tree.
+<li>Root - The node at the top of the tree is called root. There is only one root per tree and one path from the root node to any node.
+<li>Parent - Any node except the root node has one edge upward to a node called parent.
+<li>Child - The node below a given node connected by its edge downward is called its child node.</li>
+<li>Leaf - The node which does not have any child node is called the leaf node.
+<li>Subtree - Subtree represents the descendants of a node.
+<li>Visiting - Visiting refers to checking the value of a node when control is on the node.
+<li>Traversing - Traversing means passing through nodes in a specific order.
+<li>Levels - Level of a node represents the generation of a node. If the root node is at level 0, then its next child node is at level 1, its grandchild is at level 2, and so on.
+<li>keys - Key represents a value of a node based on which a search operation is to be carried out for a node.</ul>
+      
+      <hr>
+      <p style="font-size :25px;	">Binary Search Tree:</p>
+      <p style="font-size :25px;	">Binary Search tree exhibits a special behavior. A node's left child must have a value less than its parent's value and the node's right child must have a value greater than its parent value.</p>
+      
+      <hr>
+      <p style="font-size :25px;	">BST Basic Operations:</p>
+<ul  style="font-size :25px;	" >           <li> Insert - Inserts an element in a tree/create a tree.
+<li>Search - Searches an element in a tree.
+<li>Preorder Traversal - Traverses a tree in a pre-order manner.
+<li>Inorder Traversal - Traverses a tree in an in-order manner.
+<li>Postorder Traversal - Traverses a tree in a post-order manner.</ul>
+          
                 <p>
                 
                 </p>
