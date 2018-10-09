@@ -75,17 +75,19 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><img
+				<a class="navbar-brand" href="getStarted.jsp"><img
 					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
-					href="index.html"><img src="homepageLogo1.png"></a>
+					href="getStarted.jsp"><img src="homepageLogo1.png"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
-					<li><a href="howtostart.html">How To Start</a></li>
-					<li><a href="test_theory.html">Theory</a></li>
-					<li><a href="problems.html">Problems</a></li>
-					<li><a href="forum.html">Forum</a></li>
+					<li><a href="howtostart.jsp">How To Start</a></li>
+					<li class="active"><a href="getStarted.jsp">Get Started</a></li>
+					<li><a href="algorithm.jsp">Algorithms</a></li>
+					<li><a href="data_structures.jsp">Data Structures</a></li>
+					<li><a href="problems.jsp">MCQs</a></li>
+					<li><a href="forum.jsp">Forum</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
 					<li><a href="../controller/login_register/logout.jsp"><span

@@ -43,7 +43,7 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp"><img
+				<a class="navbar-brand" href="getStarted.jsp"><img
 					src="homepageLogo1.png"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -55,11 +55,10 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li class="active"><a href="forum.jsp">Forum</a></li>
-
-				</ul>
-				<ul class="nav navbar-nav navbar-right ">
-					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
-							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+					</ul>
+                    <ul class="nav navbar-nav navbar-right ">
+					<li><a href="../controller/login_register/logout.jsp"><span
+							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">
 					<div class="input-group">

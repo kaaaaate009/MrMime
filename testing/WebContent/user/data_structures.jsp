@@ -39,6 +39,11 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <%
+	if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
+	}
+%>
     </head>
     <body>
         <!--NavBar-->
@@ -50,22 +55,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.jsp"><img src="homepageLogo1.png"></a>
-                    <a class="navbar-brand-mobile" href="index.jsp"><img src="homepageLogo1.png"></a>
+                    <a class="navbar-brand" href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+                    <a class="navbar-brand-mobile" href="getStarted.jsp"><img src="homepageLogo1.png"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <!--<li class="active"><a href="#">Home</a></li>-->
                         <li><a href="howtostart.jsp">How To Start</a></li>
-						<li><a href="algorithm.jsp">Algorithms</a></li>
-						<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
-						<li><a href="problems.jsp">MCQs</a></li>
-						<li><a href="forum.jsp">Forum</a></li>
-					
-                    </ul>
+					<li><a href="getStarted.jsp">Get Started</a></li>
+					<li><a href="algorithm.jsp">Algorithms</a></li>
+					<li class="active"><a href="data_structures.jsp">Data Structures</a></li>
+					<li><a href="problems.jsp">MCQs</a></li>
+					<li><a href="forum.jsp">Forum</a></li>
+					</ul>
                     <ul class="nav navbar-nav navbar-right ">
-                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
-                    </ul>
+					<li><a href="../controller/login_register/logout.jsp"><span
+							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+				</ul>
                     <!--<div class = "search">
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
