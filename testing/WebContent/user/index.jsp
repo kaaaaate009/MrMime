@@ -12,20 +12,15 @@
 	src="../css/jquery.min.js"></script>
 <script
 	src="../css/bootstrap.min.js"></script>
-<link rel="stylesheet" href="main.css"
-<link href="../css/bootstrap1.css"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="bootstrap-social-gh-pages/bootstrap-social.css">
+<link rel="stylesheet" href="main.css">
+<link href="../css/bootstrap1.css"	rel="stylesheet">
+<link rel="stylesheet"	href="bootstrap-social-gh-pages/bootstrap-social.css">
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="../css/bootstrap2.css"
-	rel="stylesheet">
+<link href="../css/bootstrap2.css"	rel="stylesheet">
 <link rel="shortcut icon" href="../favicon.ico">
 <link rel="icon" sizes="16x16 32x32 64x64" href="../favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="196x196"
-	href="../favicon/favicon-192.png">
-<link rel="icon" type="image/png" sizes="160x160"
-	href="../favicon/favicon-160.png">
+<link rel="icon" type="image/png" sizes="196x196"	href="../favicon/favicon-192.png">
+<link rel="icon" type="image/png" sizes="160x160"	href="../favicon/favicon-160.png">
 <link rel="icon" type="image/png" sizes="96x96"
 	href="../favicon/favicon-96.png">
 <link rel="icon" type="image/png" sizes="64x64"
