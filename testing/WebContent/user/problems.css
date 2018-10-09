@@ -62,7 +62,7 @@ html,body {
 @media only screen and (min-width:768px){
     .subjects .header {
         padding-top: 12%;
-    }    
+    }
 }
 /*Desktop Screens*/
 @media only screen and (min-width:1024px){
@@ -121,7 +121,7 @@ html,body {
 @media only screen and (min-width:768px){
     .ds .header {
         padding-top: 12%;
-    }    
+    }
 }
 /*Desktop Screens*/
 @media only screen and (min-width:1024px){
@@ -285,8 +285,6 @@ html,body {
 }
 
 /*Footer for Mobile Devices Ends*/
-
-
 .modal-text
 {
 	padding-left: 10px;

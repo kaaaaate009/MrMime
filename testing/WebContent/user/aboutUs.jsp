@@ -49,21 +49,20 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>                        
+                    <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html"><img src="homepageLogo1.png"></a>
                     <a class="navbar-brand-mobile" href="index.html"><img src="homepageLogo1.png"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-					<li><a href="howtostart.jsp">How To Start</a></li>
-					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
-					<li><a href="problems.jsp">MCQs</a></li>
-					<li><a href="forum.jsp">Forum</a></li>
-
-				</ul>
+                      <li><a href="howtostart.jsp">How To Start</a></li>
+                      <li><a href="getStarted.jsp">Get Started</a></li>
+                      <li><a href="algorithm.jsp">Algorithms</a></li>
+                      <li><a href="data_structures.jsp">Data Structures</a></li>
+                      <li><a href="problems.jsp">MCQs</a></li>
+                      <li><a href="forum.jsp">Forum</a></li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right ">
                         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
                     </ul>
@@ -90,8 +89,8 @@
 		            <div class = "col-sm-2"></div>
 		            <div class = "col-sm-8">
 		                   <p align ="center">At </em>Algranth</em> our philosophy is to learn and help others learn. The aim behind creating <em>Algranth</em> is to help anyone who wishes to try their hand at programming. You can learn the  basics of <em>algorithms</em> - how they are implemented, the different types, their space complexity and efficiency and <em>data structures</em> - how they make coding easier and their applications.<br>
-		                   We also provide an ever expanding library of problems with their solutions. If you think you have got a better solution, go ahead and share it to earn <a href = "karma.html">Karma</a>! 
-		                   </p></div>          
+		                   We also provide an ever expanding library of problems with their solutions. If you think you have got a better solution, go ahead and share it to earn <a href = "karma.html">Karma</a>!
+		                   </p></div>
 		            <div class = "col-sm-2"></div>
 		    	</div>
 		    <hr class="about-us-hr">
@@ -111,8 +110,8 @@
 		            <img src="Insert-Photo-Here.jpg" class = "img"/>
 		    	</div>
 		    <hr class="about-us-hr">
-		    </div>    
-        </div>   
+		    </div>
+        </div>
         <!--Footer-->
          <div class="jumbotron footer row">
         	<div class = "col-sm-4"></div>
@@ -123,10 +122,10 @@
         	<span> | </span>
         	<a href=# class = "footer-text">Contact Us</a>
         	<span> | </span>
- 			<a href=# class = "footer-text">About Us</a>  
+ 			<a href=# class = "footer-text">About Us</a>
         	<span> | </span>
         	<a href=# class = "footer-text">Terms Of Service</a>
-        	</span>         
+        	</span>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -138,7 +137,7 @@
                     </div>
                     <div class="modal-body">
                         <form class="form-horizontal">
-                            <div class="form-group">    	
+                            <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-6">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
@@ -146,22 +145,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">  					
-                                <div class="col-sm-offset-3 col-sm-6"> 
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-6">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                         <input type="password" class="form-control" id="pwd" placeholder="Password">
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group"> 
+                            <div class="form-group">
                                 <div class="col-sm-offset-1 col-sm-10">
                                     <div class="checkbox">
                                       <center><label><input type="checkbox">Remember me</label></center>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group"> 
+                            <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-6">
                                     <center><button type="submit" class="btn btn-primary btn-block">Sign in</button></center>
                                 </div>
@@ -177,7 +176,7 @@
                             </div>
                         </form>
                     </div>
-                </div>     
+                </div>
             </div>
         </div>
     </body>

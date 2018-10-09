@@ -1,4 +1,4 @@
-            
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -61,6 +61,7 @@
 <meta name="msapplication-navbutton-color" content="#24292e">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+
 </head>
 <body>
 	<!--NavBar-->
@@ -106,13 +107,23 @@
 			</div>
 		</div>
 	</nav>
+	<%
+		if (request.getParameter("cred") != null) {
+	%>
+	<script type="text/javascript">
+   			 var msg = "<%=request.getParameter("cred")%>";
+		alert(msg);
+	</script>
+	<%
+		}
+	%>
 	<!--Register-->
 	<div class="jumbotron">
 		<div class="register">
 			<center>
 				<h3>Register</h3>
 				<br>
-			</center> 
+			</center>
 			<form action="../controller/login_register/register.jsp"
 				method="post" class="form-horizontal">
 				<div class="form-group">
@@ -133,7 +144,8 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-								class="form-control" id="email" placeholder="Email" name="email_id">
+								class="form-control" id="email" placeholder="Email"
+								name="email_id">
 						</div>
 					</div>
 				</div>
@@ -156,22 +168,6 @@
 								<button type="submit" class="btn btn-primary btn-block"
 									name="btn_reg">Register and Start Coding!</button>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="register-signup">
-					<div class="col-xs-8">
-						<div class="col-sm-offset-1 col-sm-5 loginbutt">
-							<center>
-								<a class="btn btn-block btn-social btn-facebook"><span
-									class="fa fa-facebook"></span>Sign up with Facebook</a>
-							</center>
-						</div>
-						<div class="col-sm-5 loginbutt">
-							<center>
-								<a class="btn btn-block btn-social btn-google"><span
-									class="fa fa-google"></span>Sign up with Google</a>
-							</center>
 						</div>
 					</div>
 				</div>
@@ -334,15 +330,12 @@
 				<h4 class="footerheadpad">Algranth</h4>
 				<ul class="ulfooter">
 					<li><a href=#>Home</a></li>
-					<li><a href="karma.jsp">Earn Karma</a></li>
-					<li><a href=#>Contribute</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-2">
 				<h4 class="footerheadpad">About</h4>
 				<ul class="ulfooter">
 					<li><a href=#>About Us</a></li>
-					<li><a href=#>Terms of Service</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-2">
@@ -351,21 +344,6 @@
 					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href=#>Contact Us</a></li>
 				</ul>
-			</div>
-			<div class="col-sm-4">
-				<div class="footercwu">
-					<p2 class="footer-text"> <b><font color=white>Connect
-							with Us</font></b></p2>
-				</div>
-				<div class="row footericonpad">
-					<span class="footerdivicon"><a href="#"
-						class="fa fa-facebook footericon"></a></span> <span class="footerdivicon"><a
-						href="#" class="fa fa-google footericon"></a></span> <span
-						class="footerdivicon"><a href="#"
-						class="fa fa-instagram footericon"></a></span> <span
-						class="footerdivicon"><a href="#"
-						class="fa fa-twitter footericon"></a></span>
-				</div>
 			</div>
 			<div class="row footercopyright">
 				<center>
@@ -386,14 +364,15 @@
 					</center>
 				</div>
 				<div class="modal-body">
-					<form acrion="../controller/login_register/login.jsp" class="form-horizontal">
+					<form action="../controller/login_register/login.jsp"
+						class="form-horizontal">
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-										class="form-control" id="email"
-										placeholder="Email ID " name="email_id">
+										class="form-control" id="email" placeholder="Email ID "
+										name="email_id">
 								</div>
 							</div>
 						</div>
@@ -402,11 +381,12 @@
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="glyphicon glyphicon-lock"></i></span> <input type="password"
-										class="form-control" id="pwd" placeholder="Password" name="pwd">
+										class="form-control" id="pwd" placeholder="Password"
+										name="pwd">
 								</div>
 							</div>
 						</div>
-						<div class="form-group">
+					<!--  	<div class="form-group">
 							<div class="col-sm-offset-1 col-sm-10">
 								<div class="checkbox">
 									<center>
@@ -415,24 +395,12 @@
 								</div>
 							</div>
 						</div>
+					-->
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<center>
-									<button type="submit" class="btn btn-primary btn-block" name="btn_login">Sign
-										in</button>
-								</center>
-							</div>
-							<hr class="signin-hr">
-							<div class="col-sm-offset-1 col-sm-5 loginbutt">
-								<center>
-									<a class="btn btn-block btn-social btn-facebook"><span
-										class="fa fa-facebook"></span>Sign in with Facebook</a>
-								</center>
-							</div>
-							<div class="col-sm-5 loginbutt">
-								<center>
-									<a class="btn btn-block btn-social btn-google"><span
-										class="fa fa-google"></span>Sign in with Google</a>
+									<button type="submit" class="btn btn-primary btn-block"
+										name="btn_login">Sign in</button>
 								</center>
 							</div>
 						</div>
