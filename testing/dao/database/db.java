@@ -12,7 +12,7 @@ public class db {
 	}
 
 	public boolean connect() throws Exception {
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(connectionURL, "root", "admin");
 		return true;
 	}
