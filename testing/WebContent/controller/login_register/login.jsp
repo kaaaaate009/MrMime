@@ -22,7 +22,6 @@
 			<jsp:setProperty name="ar" property="*" />
 			<%
 				try {
-						System.out.println("\nHello in the login controller ");
 							if (request.getParameter("btn_login") != null) {
 
 								db.connect();
@@ -34,11 +33,11 @@
 									//out.println("welcome " + userid);
 									//out.println("<a href='logout.jsp'>Log out</a>");
 									System.out.print("-----Login Successful-----");
-									response.sendRedirect("../../user/getStarted.jsp");
-								} else {
+									response.sendRedirect("../../user/homepage.jsp");
+								}else {
 									System.out.print("-----Login Unccessful-----");
-									response.sendRedirect("../../user/index.jsp?cred=Invalid+Credintials+Please+Try+Again");
-								}
+									response.sendRedirect("../../user/index.jsp");
+							    }
 								db.close();
 							}
 						} catch (Exception ex) {
