@@ -1,4 +1,4 @@
-            
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -7,52 +7,52 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
-	href="../css/bootstrap.min.css">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
-	src="../css/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
-	src="../css/bootstrap.min.js"></script>
-<link rel="stylesheet" href="main.css"
-<link href="../css/bootstrap1.css"
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round"
 	rel="stylesheet">
 <link rel="stylesheet"
 	href="bootstrap-social-gh-pages/bootstrap-social.css">
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="../css/bootstrap2.css"
+<link href="https://fonts.googleapis.com/css?family=Anton"
 	rel="stylesheet">
-<link rel="shortcut icon" href="../favicon.ico">
-<link rel="icon" sizes="16x16 32x32 64x64" href="../favicon/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="196x196"
-	href="../favicon/favicon-192.png">
+	href="/favicon/favicon-192.png">
 <link rel="icon" type="image/png" sizes="160x160"
-	href="../favicon/favicon-160.png">
+	href="/favicon/favicon-160.png">
 <link rel="icon" type="image/png" sizes="96x96"
-	href="../favicon/favicon-96.png">
+	href="/favicon/favicon-96.png">
 <link rel="icon" type="image/png" sizes="64x64"
-	href="../favicon/favicon-64.png">
+	href="/favicon/favicon-64.png">
 <link rel="icon" type="image/png" sizes="32x32"
-	href="../favicon/favicon-32.png">
+	href="/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16"
-	href="../favicon/favicon-16.png">
-<link rel="apple-touch-icon" href="../favicon/favicon-57.png">
+	href="/favicon/favicon-16.png">
+<link rel="apple-touch-icon" href="/favicon/favicon-57.png">
 <link rel="apple-touch-icon" sizes="114x114"
-	href="../favicon/favicon-114.png">
+	href="/favicon/favicon-114.png">
 <link rel="apple-touch-icon" sizes="72x72"
-	href="../favicon/favicon-72.png">
+	href="/favicon/favicon-72.png">
 <link rel="apple-touch-icon" sizes="144x144"
-	href="../favicon/favicon-144.png">
+	href="/favicon/favicon-144.png">
 <link rel="apple-touch-icon" sizes="60x60"
-	href="../favicon/favicon-60.png">
+	href="/favicon/favicon-60.png">
 <link rel="apple-touch-icon" sizes="120x120"
-	href="../favicon/favicon-120.png">
+	href="/favicon/favicon-120.png">
 <link rel="apple-touch-icon" sizes="76x76"
-	href="../favicon/favicon-76.png">
+	href="/favicon/favicon-76.png">
 <link rel="apple-touch-icon" sizes="152x152"
-	href="../favicon/favicon-152.png">
+	href="/favicon/favicon-152.png">
 <link rel="apple-touch-icon" sizes="180x180"
-	href="../favicon/favicon-180.png">
+	href="/favicon/favicon-180.png">
 <meta name="msapplication-TileColor" content="#FFFFFF">
-<meta name="msapplication-TileImage" content="../favicon/favicon-144.png">
+<meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <!-- Chrome, Firefox OS and Opera -->
@@ -106,13 +106,23 @@
 			</div>
 		</div>
 	</nav>
+	<%
+		if (request.getParameter("cred") != null) {
+	%>
+	<script type="text/javascript">
+   			 var msg = "<%=request.getParameter("cred")%>";
+		alert(msg);
+	</script>
+	<%
+		}
+	%>
 	<!--Register-->
 	<div class="jumbotron">
 		<div class="register">
 			<center>
 				<h3>Register</h3>
 				<br>
-			</center> 
+			</center>
 			<form action="../controller/login_register/register.jsp"
 				method="post" class="form-horizontal">
 				<div class="form-group">
@@ -133,7 +143,8 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-								class="form-control" id="email" placeholder="Email" name="email_id">
+								class="form-control" id="email" placeholder="Email"
+								name="email_id">
 						</div>
 					</div>
 				</div>
@@ -156,22 +167,6 @@
 								<button type="submit" class="btn btn-primary btn-block"
 									name="btn_reg">Register and Start Coding!</button>
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="register-signup">
-					<div class="col-xs-8">
-						<div class="col-sm-offset-1 col-sm-5 loginbutt">
-							<center>
-								<a class="btn btn-block btn-social btn-facebook"><span
-									class="fa fa-facebook"></span>Sign up with Facebook</a>
-							</center>
-						</div>
-						<div class="col-sm-5 loginbutt">
-							<center>
-								<a class="btn btn-block btn-social btn-google"><span
-									class="fa fa-google"></span>Sign up with Google</a>
-							</center>
 						</div>
 					</div>
 				</div>
@@ -334,15 +329,12 @@
 				<h4 class="footerheadpad">Algranth</h4>
 				<ul class="ulfooter">
 					<li><a href=#>Home</a></li>
-					<li><a href="karma.jsp">Earn Karma</a></li>
-					<li><a href=#>Contribute</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-2">
 				<h4 class="footerheadpad">About</h4>
 				<ul class="ulfooter">
 					<li><a href=#>About Us</a></li>
-					<li><a href=#>Terms of Service</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-2">
@@ -351,21 +343,6 @@
 					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href=#>Contact Us</a></li>
 				</ul>
-			</div>
-			<div class="col-sm-4">
-				<div class="footercwu">
-					<p2 class="footer-text"> <b><font color=white>Connect
-							with Us</font></b></p2>
-				</div>
-				<div class="row footericonpad">
-					<span class="footerdivicon"><a href="#"
-						class="fa fa-facebook footericon"></a></span> <span class="footerdivicon"><a
-						href="#" class="fa fa-google footericon"></a></span> <span
-						class="footerdivicon"><a href="#"
-						class="fa fa-instagram footericon"></a></span> <span
-						class="footerdivicon"><a href="#"
-						class="fa fa-twitter footericon"></a></span>
-				</div>
 			</div>
 			<div class="row footercopyright">
 				<center>
@@ -386,14 +363,15 @@
 					</center>
 				</div>
 				<div class="modal-body">
-					<form acrion="../controller/login_register/login.jsp" class="form-horizontal">
+					<form action="../controller/login_register/login.jsp"
+						class="form-horizontal">
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-										class="form-control" id="email"
-										placeholder="Email ID " name="email_id">
+										class="form-control" id="email" placeholder="Email ID "
+										name="email_id">
 								</div>
 							</div>
 						</div>
@@ -402,11 +380,12 @@
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="glyphicon glyphicon-lock"></i></span> <input type="password"
-										class="form-control" id="pwd" placeholder="Password" name="pwd">
+										class="form-control" id="pwd" placeholder="Password"
+										name="pwd">
 								</div>
 							</div>
 						</div>
-						<div class="form-group">
+					<!--  	<div class="form-group">
 							<div class="col-sm-offset-1 col-sm-10">
 								<div class="checkbox">
 									<center>
@@ -415,24 +394,12 @@
 								</div>
 							</div>
 						</div>
+					-->
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<center>
-									<button type="submit" class="btn btn-primary btn-block" name="btn_login">Sign
-										in</button>
-								</center>
-							</div>
-							<hr class="signin-hr">
-							<div class="col-sm-offset-1 col-sm-5 loginbutt">
-								<center>
-									<a class="btn btn-block btn-social btn-facebook"><span
-										class="fa fa-facebook"></span>Sign in with Facebook</a>
-								</center>
-							</div>
-							<div class="col-sm-5 loginbutt">
-								<center>
-									<a class="btn btn-block btn-social btn-google"><span
-										class="fa fa-google"></span>Sign in with Google</a>
+									<button type="submit" class="btn btn-primary btn-block"
+										name="btn_login">Sign in</button>
 								</center>
 							</div>
 						</div>

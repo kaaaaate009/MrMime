@@ -56,14 +56,12 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-					<li><a href="howtostart.jsp">How To Start</a></li>
-					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
-					<li><a href="problems.jsp">MCQs</a></li>
-					<li><a href="forum.jsp">Forum</a></li>
-
-				</ul>
+                        <!--<li class="active"><a href="#">Home</a></li>-->
+                        <li><a href="howtostart.html">How To Start</a></li>
+                        <li><a href="test_theory.html">Theory</a></li>
+                        <li><a href="problems.html">Problems</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
                     <ul class="nav navbar-nav navbar-right ">
                         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
                     </ul>
