@@ -57,6 +57,7 @@
 <meta name="msapplication-navbutton-color" content="#24292e">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+
 </head>
 <body>
 	<!--NavBar-->
@@ -102,6 +103,16 @@
 			</div>
 		</div>
 	</nav>
+	<%
+		if (request.getParameter("cred") != null) {
+	%>
+	<script type="text/javascript">
+   			 var msg = "<%=request.getParameter("cred")%>";
+		alert(msg);
+	</script>
+	<%
+		}
+	%>
 	<!--Register-->
 	<div class="jumbotron">
 		<div class="register">
