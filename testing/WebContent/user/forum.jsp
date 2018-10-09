@@ -9,6 +9,7 @@
 
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <title>ALGranth|Forum</title>
 <meta charset="utf-8">
@@ -202,4 +203,5 @@
 		%>
 	</jsp:useBean>
 </body>
+
 </html>

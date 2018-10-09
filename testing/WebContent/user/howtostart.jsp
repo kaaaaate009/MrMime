@@ -77,6 +77,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
+
 					</ul>
                     
 				<ul class="nav navbar-nav navbar-right ">
@@ -110,6 +111,7 @@
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
                     <!--<div class = "search">
+
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search algranth">
@@ -121,9 +123,9 @@
                             </div>
                         </form>
                     </div>-->
-                </div>
-            </div>
-        </nav>
+			</div>
+		</div>
+	</nav>
                 <!--howtostart-->
         <div class="jumbotron ">
             <div class="howtostart">

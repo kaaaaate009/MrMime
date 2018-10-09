@@ -1,0 +1,60 @@
+.quiztype
+{
+	background-color: #24292e;
+	font-family: 'Varela Round', sans-serif;
+	margin: 0%;
+	padding: 0%;
+}
+
+.box
+{
+			margin-top: 8%;
+			background-color: white;
+    	border: 1px solid lightgray;
+    	border-radius: 10px;
+			margin-bottom: 5%;
+			margin-left: 10%;
+			margin-right: 12%;
+}
+
+.form-text
+{
+	margin: 8px;
+	padding: 10px;
+}
+textarea {
+	width: 30%;
+    height: 100px;
+    margin-left: 10px;
+	resize:none;
+	transition: 2s;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+}
+textarea:focus
+{
+	width: 80%;
+}
+textarea:visited
+{
+	width: 80%;
+}
+.nicebutton
+{
+	background-color: #336699;
+	height: 40px;
+	width: 80px;
+	border: 1px solid #24292e;
+	border-radius : 5px;
+	color: white;
+}
+.nicebutton:active
+{
+	transform: translateY(3px);
+	background-color: #24292e;
+}
+.nicebutton:hover
+{
+	background-color: #4488bb;
+}
+

@@ -7,6 +7,7 @@
 <%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <title>ALGranth</title>
 <meta charset="utf-8">
@@ -78,6 +79,7 @@
 <body>
 	<!--NavBar-->
 	<nav class="navbar navbar-default navbar-fixed-top">
+
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -85,15 +87,19 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
+
 				<a class="navbar-brand" href="getStarted.jsp"><img
 					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
 					href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
 					<li><a href="howtostart.jsp">How To Start</a></li>
+
 					<li class="active"><a href="getStarted.jsp">Get Started</a></li>
+
 					<li><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
@@ -144,6 +150,7 @@
 			</div>
 		</div>
 	</nav>
+
 	<!--getStarted-->
 	<div class="jumbotron">
 		<div class="getStarted">

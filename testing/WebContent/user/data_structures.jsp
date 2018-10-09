@@ -7,6 +7,7 @@
 <%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <title>Theory | ALGranth</title>
 <meta charset="utf-8">
@@ -78,6 +79,7 @@
 <body>
 	<!--NavBar-->
 	<nav class="navbar navbar-default navbar-fixed-top">
+
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -85,9 +87,11 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
+
 				<a class="navbar-brand" href="getStarted.jsp"><img
 					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
 					href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
@@ -95,6 +99,7 @@
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
+
 					<li class="active"><a href="data_structures.jsp">Data
 							Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
@@ -129,6 +134,7 @@
 
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+
 				</ul>
 				<!--<div class = "search">
                         <form class="navbar-form navbar-right">
@@ -145,6 +151,7 @@
 			</div>
 		</div>
 	</nav>
+
 	<!-- Data Structures -->
 	<div class="ds">
 		<div class="header">
@@ -292,6 +299,7 @@
 
 	<!--Algorithms Modal-->
 	<!--
+
         <div class="sub-modal">
             <div class="modal fade" id="algo_modal" role="dialog">
                 <div class="modal-dialog">
@@ -511,6 +519,7 @@
             </div>
         </div>
         -->
+
 	<!--Arrays Modal-->
 	<div class="ds-modal">
 		<div class="modal fade" id="ds_modal_arrays" role="dialog">

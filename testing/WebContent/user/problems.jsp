@@ -7,6 +7,7 @@
 <%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <title>MCQs | ALGranth</title>
 <meta charset="utf-8">
@@ -78,6 +79,7 @@
 <body>
 	<!--NavBar-->
 	<nav class="navbar navbar-default navbar-fixed-top">
+
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -85,9 +87,11 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
+
 				<a class="navbar-brand" href="getStarted.jsp"><img
 					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
 					href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
@@ -98,6 +102,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li class="active"><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
+
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
 					<jsp:useBean id="db" class="database.db" scope="request">
@@ -424,16 +429,18 @@
 	<!--
         <div class="algo-modal">
             <div class="modal fade" id="algo_modal" role="dialog">
+
+
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <center><h4 class="modal-title">Algorithm</h4></center>
+                            <center><h4 class="modal-title">EM-I</h4></center>
                         </div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="quiz.jsp?sub=em1"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
                         </div>
                     </div>     
                 </div>
@@ -628,18 +635,19 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <center><h4 class="modal-title">Data Structure</h4></center>
+                            <center><h4 class="modal-title">DELD</h4></center>
                         </div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                            <a href="quiz.jsp?sub=deld"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
                         </div>
                     </div>     
                 </div>
             </div>
         </div>
+
         -->
 	<!--Arrays Modal-->
 	<div class="ds-modal">
@@ -763,4 +771,5 @@
 	</div>
 
 </body>
+
 </html>
