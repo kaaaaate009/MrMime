@@ -28,7 +28,7 @@
 								if (i > 0) {
 									session.setAttribute("userid", ar.getEmail_id());
 									System.out.print("-----Registration Successful-----");
-									response.sendRedirect("../../user/getStarted.jsp");
+									response.sendRedirect("../../user/homepage.jsp");
 
 								} else {
 									System.out.print("-----Registration Unccessful-----");
