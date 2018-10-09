@@ -1,3 +1,10 @@
+<%@page import="org.apache.catalina.User"%>
+<%@page import="database.db"%>
+<%@page import="java.util.ListIterator"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -44,6 +51,9 @@
 		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
 	}
 %>
+<%!ResultSet rs = null;
+	int i;
+	String qr;%>
     </head>
     <body>
         <!--NavBar-->
@@ -68,7 +78,34 @@
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 					</ul>
-                    <ul class="nav navbar-nav navbar-right ">
+                    
+				<ul class="nav navbar-nav navbar-right ">
+					<jsp:useBean id="db" class="database.db" scope="request">
+						<jsp:setProperty name="db" property="*" />
+						<%
+							try {
+
+									db.connect();
+									System.out.println("-----CONNECTED TO DATABASE-----");
+									String var = (String) session.getAttribute("userid");
+									rs = db.execSQL("select username from user_details where email_id='" + var + "'");
+
+									while (rs.next()) {
+						%>
+						<li><a href="profile.jsp"> <%=rs.getString("username")%>
+						</a></li>
+
+						<%
+							}
+									db.close();
+								} catch (Exception ex) {
+									out.println("Unable to connect to database " + ex);
+								}
+						%>
+					</jsp:useBean>
+
+
+
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>

@@ -1,3 +1,10 @@
+<%@page import="org.apache.catalina.User"%>
+<%@page import="database.db"%>
+<%@page import="java.util.ListIterator"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -64,6 +71,9 @@
 		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
 	}
 %>
+<%!ResultSet rs = null;
+	int i;
+	String qr;%>
 </head>
 <body>
 	<!--NavBar-->
@@ -90,6 +100,32 @@
 					<li><a href="forum.jsp">Forum</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
+					<jsp:useBean id="db" class="database.db" scope="request">
+						<jsp:setProperty name="db" property="*" />
+						<%
+							try {
+
+									db.connect();
+									System.out.println("-----CONNECTED TO DATABASE-----");
+									String var = (String) session.getAttribute("userid");
+									rs = db.execSQL("select username from user_details where email_id='" + var + "'");
+
+									while (rs.next()) {
+						%>
+						<li><a href="profile.jsp"> <%=rs.getString("username")%>
+						</a></li>
+
+						<%
+							}
+									db.close();
+								} catch (Exception ex) {
+									out.println("Unable to connect to database " + ex);
+								}
+						%>
+					</jsp:useBean>
+
+
+
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
@@ -115,7 +151,7 @@
 				<center>
 					<h2>
 						Are you new to coding and don't know where to start?<br> <a
-							href=#>Click here</a> to know more.
+							href="howtostart.jsp">Click here</a> to know more.
 					</h2>
 				</center>
 			</div>
@@ -125,7 +161,7 @@
 			<div class="row">
 				<center>
 					<h2>
-						Dive into <a href=alorithm.jsp>algorithms!</a>
+						Dive into <a href="alorithm.jsp">algorithms!</a>
 					</h2>
 				</center>
 			</div>
@@ -135,7 +171,7 @@
 			<div class="row">
 				<center>
 					<h2>
-						Begin with <a href=data_structures.jsp>data structures!</a>
+						Begin with <a href="data_structures.jsp">data structures!</a>
 					</h2>
 				</center>
 			</div>
@@ -146,7 +182,7 @@
 				<center>
 					<h2>
 						Searching for the solution to a problem? <br>Get it <a
-							href=forum.jsp>here!</a>
+							href="forum.jsp">here!</a>
 					</h2>
 				</center>
 			</div>
@@ -156,7 +192,7 @@
 			<div class="row">
 				<center>
 					<h2>
-						Want to test your skills?<br> Take a test <a href=mcq.jsp>go!</a>
+						Want to test your skills?<br> Take a test <a href="problems.jsp">go!</a>
 					</h2>
 				</center>
 			</div>

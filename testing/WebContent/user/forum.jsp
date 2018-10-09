@@ -30,7 +30,7 @@
 		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
 	}
 %>
-<%!ResultSet rs, rs2 = null;
+<%!ResultSet rs, rs2,rs3 = null;
 	int i;
 	String qr;%>
 </head>
@@ -57,6 +57,32 @@
 					<li class="active"><a href="forum.jsp">Forum</a></li>
 					</ul>
                     <ul class="nav navbar-nav navbar-right ">
+					<jsp:useBean id="db" class="database.db" scope="request">
+						<jsp:setProperty name="db" property="*" />
+						<%
+							try {
+
+									db.connect();
+									System.out.println("-----CONNECTED TO DATABASE-----");
+									String var = (String) session.getAttribute("userid");
+									rs3 = db.execSQL("select username from user_details where email_id='" + var + "'");
+
+									while (rs3.next()) {
+						%>
+						<li><a href="profile.jsp"> <%=rs3.getString("username")%>
+						</a></li>
+
+						<%
+							}
+									db.close();
+								} catch (Exception ex) {
+									out.println("Unable to connect to database " + ex);
+								}
+						%>
+					</jsp:useBean>
+
+
+
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
@@ -152,8 +178,6 @@
 						int q = rs.getInt("q_id");
 						rs2 = db.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
 								+ "' = a.q_id");
-
-						System.out.println(rs2);
 		%>
 		<div class="jumbotron">
 			<textarea rows="4" cols="50" readonly>

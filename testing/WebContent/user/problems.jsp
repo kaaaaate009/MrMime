@@ -1,3 +1,10 @@
+<%@page import="org.apache.catalina.User"%>
+<%@page import="database.db"%>
+<%@page import="java.util.ListIterator"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -59,6 +66,14 @@
 <meta name="msapplication-navbutton-color" content="#24292e">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+<%
+	if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
+	}
+%>
+<%!ResultSet rs = null;
+	int i;
+	String qr;%>
 </head>
 <body>
 	<!--NavBar-->
@@ -70,20 +85,47 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="getStarted.jsp"><img src="homepageLogo1.png"></a>
-                    <a class="navbar-brand-mobile" href="getStarted.jsp"><img src="homepageLogo1.png"></a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <!--<li class="active"><a href="#">Home</a></li>-->
-<						<li><a href="howtostart.jsp">How To Start</a></li>
+				<a class="navbar-brand" href="getStarted.jsp"><img
+					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
+					href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<!--<li class="active"><a href="#">Home</a></li>-->
+					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li class="active"><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
-					</ul>
-                    <ul class="nav navbar-nav navbar-right ">
+				</ul>
+				<ul class="nav navbar-nav navbar-right ">
+					<jsp:useBean id="db" class="database.db" scope="request">
+						<jsp:setProperty name="db" property="*" />
+						<%
+							try {
+
+									db.connect();
+									System.out.println("-----CONNECTED TO DATABASE-----");
+									String var = (String) session.getAttribute("userid");
+									rs = db.execSQL("select username from user_details where email_id='" + var + "'");
+
+									while (rs.next()) {
+						%>
+						<li><a href="profile.jsp"> <%=rs.getString("username")%>
+						</a></li>
+
+						<%
+							}
+									db.close();
+								} catch (Exception ex) {
+									out.println("Unable to connect to database " + ex);
+								}
+						%>
+					</jsp:useBean>
+
+
+
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
@@ -110,31 +152,30 @@
 		<hr class="sub-hr">
 		<div class="grid">
 			<div class="grid-column col-sm-3">
-				<a href="mcq.jsp?name=test" >
+				<a href="mcq.jsp?name=test">
 					<div class="grid-element">
 						<img src="../theory_icons/algo_search.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">Test</h3>
 					</div>
-				</a> 
-				<a href="#" data-toggle="modal" data-target="#algo_modal_sorting">
+				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_sorting">
 					<div class="grid-element">
-						<img src="theory_icons/algo_search.png"
+						<img src="../theory_icons/algo_search.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">BEE</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_strings">
 					<div class="grid-element">
-						<img src="theory_icons/algo_string.png"
+						<img src="../theory_icons/algo_string.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">BXE</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_strings">
 					<div class="grid-element">
-						<img src="theory_icons/algo_string.png"
+						<img src="../theory_icons/algo_string.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">FPL-II</h3>
@@ -145,28 +186,28 @@
 
 				<a href="#" data-toggle="modal" data-target="#algo_modal_greedy">
 					<div class="grid-element">
-						<img src="theory_icons/algo_greedy.png"
+						<img src="../theory_icons/algo_greedy.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">EM-II</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_greedy">
 					<div class="grid-element">
-						<img src="theory_icons/algo_greedy.png"
+						<img src="../theory_icons/algo_greedy.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">Physics</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_graph">
 					<div class="grid-element">
-						<img src="theory_icons/algo_graph.png"
+						<img src="../theory_icons/algo_graph.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">Chemistry</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_dp">
 					<div class="grid-element">
-						<img src="theory_icons/algo_dp.png"
+						<img src="../theory_icons/algo_dp.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">Mechanics</h3>
@@ -178,21 +219,21 @@
 				<a href="#" data-toggle="modal"
 					data-target="#algo_modal_constructive">
 					<div class="grid-element">
-						<img src="theory_icons/algo_constructive.png"
+						<img src="../theory_icons/algo_constructive.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">BME</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_bm">
 					<div class="grid-element">
-						<img src="theory_icons/algo_bits.png"
+						<img src="../theory_icons/algo_bits.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; padding-left: 10px; margin-top: 25px;">BCEE</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_recursion">
 					<div class="grid-element">
-						<img src="theory_icons/algo_recursive.png"
+						<img src="../theory_icons/algo_recursive.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">FPL-I</h3>
@@ -211,7 +252,7 @@
 			<div class="grid-column col-sm-3">
 				<a href="#" data-toggle="modal" data-target="#algo_modal_searching">
 					<div class="grid-element">
-						<img src="theory_icons/algo_search.png"
+						<img src="../theory_icons/algo_search.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">Discrete
@@ -219,21 +260,21 @@
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_sorting">
 					<div class="grid-element">
-						<img src="theory_icons/algo_search.png"
+						<img src="../theory_icons/algo_search.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">DELD</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_strings">
 					<div class="grid-element">
-						<img src="theory_icons/algo_string.png"
+						<img src="../theory_icons/algo_string.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">COA</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_dp">
 					<div class="grid-element">
-						<img src="theory_icons/algo_dp.png"
+						<img src="../theory_icons/algo_dp.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">CG</h3>
@@ -245,21 +286,21 @@
 
 				<a href="#" data-toggle="modal" data-target="#algo_modal_greedy">
 					<div class="grid-element">
-						<img src="theory_icons/algo_greedy.png"
+						<img src="../theory_icons/algo_greedy.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">OOP</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_greedy">
 					<div class="grid-element">
-						<img src="theory_icons/algo_greedy.png"
+						<img src="../theory_icons/algo_greedy.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">FDS</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_graph">
 					<div class="grid-element">
-						<img src="theory_icons/algo_graph.png"
+						<img src="../theory_icons/algo_graph.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">EM-III</h3>
@@ -272,21 +313,21 @@
 				<a href="#" data-toggle="modal"
 					data-target="#algo_modal_constructive">
 					<div class="grid-element">
-						<img src="theory_icons/algo_constructive.png"
+						<img src="../theory_icons/algo_constructive.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">FCCN</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_bm">
 					<div class="grid-element">
-						<img src="theory_icons/algo_bits.png"
+						<img src="../theory_icons/algo_bits.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; padding-left: 10px; margin-top: 25px;">DSF</h3>
 					</div>
 				</a> <a href="#" data-toggle="modal" data-target="#algo_modal_recursion">
 					<div class="grid-element">
-						<img src="theory_icons/algo_recursive.png"
+						<img src="../theory_icons/algo_recursive.png"
 							style="border-radius: 25px; float: left; margin-left: 5%; margin-top: 14px;">
 						<h3
 							style="vertical-align: middle; float: left; margin-top: 25px; padding-left: 10px;">PAI</h3>
