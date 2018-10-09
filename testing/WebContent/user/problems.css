@@ -285,3 +285,18 @@ html,body {
 }
 
 /*Footer for Mobile Devices Ends*/
+
+
+.modal-text
+{
+	padding-left: 10px;
+	font-size: 24px;
+}
+.usertypeselection
+{
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	font-color: white;
+	font-size: 25px;
+	margin: 10px;
+}
