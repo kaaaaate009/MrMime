@@ -1,3 +1,10 @@
+<%@page import="org.apache.catalina.User"%>
+<%@page import="database.db"%>
+<%@page import="java.util.ListIterator"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -39,37 +46,72 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <%
+	if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
+	}
+%>
+<%!ResultSet rs = null;
+	int i;
+	String qr;%>
     </head>
     <body>
         <!--NavBar-->
-<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.jsp"><img
-					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
-					href="index.jsp"><img src="homepageLogo1.png"></a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<!--<li class="active"><a href="#">Home</a></li>-->
-					<li class="active"><a href="howtostart.jsp">How To Start</a></li>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+                    <a class="navbar-brand-mobile" href="getStarted.jsp"><img src="homepageLogo1.png"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <!--<li class="active"><a href="#">Home</a></li>-->
+<						<li class="active"><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
 
-				</ul>
+					</ul>
+                    
 				<ul class="nav navbar-nav navbar-right ">
-					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
-							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+					<jsp:useBean id="db" class="database.db" scope="request">
+						<jsp:setProperty name="db" property="*" />
+						<%
+							try {
+
+									db.connect();
+									System.out.println("-----CONNECTED TO DATABASE-----");
+									String var = (String) session.getAttribute("userid");
+									rs = db.execSQL("select username from user_details where email_id='" + var + "'");
+
+									while (rs.next()) {
+						%>
+						<li><a href="profile.jsp"> <%=rs.getString("username")%>
+						</a></li>
+
+						<%
+							}
+									db.close();
+								} catch (Exception ex) {
+									out.println("Unable to connect to database " + ex);
+								}
+						%>
+					</jsp:useBean>
+
+
+
+					<li><a href="../controller/login_register/logout.jsp"><span
+							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
-				<!--<div class = "search">
+                    <!--<div class = "search">
+
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search algranth">
