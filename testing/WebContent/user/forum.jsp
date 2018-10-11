@@ -30,7 +30,7 @@
 		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
 	}
 %>
-<%!ResultSet rs, rs2,rs3 = null;
+<%!ResultSet rs, rs2, rs3 = null;
 	int i;
 	String qr;%>
 </head>
@@ -55,8 +55,8 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li class="active"><a href="forum.jsp">Forum</a></li>
-					</ul>
-                    <ul class="nav navbar-nav navbar-right ">
+				</ul>
+				<ul class="nav navbar-nav navbar-right ">
 					<jsp:useBean id="db" class="database.db" scope="request">
 						<jsp:setProperty name="db" property="*" />
 						<%
@@ -100,83 +100,54 @@
 		</div>
 
 	</nav>
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<center>
-						<h4 class="modal-title">Sign in</h4>
-					</center>
-				</div>
-				<div class="modal-body">
-					<form class="form-horizontal">
-						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-6">
-								<div class="input-group">
-									<span class="input-group-addon"><i
-										class="glyphicon glyphicon-envelope"></i></span> <input type="email"
-										class="form-control" id="email" placeholder="Email">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-6">
-								<div class="input-group">
-									<span class="input-group-addon"><i
-										class="glyphicon glyphicon-lock"></i></span> <input type="password"
-										class="form-control" id="pwd" placeholder="Password">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<div class="checkbox">
-									<center>
-										<label><input type="checkbox">Remember me</label>
-									</center>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-6">
-								<center>
-									<button type="submit" class="btn btn-primary btn-block">Sign
-										in</button>
-								</center>
-							</div>
-							<hr class="signin-hr">
-							<div class="col-sm-offset-1 col-sm-5 loginbutt">
-								<center>
-									<a class="btn btn-block btn-social btn-facebook"><span
-										class="fa fa-facebook"></span>Sign in with Facebook</a>
-								</center>
-							</div>
-							<div class="col-sm-5 loginbutt">
-								<center>
-									<a class="btn btn-block btn-social btn-google"><span
-										class="fa fa-google"></span>Sign in with Google</a>
-								</center>
-							</div>
-						</div>
-					</form>
+	<div class="jumbotron">
+		<form action="../controller/forum/add_forum.jsp" method="post"
+			class="form-horizontal">
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="name"></label>
+				<div class="col-xs-3">
+					<div class="input-group">
+						<input type="text" class="form-control" id="name"
+							placeholder="Title" name="question">
+					</div>
 				</div>
 			</div>
-		</div>
+			<br>
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="name"></label>
+				<div class="col-xs-3">
+					<div class="input-group">
+						<input type="text" class="form-control" id="name"
+							placeholder="Description" name="description">
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-10">
+					<div class="subButton">
+						<div class="col-xs-3">
+							<button type="submit" class="btn btn-primary btn-block"
+								name="btn_reg">Post</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
 	</div>
-	<jsp:useBean id="db" class="database.db" scope="request">
-		<jsp:setProperty name="db" property="*" />
+
+	<jsp:useBean id="db2" class="database.db" scope="request">
+		<jsp:setProperty name="db2" property="*" />
 		<%
 			try {
 
-					db.connect();
+					db2.connect();
 					System.out.println("-----CONNECTED TO DATABASE-----");
-					rs = db.execSQL("select * from forum_question");
+					rs = db2.execSQL("select * from forum_question");
 
 					while (rs.next()) {
 						int q = rs.getInt("q_id");
-						rs2 = db.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
+						rs2 = db2.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
 								+ "' = a.q_id");
 		%>
 		<div class="jumbotron">
@@ -184,6 +155,7 @@
 									<%=rs.getString("question")%>
 									</textarea>
 		</div>
+
 		<%
 			while (rs2.next()) {
 		%>
@@ -195,7 +167,7 @@
 		<%
 			}
 					}
-					db.close();
+					db2.close();
 				} catch (Exception ex) {
 					out.println("Unable to connect to database " + ex);
 				}
