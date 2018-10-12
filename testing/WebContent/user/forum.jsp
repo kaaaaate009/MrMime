@@ -1,4 +1,3 @@
-
 <%@page import="org.apache.catalina.User"%>
 <%@page import="database.db"%>
 <%@page import="java.util.ListIterator"%>
