@@ -2,7 +2,11 @@ html,body {
     overflow-x: hidden;
     background-color: white;
 }
-
+.option{
+	margin: 1%;
+	padding: 5px;
+	border: 1px solid lightgray;
+}
 .jumbotron {
     padding-bottom: 0px;
     padding-top: 0px;

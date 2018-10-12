@@ -129,18 +129,7 @@
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 				</ul>
-				<!--<div class = "search">
-                        <form class="navbar-form navbar-right">
-                            <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search algranth">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
-                                    <i class="glyphicon glyphicon-search"></i>
-                                </button>
-                            </div>
-                            </div>
-                        </form>
-                    </div>-->
+		
 			</div>
 		</div>
 	</nav>
@@ -351,20 +340,36 @@
         
        <div class="sub-modal">
             <div class="modal fade" id="algo_modal_em1" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <center><h4 class="modal-title">EM-I</h4></center>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=em1"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
-                    </div>     
-                </div>
-            </div>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<center>
+							<h4 class="modal-title">EM-I</h4>
+						</center>
+					</div>
+					<form action="quiz.jsp" method="get">
+					<div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="em1">
+						
+					</div>
+					<div class="modal-footer">
+						<button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-default" style="float: left">Take
+							the Quiz!</button>
+					</div></form>
+				</div>
+			</div>
+		</div>
         </div>
         <div class="sub-modal">
             <div class="modal fade" id="algo_modal_em2" role="dialog">
@@ -372,13 +377,25 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <center><h4 class="modal-title">EM-II</h4></center>
-                        </div>
-                        <div class="modal-body">
-                        </div>
+                        </div><form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="em2">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=em2"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the Quiz!</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -390,12 +407,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">Physics</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="phy">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=phy"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -407,12 +437,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">EM-III</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="phy">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=em3"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -424,12 +467,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">BME</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="bme">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=bme"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button></a>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -441,12 +497,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">Mechanics</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="mech">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=mech"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button></a>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -458,12 +527,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">Chemistry</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="phy">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=chem"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button></a>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -475,12 +557,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">CG</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="cg">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=cg"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button></a>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -492,12 +587,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">COA</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="coa">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=coa"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take the quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -509,12 +617,25 @@
                         <div class="modal-header">
                             <center><h4 class="modal-title">PAI</h4></center>
                         </div>
-                        <div class="modal-body">
-                        </div>
+                       <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="pai">
+						
+					</div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=pai"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="submit" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -522,16 +643,30 @@
         <div class="sub-modal">
             <div class="modal fade" id="algo_modal_deld" role="dialog">
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-content"><div class="modal-header">
                             <center><h4 class="modal-title">DELD</h4></center>
                         </div>
+                       <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="deld">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=deld"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -539,16 +674,30 @@
         <div class="sub-modal">
             <div class="modal fade" id="algo_modal_dsf" role="dialog">
                 <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-content"><div class="modal-header">
                             <center><h4 class="modal-title">DSF</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="dsf">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=dsf"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button><
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -557,15 +706,30 @@
             <div class="modal fade" id="algo_modal_fds" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">FDS</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="fds">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=fds"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -574,15 +738,30 @@
             <div class="modal fade" id="algo_modal_oop" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">OOP</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="oop">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=oop"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -591,15 +770,30 @@
             <div class="modal fade" id="algo_modal_bee" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">BEE</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="bee">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=bee"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -608,15 +802,30 @@
             <div class="modal fade" id="algo_modal_bcee" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">BCEE</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="bcee">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=bcee"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -625,15 +834,30 @@
             <div class="modal fade" id="algo_modal_bxe" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">BXE</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="bxe">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=bxe"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -642,15 +866,30 @@
             <div class="modal fade" id="algo_modal_fpl1" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">FPL-I</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="fpl1">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=fpl1"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -659,15 +898,30 @@
             <div class="modal fade" id="algo_modal_fpl2" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">FPL-II</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="fpl2">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=fpl2"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -676,15 +930,30 @@
             <div class="modal fade" id="algo_modal_dm" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <center><h4 class="modal-title">Discrete Maths</h4></center>
+                    <div class="modal-header">
+                            <center><h4 class="modal-title">Discrete maths</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="dm">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=dm"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
@@ -693,15 +962,30 @@
             <div class="modal fade" id="algo_modal_fccn" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
+                    <div class="modal-header">
                             <center><h4 class="modal-title">FCCN</h4></center>
                         </div>
+                        <form action="quiz.jsp" method="get">
+                       <div class="modal-body">
+						
+							<div class="option">
+								<input type="radio" name="noq" value='10'> 10 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='20'> 20 Questions
+							</div>
+							<div class="option">
+								<input type="radio" name="noq" value='50'> 50 Questions
+							</div>
+							<input type="hidden" name="sub" value="fccn">
+						
+					</div>
                         <div class="modal-body">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <a href="quiz.jsp?sub=fccn"><button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button></a>
-                        </div>
+                            <button type="button" class="btn btn-default" style="float: left">Take a 5q quiz</button>
+                        </div></form>
                     </div>     
                 </div>
             </div>
