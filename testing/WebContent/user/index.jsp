@@ -6,47 +6,52 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
-	href="../css/bootstrap.min.css">
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
-	src="../css/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
-	src="../css/bootstrap.min.js"></script>
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="main.css">
-<link href="../css/bootstrap1.css"	rel="stylesheet">
-<link rel="stylesheet"	href="bootstrap-social-gh-pages/bootstrap-social.css">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="bootstrap-social-gh-pages/bootstrap-social.css">
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link href="../css/bootstrap2.css"	rel="stylesheet">
-<link rel="shortcut icon" href="../favicon.ico">
-<link rel="icon" sizes="16x16 32x32 64x64" href="../favicon/favicon.ico">
-<link rel="icon" type="image/png" sizes="196x196"	href="../favicon/favicon-192.png">
-<link rel="icon" type="image/png" sizes="160x160"	href="../favicon/favicon-160.png">
+<link href="https://fonts.googleapis.com/css?family=Anton"
+	rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="196x196"
+	href="/favicon/favicon-192.png">
+<link rel="icon" type="image/png" sizes="160x160"
+	href="/favicon/favicon-160.png">
 <link rel="icon" type="image/png" sizes="96x96"
-	href="../favicon/favicon-96.png">
+	href="/favicon/favicon-96.png">
 <link rel="icon" type="image/png" sizes="64x64"
-	href="../favicon/favicon-64.png">
+	href="/favicon/favicon-64.png">
 <link rel="icon" type="image/png" sizes="32x32"
-	href="../favicon/favicon-32.png">
+	href="/favicon/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16"
-	href="../favicon/favicon-16.png">
-<link rel="apple-touch-icon" href="../favicon/favicon-57.png">
+	href="/favicon/favicon-16.png">
+<link rel="apple-touch-icon" href="/favicon/favicon-57.png">
 <link rel="apple-touch-icon" sizes="114x114"
-	href="../favicon/favicon-114.png">
+	href="/favicon/favicon-114.png">
 <link rel="apple-touch-icon" sizes="72x72"
-	href="../favicon/favicon-72.png">
+	href="/favicon/favicon-72.png">
 <link rel="apple-touch-icon" sizes="144x144"
-	href="../favicon/favicon-144.png">
+	href="/favicon/favicon-144.png">
 <link rel="apple-touch-icon" sizes="60x60"
-	href="../favicon/favicon-60.png">
+	href="/favicon/favicon-60.png">
 <link rel="apple-touch-icon" sizes="120x120"
-	href="../favicon/favicon-120.png">
+	href="/favicon/favicon-120.png">
 <link rel="apple-touch-icon" sizes="76x76"
-	href="../favicon/favicon-76.png">
+	href="/favicon/favicon-76.png">
 <link rel="apple-touch-icon" sizes="152x152"
-	href="../favicon/favicon-152.png">
+	href="/favicon/favicon-152.png">
 <link rel="apple-touch-icon" sizes="180x180"
-	href="../favicon/favicon-180.png">
+	href="/favicon/favicon-180.png">
 <meta name="msapplication-TileColor" content="#FFFFFF">
-<meta name="msapplication-TileImage" content="../favicon/favicon-144.png">
+<meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 <!-- Chrome, Firefox OS and Opera -->
@@ -55,7 +60,6 @@
 <meta name="msapplication-navbutton-color" content="#24292e">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
-
 </head>
 <body>
 	<!--NavBar-->

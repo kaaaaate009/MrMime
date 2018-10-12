@@ -22,18 +22,31 @@
 							if (request.getParameter("btn_reg") != null) {
 								db.connect();
 								System.out.println("-----CONNECTED TO DATABASE-----");
-								String qr = "insert into user_details(username,email_id,pwd)values('" + ar.getUsername() + "','"
-										+ ar.getEmail_id() + "','" + ar.getPwd() + "')";
-								i = db.updateSQL(qr);
-								if (i > 0) {
-									session.setAttribute("userid", ar.getEmail_id());
-									System.out.print("-----Registration Successful-----");
-									response.sendRedirect("../../user/getStarted.jsp");
-
-								} else {
-									System.out.print("-----Registration Unccessful-----");
-									response.sendRedirect("../../user/index.jsp");
+								rs = db.execSQL("select * from user_details where email_id = '" + ar.getEmail_id() + "' ");
+								String duplicate = null;
+								
+								while (rs.next()) {
+									duplicate = rs.getString("email_id");
 								}
+								
+								if (duplicate == null) {
+									String qr = "insert into user_details(username,email_id,pwd)values('" + ar.getUsername()
+											+ "','" + ar.getEmail_id() + "','" + ar.getPwd() + "')";
+									i = db.updateSQL(qr);
+									if (i > 0) {
+										session.setAttribute("userid", ar.getEmail_id());
+										System.out.println("-----Registration Successful-----");
+										response.sendRedirect("../../user/getStarted.jsp");
+
+									} else {
+										System.out.println("-----Registration Unccessful-----");
+										response.sendRedirect(
+												"../../user/index.jsp?cred=Registration+Failed+Please+Try Again");
+									}
+								} else {
+									response.sendRedirect("../../user/index.jsp?cred=User with the same Email Id already exist");
+								}
+
 								db.close();
 							}
 						} catch (Exception ex) {
