@@ -151,22 +151,14 @@
 								+ "' = a.q_id");
 		%>
 		<div class="jumbotron">
-			<textarea rows="4" cols="50" readonly>
-									<%=rs.getString("question")%>
-									</textarea>
+			<p>
+				<a href="forum_discuss.jsp?cred=<%=rs.getString("question")%>"><%=rs.getString("question")%></a>
+				<%=rs.getString("date_time")%>
+			</p>
 		</div>
 
 		<%
-			while (rs2.next()) {
-		%>
-		<div class="jumbotron">
-			<textarea rows="4" cols="50" readonly>
-									<%=rs2.getString("answer")%>
-									</textarea>
-		</div>
-		<%
 			}
-					}
 					db2.close();
 				} catch (Exception ex) {
 					out.println("Unable to connect to database " + ex);
