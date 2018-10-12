@@ -1,4 +1,3 @@
-<%@page import="user.forum"%>
 <%@page import="org.apache.catalina.User"%>
 <%@page import="database.db"%>
 <%@page import="java.util.ListIterator"%>
@@ -17,35 +16,31 @@
 <body>
 	<jsp:useBean id="db" class="database.db" scope="request">
 		<jsp:setProperty name="db" property="*" />
-		<jsp:useBean id="fr" class="user.forum" scope="request">
-			<jsp:setProperty name="fr" property="*" />
+		<%
+			try {
+					if (request.getParameter("btn_reg") != null) {
+						db.connect();
+						System.out.println("-----CONNECTED TO DATABASE-----");
+						String sqlDate = (new java.util.Date()).toString();
+						String qr = "insert into forum_question(question,description,date_time)values('"
+								+ request.getParameter("question") + "','" + request.getParameter("description") + "','"
+								+ sqlDate + "')";
+						i = db.updateSQL(qr);
+						if (i > 0) {
+							System.out.println("-----Posted-----");
+							response.sendRedirect("../../user/problems.jsp?cred=Posted");
 
-			<%
-				System.out.println(fr.getQuestion() + "'....... '" + fr.getDescription());
-						try {
-							if (request.getParameter("btn_reg") != null) {
-								db.connect();
-								System.out.println("-----CONNECTED TO DATABASE-----");
-								java.sql.Date sqlDate = new java.sql.Date(new java.util.Date().getTime());
-								String qr = "insert into forum_question(question,description)values('" + fr.getQuestion()
-										+ "','" + fr.getDescription() + "')";
-								i = db.updateSQL(qr);
-								if (i > 0) {
-									System.out.println("-----Posted-----");
-									response.sendRedirect("../../user/problems.jsp?cred=Posted");
-
-								} else {
-									System.out.println("-----Failed to Post-----");
-									response.sendRedirect("../../user/problems.jsp?cred=Failed to Post");
-								}
-
-								db.close();
-							}
-						} catch (Exception ex) {
-							out.println("Unable to connect to database " + ex);
+						} else {
+							System.out.println("-----Failed to Post-----");
+							response.sendRedirect("../../user/problems.jsp?cred=Failed to Post");
 						}
-			%>
-		</jsp:useBean>
+
+						db.close();
+					}
+				} catch (Exception ex) {
+					out.println("Unable to connect to database " + ex);
+				}
+		%>
 	</jsp:useBean>
 
 </body>
