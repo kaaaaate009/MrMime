@@ -66,6 +66,7 @@
 <meta name="msapplication-navbutton-color" content="#24292e">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+
 <%
 	if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
 		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
@@ -144,22 +145,22 @@
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#algo_modal_em1">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_search.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">EM-I</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">EM-I</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_bee">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_search.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">BEE</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">BEE</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_bxe">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_string.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">BXE</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">BXE</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_fpl2">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_string.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FPL-II</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FPL-II</h3>
                         </div>
                     </a>
                 </div>
@@ -167,22 +168,22 @@
                    
                     <a href="#" data-toggle="modal" data-target="#algo_modal_em2">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_greedy.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">EM-II</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">EM-II</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_phy">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_greedy.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Physics</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Physics</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_chem">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_graph.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Chemistry</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Chemistry</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_mech">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_dp.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Mechanics</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Mechanics</h3>
                         </div>
                     </a>
                 </div>
@@ -190,17 +191,17 @@
                     <!--<center><hr class="element-hr"></center>-->
                     <a href="#" data-toggle="modal" data-target="#algo_modal_bme">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_constructive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">BME</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">BME</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_bcee">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_bits.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; padding-left: 10px; margin-top: 25px;">BCEE</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; padding-left: 10px; margin-top: 25px;">BCEE</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_fpl1">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_recursive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FPL-I</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FPL-I</h3>
                         </div>
                     </a>
                 </div>
@@ -216,22 +217,22 @@
                 <div class="grid-column col-sm-3">
                     <a href="#" data-toggle="modal" data-target="#algo_modal_dm">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_search.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Discrete Maths</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">Discrete Maths</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_deld">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_search.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">DELD</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">DELD</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_coa">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_string.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">COA</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">COA</h3>
                         </div>
                     </a>
                      <a href="#" data-toggle="modal" data-target="#algo_modal_cg">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_dp.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">CG</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">CG</h3>
                         </div>
                     </a>
                     
@@ -240,17 +241,17 @@
                     
                     <a href="#" data-toggle="modal" data-target="#algo_modal_oop">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_greedy.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">OOP</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">OOP</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_fds">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_greedy.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FDS</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">FDS</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_em3">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_graph.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">EM-III</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">EM-III</h3>
                         </div>
                     </a>
                    
@@ -264,12 +265,12 @@
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_dsf">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_bits.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; padding-left: 10px; margin-top: 25px;">DSF</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; padding-left: 10px; margin-top: 25px;">DSF</h3>
                         </div>
                     </a>
                     <a href="#" data-toggle="modal" data-target="#algo_modal_pai">
                         <div class="grid-element">
-                            <img src="theory_icons/algo_recursive.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">PAI</h3>
+                            <img src="../favicon/favicon-57.png" style="border-radius: 25px; float:left; margin-left: 5%; margin-top:14px;"><h3 style="vertical-align: middle; float:left; margin-top: 25px; padding-left: 10px;">PAI</h3>
                         </div>
                     </a>
                 </div>
