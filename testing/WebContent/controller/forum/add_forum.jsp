@@ -22,9 +22,9 @@
 						db.connect();
 						System.out.println("-----CONNECTED TO DATABASE-----");
 						String sqlDate = (new java.util.Date()).toString();
-						String qr = "insert into forum_question(question,description,date_time)values('"
+						String qr = "insert into forum_question(question,description,date_time,usr_id)values('"
 								+ request.getParameter("question") + "','" + request.getParameter("description") + "','"
-								+ sqlDate + "')";
+								+ sqlDate + "','" + session.getAttribute("userid")+"')";
 						i = db.updateSQL(qr);
 						if (i > 0) {
 							System.out.println("-----Posted-----");

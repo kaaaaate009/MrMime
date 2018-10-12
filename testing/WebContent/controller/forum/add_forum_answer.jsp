@@ -22,8 +22,8 @@
 						db.connect();
 						System.out.println("-----CONNECTED TO DATABASE-----");
 
-						String qr = "insert into forum_answer(answer,q_id)values('"
-								+ request.getParameter("description") + "','" + request.getParameter("cred") + "')";
+						String qr = "insert into forum_answer(answer,q_id,usr_id)values('"
+								+ request.getParameter("description") + "','" + request.getParameter("cred") + "','"+session.getAttribute("userid")+"')";
 						i = db.updateSQL(qr);
 						if (i > 0) {
 							System.out.println("-----Posted-----");
