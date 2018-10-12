@@ -31,6 +31,7 @@
 	}
 %>
 <%!ResultSet rs, rs2, rs3 = null;
+	int id;
 	int i;
 	String qr;%>
 </head>
@@ -66,7 +67,12 @@
 									System.out.println("-----CONNECTED TO DATABASE-----");
 									String var = (String) session.getAttribute("userid");
 									rs3 = db.execSQL("select username from user_details where email_id='" + var + "'");
+									rs2 = db.execSQL(
+											"select * from forum_question where q_id=" + request.getParameter("cred"));
 
+									while (rs2.next()) {
+										id = rs2.getInt("q_id");
+									}
 									while (rs3.next()) {
 						%>
 						<li><a href="profile.jsp"> <%=rs3.getString("username")%>
@@ -80,8 +86,6 @@
 								}
 						%>
 					</jsp:useBean>
-
-
 
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
@@ -99,7 +103,31 @@
 			</div>
 		</div>
 	</nav>
-
+	<div class="jumbotron">
+		<form action="../controller/forum/add_forum_answer.jsp?cred=<%=id%>"
+			method="post" class="form-horizontal">
+			<div class="form-group">
+				<label class="control-label col-sm-4" for="name"></label>
+				<div class="col-xs-3">
+					<div class="input-group">
+						<input type="text" class="form-control" id="name"
+							placeholder="Description" name="description">
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-10">
+					<div class="subButton">
+						<div class="col-xs-3">
+							<button type="submit" class="btn btn-primary btn-block"
+								name="btn_reg">Post</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 	<jsp:useBean id="db2" class="database.db" scope="request">
 		<jsp:setProperty name="db2" property="*" />
 		<%
@@ -107,8 +135,7 @@
 
 					db2.connect();
 					System.out.println("-----CONNECTED TO DATABASE-----");
-					rs = db2.execSQL(
-							"select * from forum_question where question='" + request.getParameter("cred") + "'");
+					rs = db2.execSQL("select * from forum_question where q_id=" + request.getParameter("cred"));
 
 					while (rs.next()) {
 						int q = rs.getInt("q_id");
@@ -129,7 +156,7 @@
 		<div class="jumbotron">
 			<p>
 				<%=rs2.getString("answer")%>
-				
+
 			</p>
 		</div>
 		<%

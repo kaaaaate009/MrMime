@@ -21,18 +21,16 @@
 					if (request.getParameter("btn_reg") != null) {
 						db.connect();
 						System.out.println("-----CONNECTED TO DATABASE-----");
-						String sqlDate = (new java.util.Date()).toString();
-						String qr = "insert into forum_question(question,description,date_time)values('"
-								+ request.getParameter("question") + "','" + request.getParameter("description") + "','"
-								+ sqlDate + "')";
+
+						String qr = "insert into forum_answer(answer,q_id)values('"
+								+ request.getParameter("description") + "','" + request.getParameter("cred") + "')";
 						i = db.updateSQL(qr);
 						if (i > 0) {
 							System.out.println("-----Posted-----");
-							response.sendRedirect("../../user/forum.jsp?cred=Posted");
-
+							response.sendRedirect("../../user/forum_discuss.jsp?cred="+request.getParameter("cred"));
 						} else {
 							System.out.println("-----Failed to Post-----");
-							response.sendRedirect("../../user/forum.jsp?cred=Failed to Post");
+						response.sendRedirect("../../user/forum_discuss.jsp?cred="+request.getParameter("cred"));
 						}
 
 						db.close();

@@ -152,7 +152,7 @@
 		%>
 		<div class="jumbotron">
 			<p>
-				<a href="forum_discuss.jsp?cred=<%=rs.getString("question")%>"><%=rs.getString("question")%></a>
+				<a href="forum_discuss.jsp?cred=<%=rs.getString("q_id")%>"><%=rs.getString("question")%></a>
 				<%=rs.getString("date_time")%>
 			</p>
 		</div>
