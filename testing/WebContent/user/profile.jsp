@@ -81,6 +81,8 @@
 </head>
 <body>
 	<!--NavBar-->
+	<jsp:useBean id="db" class="database.db" scope="request">
+						<jsp:setProperty name="db" property="*" />
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -104,8 +106,7 @@
 					<li><a href="forum.jsp">Forum</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
-					<jsp:useBean id="db" class="database.db" scope="request">
-						<jsp:setProperty name="db" property="*" />
+					
 						<%
 							try {
 
@@ -126,13 +127,13 @@
 									out.println("Unable to connect to database " + ex);
 								}
 						%>
-			
 
 
 
-					<li><a href="../controller/login_register/logout.jsp"><span
-							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
-				</ul>
+
+						<li><a href="../controller/login_register/logout.jsp"><span
+								class="glyphicon glyphicon-log-in"></span> Log Out</a></li></ul>
+								
 				<!--<div class = "search">
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
@@ -145,9 +146,12 @@
                             </div>
                         </form>
                     </div>-->
+                    
 			</div>
 		</div>
+		
 	</nav>
+	</jsp:useBean>
 	<%
 			if (request.getParameter("cred") != null) {
 	%>
@@ -159,7 +163,7 @@
 			}
 	%>
 
-		<%
+	<%
 				try {
 						db.connect();
 						Class.forName("com.mysql.jdbc.Driver");
@@ -213,7 +217,6 @@
 			
 			%>
 
-	</jsp:useBean>
 
 	<hr>
 	<div style="margin-top: 60px;">
@@ -259,9 +262,8 @@
 				<div class="col-sm-9">
 
 					<ul class="nav nav-tabs" id="myTab">
-						<li class="active"><a href="#home" data-toggle="tab">Test
-								results</a></li>
-						<li><a href="#messages" data-toggle="tab">Unused tab</a></li>
+						<li class="active"><a href="#home" data-toggle="tab" >Test results</a></li>
+						<li><a href="#messages" data-toggle="tab">My Questions</a></li>
 						<li><a href="#settings" data-toggle="tab">Reset Password</a></li>
 					</ul>
 
@@ -277,7 +279,7 @@
 											<th>%Accuracy</th>
 										</tr>
 									</thead>
-									<tbody id="items">
+									<tbody >
 
 										<%
 	                	Class.forName("com.mysql.jdbc.Driver");
@@ -291,8 +293,7 @@
 	                	while(rs.next())
 	                	{
 	                		%>
-										<tr data-toggle="collapse" data-target="#demo1"
-											class="accordion-toggle ">
+										<tr>
 											<td><%=rs.getString("subject") %></td>
 											<td><%=rs.getInt("score") %></td>
 											<td><%=rs.getInt("attempted") %></td>
@@ -304,7 +305,7 @@
 	                		}
 	                    %>
 
-										<tr>
+										<!-- >tr>
 											<td colspan="12" class="hiddenRow"><div
 													class="accordian-body collapse" id="demo1">
 													<table class="table table-striped">
@@ -329,7 +330,7 @@
 														riga</a>
 
 												</div></td>
-										</tr>
+										</tr-->
 
 
 
@@ -345,7 +346,7 @@
 							</div>
 							<!--/table-resp-->
 
-							<div id="edit" class="modal fade" role="dialog">
+							<!-- div id="edit" class="modal fade" role="dialog">
 								<div class="modal-dialog">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -368,94 +369,105 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div-->
 
 							<hr>
 
 						</div>
 						<!--/tab-pane-->
-						<div class="tab-pane" id="messages">
+							<div class="tab-pane" id="messages">
+								<div class="table-responsive">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>Date & time</th>
+												<th>Question</th>
+											</tr>
+										</thead>
+										<tbody id="items">
 
-							<h2></h2>
+											<%
+	                		Class.forName("com.mysql.jdbc.Driver");
+		                	
+		                	Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+		                	PreparedStatement ps2;
+		                	String question = (String) session.getAttribute("userid");
+		                	String qr2="select question from forums_question where userid = '"+userid+"'";
+		                	ps1=con.prepareStatement(qr1);
+		                	rs=ps1.executeQuery();
+		                	while(rs.next())
+		                	{
+	                	%>
+											<tr>
+												<td><%=rs.getString("date") %>></td>
+												<td><%=rs.getString("question") %></td>
+											</tr>
+												<% 
+	                     	}	
+		                %>
 
-							<div class="table-responsive">
-								<!-- table class="table table-hover">
-	                  <thead>
-	                    <tr>
-	                      <th>Data</th>
-	                      <th>Servizio</th>
-	                      <th>Modifica</th>
-	                    </tr>
-	                  </thead>
-	                  <tbody id="items">
-	                    <tr>
-	                      <td>10.05.2017</td>
-	                      <td>MASSAGGIO schiena</td>
-	                     
-	                      <td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td>
-	                      
-	                      
-	                    </tr>
-	                  </tbody>
-	                </table-->
+
+											
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+							<!--/tab-pane-->
+							<div class="tab-pane" id="settings">
+
+
+								<hr>
+								<form class="form" action="profile.jsp" method="get"
+									id="changepasswordform">
+									<div class="form-group">
+
+										<div class="col-xs-6">
+											<label for="username"><h4>Username</h4></label> <input
+												type="text" class="form-control" name="username"
+												id="username" placeholder="Enter username">
+										</div>
+									</div>
+
+
+									<div class="form-group">
+										<div class="col-xs-6">
+											<label for="oldpassword"><h4>Old password</h4></label> <input
+												type="password" class="form-control" name="oldpassword"
+												id="oldpassword" placeholder="Enter old password">
+										</div>
+									</div>
+									<div class="form-group">
+
+										<div class="col-xs-6">
+											<label for="newpassword"><h4>New passwprd</h4></label> <input
+												type="password" class="form-control" name="newpassword"
+												id="newpassword" placeholder="Enter new password">
+										</div>
+									</div>
+
+
+									<div class="form-group">
+										<div class="col-xs-12">
+											<br>
+											<button class="nicebutton" type="submit">Submit</button>
+											<button class="btn btn-lg" type="reset">Clear</button>
+										</div>
+									</div>
+								</form>
 							</div>
 
 						</div>
 						<!--/tab-pane-->
-						<div class="tab-pane" id="settings">
-
-
-							<hr>
-							<form class="form" action="profile.jsp" method="get"
-								id="changepasswordform">
-								<div class="form-group">
-
-									<div class="col-xs-6">
-										<label for="username"><h4>Username</h4></label> <input
-											type="text" class="form-control" name="username"
-											id="username" placeholder="Enter username">
-									</div>
-								</div>
-
-
-								<div class="form-group">
-									<div class="col-xs-6">
-										<label for="oldpassword"><h4>Old password</h4></label> <input
-											type="text" class="form-control" name="oldpassword"
-											id="oldpassword" placeholder="Enter old password">
-									</div>
-								</div>
-								<div class="form-group">
-
-									<div class="col-xs-6">
-										<label for="newpassword"><h4>New passwprd</h4></label> <input
-											type="text" class="form-control" name="newpassword"
-											id="newpassword" placeholder="Enter new password">
-									</div>
-								</div>
-
-
-								<div class="form-group">
-									<div class="col-xs-12">
-										<br>
-										<button class="nicebutton" type="submit">Submit</button>
-										<button class="btn btn-lg" type="reset">Clear</button>
-									</div>
-								</div>
-							</form>
-						</div>
-
 					</div>
-					<!--/tab-pane-->
+					<!--/tab-content-->
+
 				</div>
-				<!--/tab-content-->
-
+				<!--/col-9-->
 			</div>
-			<!--/col-9-->
+			<!--/row-->
+			</hr>
 		</div>
-		<!--/row-->
-		</hr>
-	</div>
-
+		</div>
 </body>
 </html>
