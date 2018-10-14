@@ -322,6 +322,7 @@
 									<thead>
 										<tr>
 											<th>Date & time</th>
+											<th>User</th>
 											<th>Question</th>
 										</tr>
 									</thead>
@@ -333,14 +334,15 @@
 		                	Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 		                	PreparedStatement ps2;
 		                	String question = (String) session.getAttribute("userid");
-		                	String qr2="select question from forums_question order by usr_id";
-		                	ps1=con.prepareStatement(qr1);
+		                	String qr2="select * from forum_question order by usr_id";
+		                	ps1=con.prepareStatement(qr2);
 		                	rs=ps1.executeQuery();
 		                	while(rs.next())
 		                	{
 	                	%>
 										<tr>
-											<td><%=rs.getString("date") %>></td>
+											<td><%=rs.getString("date_time") %>></td>
+											<td><%=rs.getString("usr_id") %>
 											<td><%=rs.getString("question") %></td>
 										</tr>
 										<% 
