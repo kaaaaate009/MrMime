@@ -161,7 +161,7 @@
 			<div class="row">
 				<center>
 					<h2>
-						Dive into <a href="alorithm.jsp">algorithms!</a>
+						Dive into <a href="algorithm.jsp">algorithms!</a>
 					</h2>
 				</center>
 			</div>
