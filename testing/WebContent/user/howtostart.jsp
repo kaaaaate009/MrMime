@@ -46,11 +46,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
-        <%
-	if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
-		response.sendRedirect("index.jsp?cred=You+are+not+logged+in");
-	}
-%>
+        
 <%!ResultSet rs = null;
 	int i;
 	String qr;%>
@@ -77,38 +73,49 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
-					</ul>
-                    
-				<ul class="nav navbar-nav navbar-right ">
+					</ul>   
+					<%
+					if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+				%>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
+							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+					<li><a href="index.jsp">Register</a></li>
+				</ul>
+				<%
+					} else {
+				%>
+				<ul class="nav navbar-nav navbar-right">
 					<jsp:useBean id="db" class="database.db" scope="request">
 						<jsp:setProperty name="db" property="*" />
 						<%
 							try {
 
-									db.connect();
-									System.out.println("-----CONNECTED TO DATABASE-----");
-									String var = (String) session.getAttribute("userid");
-									rs = db.execSQL("select username from user_details where email_id='" + var + "'");
+										db.connect();
+										System.out.println("-----CONNECTED TO DATABASE-----");
+										String var = (String) session.getAttribute("userid");
+										rs = db.execSQL("select username from user_details where email_id='" + var + "'");
 
-									while (rs.next()) {
+										while (rs.next()) {
 						%>
 						<li><a href="profile.jsp"> <%=rs.getString("username")%>
 						</a></li>
 
 						<%
 							}
-									db.close();
-								} catch (Exception ex) {
-									out.println("Unable to connect to database " + ex);
-								}
+										db.close();
+									} catch (Exception ex) {
+										out.println("Unable to connect to database " + ex);
+									}
 						%>
 					</jsp:useBean>
-
-
-
 					<li><a href="../controller/login_register/logout.jsp"><span
 							class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+
 				</ul>
+				<%
+					}
+				%>
                     <!--<div class = "search">
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
@@ -215,56 +222,60 @@
         	</span>         
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <center><h4 class="modal-title">Sign in</h4></center>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal">
-                            <div class="form-group">    	
-                                <div class="col-sm-offset-3 col-sm-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">  					
-                                <div class="col-sm-offset-3 col-sm-6"> 
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Password">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"> 
-                                <div class="col-sm-offset-1 col-sm-10">
-                                    <div class="checkbox">
-                                      <center><label><input type="checkbox">Remember me</label></center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"> 
-                                <div class="col-sm-offset-3 col-sm-6">
-                                    <center><button type="submit" class="btn btn-primary btn-block">Sign in</button></center>
-                                </div>
-                                <hr class="signin-hr">
-                                <div class="col-sm-offset-1 col-sm-5 loginbutt">
-                                    <center><a class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span>Sign in with Facebook</a>
-                                    </center>
-                                </div>
-                                <div class="col-sm-5 loginbutt">
-                                    <center><a class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>Sign in with Google</a>
-                                    </center>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>     
-            </div>
-        </div>
+        <div class="modal " id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<center>
+						<h4 class="modal-title">Sign in</h4>
+					</center>
+				</div>
+				<div class="modal-body">
+					<form action="../controller/login_register/login.jsp"
+						class="form-horizontal">
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-6">
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="glyphicon glyphicon-envelope"></i></span> <input type="email"
+										class="form-control" id="email" placeholder="Email ID "
+										name="email_id">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-6">
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="glyphicon glyphicon-lock"></i></span> <input type="password"
+										class="form-control" id="pwd" placeholder="Password"
+										name="pwd">
+								</div>
+							</div>
+						</div>
+						<!--  	<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<div class="checkbox">
+									<center>
+										<label><input type="checkbox">Remember me</label>
+									</center>
+								</div>
+							</div>
+						</div>
+					-->
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-6">
+								<center>
+									<button type="submit" class="btn btn-primary btn-block"
+										name="btn_login">Sign in</button>
+								</center>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
     </body>
 </html>
