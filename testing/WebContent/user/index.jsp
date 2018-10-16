@@ -87,7 +87,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
 					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
-							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+							class="glyphicon glyphicon-log-in"></span> Register</a></li>
 				</ul>
 				<!--<div class = "search">
                         <form class="navbar-form navbar-right">
@@ -118,12 +118,11 @@
 	<div class="jumbotron">
 		<div class="register">
 			<center>
-				<h3>Log In</h3>
+				<h3>Login</h3>
 				<br>
 			</center>
 			<form action="../controller/login_register/login.jsp"
-				method="post" class="form-horizontal">
-				
+				method="get" class="form-horizontal">				
 				<br>
 				<div class="form-group">
 					<label class="control-label col-sm-4" for="email"></label>
@@ -153,7 +152,7 @@
 						<div class="subButton">
 							<div class="col-xs-3">
 								<button type="submit" class="btn btn-primary btn-block"
-									name="btn_login">Log In and Start Coding!</button>
+									name="btn_login">Login and Start Coding!</button>
 							</div>
 						</div>
 					</div>
@@ -375,6 +374,7 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<div class="input-group">
