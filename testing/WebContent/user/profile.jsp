@@ -82,31 +82,30 @@
 <body>
 	<!--NavBar-->
 	<jsp:useBean id="db" class="database.db" scope="request">
-						<jsp:setProperty name="db" property="*" />
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="getStarted.jsp"><img
-					src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
-					href="getStarted.jsp"><img src="homepageLogo1.png"></a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<!--<li class="active"><a href="#">Home</a></li>-->
-					<li><a href="howtostart.jsp">How To Start</a></li>
-					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li><a href="algorithm.jsp">Algorithms</a></li>
-					<li><a href="data_structures.jsp">Data Structures</a></li>
-					<li><a href="problems.jsp">MCQs</a></li>
-					<li><a href="forum.jsp">Forum</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right ">
+		<jsp:setProperty name="db" property="*" />
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
 					
+				</div>
+				
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<!--<li class="active"><a href="#">Home</a></li>-->
+						<li><a href="howtostart.jsp">How To Start</a></li>
+						<li><a href="getStarted.jsp">Get Started</a></li>
+						<li><a href="algorithm.jsp">Algorithms</a></li>
+						<li><a href="data_structures.jsp">Data Structures</a></li>
+						<li><a href="problems.jsp">MCQs</a></li>
+						<li><a href="forum.jsp">Forum</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right ">
+
 						<%
 							try {
 
@@ -132,9 +131,10 @@
 
 
 						<li><a href="../controller/login_register/logout.jsp"><span
-								class="glyphicon glyphicon-log-in"></span> Log Out</a></li></ul>
-								
-				<!--<div class = "search">
+								class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+					</ul>
+
+					<!--<div class = "search">
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search algranth">
@@ -146,11 +146,11 @@
                             </div>
                         </form>
                     </div>-->
-                    
+
+				</div>
 			</div>
-		</div>
-		
-	</nav>
+
+		</nav>
 	</jsp:useBean>
 	<%
 			if (request.getParameter("cred") != null) {
@@ -262,7 +262,8 @@
 				<div class="col-sm-9">
 
 					<ul class="nav nav-tabs" id="myTab">
-						<li class="active"><a href="#home" data-toggle="tab" >Test results</a></li>
+						<li class="active"><a href="#home" data-toggle="tab">Test
+								results</a></li>
 						<li><a href="#messages" data-toggle="tab">My Questions</a></li>
 						<li><a href="#settings" data-toggle="tab">Reset Password</a></li>
 					</ul>
@@ -279,7 +280,7 @@
 											<th>%Accuracy</th>
 										</tr>
 									</thead>
-									<tbody >
+									<tbody>
 
 										<%
 	                	Class.forName("com.mysql.jdbc.Driver");
@@ -375,99 +376,100 @@
 
 						</div>
 						<!--/tab-pane-->
-							<div class="tab-pane" id="messages">
-								<div class="table-responsive">
-									<table class="table table-hover">
-										<thead>
-											<tr>
-												<th>Date & time</th>
-												<th>Question</th>
-											</tr>
-										</thead>
-										<tbody id="items">
+						<div class="tab-pane" id="messages">
+							<div class="table-responsive">
+								<table class="table table-hover">
+									<thead>
+										<tr>
+											<th>Date & time</th>
+											<th>Question</th>
+										</tr>
+									</thead>
+									<tbody id="items">
 
-											<%
+										<%
 	                		Class.forName("com.mysql.jdbc.Driver");
 		                	
 		                	Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 		                	PreparedStatement ps2;
-		                	String question = (String) session.getAttribute("userid");
-		                	String qr2="select question from forums_question where userid = '"+userid+"'";
-		                	ps1=con.prepareStatement(qr1);
+		                	String userid1 = (String) session.getAttribute("userid");
+		                	String qr2="select * from forum_question where usr_id = '"+userid1+"'";
+		                	System.out.println("UserID: "+userid1);
+		                	ps1=con.prepareStatement(qr2);
 		                	rs=ps1.executeQuery();
 		                	while(rs.next())
 		                	{
 	                	%>
-											<tr>
-												<td><%=rs.getString("date") %>></td>
-												<td><%=rs.getString("question") %></td>
-											</tr>
-												<% 
+										<tr>
+											<td><%=(rs.getString("date_time")) %></td>
+											<td><a href="forum.jsp"><%=(rs.getString("question"))%></a></td>
+										</tr>
+										<% 
 	                     	}	
 		                %>
 
 
-											
-										</tbody>
-									</table>
-								</div>
 
-							</div>
-							<!--/tab-pane-->
-							<div class="tab-pane" id="settings">
-
-
-								<hr>
-								<form class="form" action="profile.jsp" method="get"
-									id="changepasswordform">
-									<div class="form-group">
-
-										<div class="col-xs-6">
-											<label for="username"><h4>Username</h4></label> <input
-												type="text" class="form-control" name="username"
-												id="username" placeholder="Enter username">
-										</div>
-									</div>
-
-
-									<div class="form-group">
-										<div class="col-xs-6">
-											<label for="oldpassword"><h4>Old password</h4></label> <input
-												type="password" class="form-control" name="oldpassword"
-												id="oldpassword" placeholder="Enter old password">
-										</div>
-									</div>
-									<div class="form-group">
-
-										<div class="col-xs-6">
-											<label for="newpassword"><h4>New passwprd</h4></label> <input
-												type="password" class="form-control" name="newpassword"
-												id="newpassword" placeholder="Enter new password">
-										</div>
-									</div>
-
-
-									<div class="form-group">
-										<div class="col-xs-12">
-											<br>
-											<button class="nicebutton" type="submit">Submit</button>
-											<button class="btn btn-lg" type="reset">Clear</button>
-										</div>
-									</div>
-								</form>
+									</tbody>
+								</table>
 							</div>
 
 						</div>
 						<!--/tab-pane-->
-					</div>
-					<!--/tab-content-->
+						<div class="tab-pane" id="settings">
 
+
+							<hr>
+							<form class="form" action="profile.jsp" method="get"
+								id="changepasswordform">
+								<div class="form-group">
+
+									<div class="col-xs-6">
+										<label for="username"><h4>Username</h4></label> <input
+											type="text" class="form-control" name="username"
+											id="username" placeholder="Enter username">
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<div class="col-xs-6">
+										<label for="oldpassword"><h4>Old password</h4></label> <input
+											type="password" class="form-control" name="oldpassword"
+											id="oldpassword" placeholder="Enter old password">
+									</div>
+								</div>
+								<div class="form-group">
+
+									<div class="col-xs-6">
+										<label for="newpassword"><h4>New passwprd</h4></label> <input
+											type="password" class="form-control" name="newpassword"
+											id="newpassword" placeholder="Enter new password">
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<div class="col-xs-12">
+										<br>
+										<button class="nicebutton" type="submit">Submit</button>
+										<button class="btn btn-lg" type="reset">Clear</button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+					</div>
+					<!--/tab-pane-->
 				</div>
-				<!--/col-9-->
+				<!--/tab-content-->
+
 			</div>
-			<!--/row-->
-			</hr>
+			<!--/col-9-->
 		</div>
-		</div>
+		<!--/row-->
+		</hr>
+	</div>
+	</div>
 </body>
 </html>

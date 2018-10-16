@@ -293,52 +293,7 @@
         	</span>         
         </div>
                 <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <center><h4 class="modal-title">Sign in</h4></center>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal">
-                            <div class="form-group">    	
-                                <div class="col-sm-offset-3 col-sm-6">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input type="email" class="form-control" id="email" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">  					
-                                <div class="col-sm-offset-3 col-sm-6"> 
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input type="password" class="form-control" id="pwd" placeholder="Password">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"> 
-                                <div class="col-sm-offset-1 col-sm-10">
-                                    <div class="checkbox">
-                                      <center><label><input type="checkbox">Remember me</label></center>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group"> 
-                                <div class="col-sm-offset-3 col-sm-6">
-                                    <center><button type="submit" class="btn btn-primary btn-block">Sign in</button></center>
-                                </div>
-                                <hr class="signin-hr">
-                                </center>
-                            </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>     
-            </div>
-        </div>
-        
+                        
        <div class="sub-modal">
             <div class="modal fade" id="algo_modal_em1" role="dialog">
 			<div class="modal-dialog">

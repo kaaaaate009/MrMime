@@ -84,7 +84,6 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
-
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
 					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
@@ -123,8 +122,7 @@
 				<br>
 			</center>
 			<form action="../controller/login_register/login.jsp"
-				method="get" class="form-horizontal">
-				
+				method="get" class="form-horizontal">				
 				<br>
 				<div class="form-group">
 					<label class="control-label col-sm-4" for="email"></label>
@@ -345,6 +343,7 @@
 	<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
+			
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<center>
@@ -352,7 +351,7 @@
 					</center>
 				</div>
 				<div class="modal-body">
-					<form action="../controller/login_register/register.jsp" method="get"
+					<form action="../controller/login_register/register.jsp"
 						class="form-horizontal">
 						<div class="form-group">
 					<label class="control-label col-sm-4" for="name"></label>

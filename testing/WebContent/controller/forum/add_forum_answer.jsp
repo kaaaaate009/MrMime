@@ -18,19 +18,24 @@
 		<jsp:setProperty name="db" property="*" />
 		<%
 			try {
+					
 					if (request.getParameter("btn_reg") != null) {
+						if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+							response.sendRedirect("../../user/index.jsp?cred=You+are+not+logged+in");
+						}
 						db.connect();
 						System.out.println("-----CONNECTED TO DATABASE-----");
 
 						String qr = "insert into forum_answer(answer,q_id,usr_id)values('"
-								+ request.getParameter("description") + "','" + request.getParameter("cred") + "','"+session.getAttribute("userid")+"')";
+								+ request.getParameter("description") + "','" + request.getParameter("cred") + "','"
+								+ session.getAttribute("userid") + "')";
 						i = db.updateSQL(qr);
 						if (i > 0) {
 							System.out.println("-----Posted-----");
-							response.sendRedirect("../../user/forum_discuss.jsp?cred="+request.getParameter("cred"));
+							response.sendRedirect("../../user/forum_discuss.jsp?cred=" + request.getParameter("cred"));
 						} else {
 							System.out.println("-----Failed to Post-----");
-						response.sendRedirect("../../user/forum_discuss.jsp?cred="+request.getParameter("cred"));
+							response.sendRedirect("../../user/forum_discuss.jsp?cred=" + request.getParameter("cred"));
 						}
 
 						db.close();
