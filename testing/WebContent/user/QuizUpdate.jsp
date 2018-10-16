@@ -10,7 +10,7 @@
 <%
 	Class.forName("com.mysql.jdbc.Driver");
 	
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mcq", "root", "admin");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 	
 	Statement st = con.createStatement();
 	ResultSet rs;
@@ -21,7 +21,7 @@
 	String answer=request.getParameter("answer");
 	if(question!=null)
 	{
-		String q1 = String.format("INSERT INTO %s (que, option1,option2,option3,option4,ans) VALUES (?,?,?,?,?,?)",subject);
+		String q1 = String.format("INSERT INTO questions (question, option1,option2,option3,option4,answer,subject) VALUES (?,?,?,?,?,?,?)");
 		PreparedStatement statement = con.prepareStatement(q1);
 		statement.setString(1, question);
 		statement.setString(2, optionA);
@@ -29,6 +29,7 @@
 		statement.setString(4, optionC);
 		statement.setString(5, optionD);
 		statement.setString(6, answer);                               
+		statement.setString(7, subject);
 		int i=statement.executeUpdate();
 	}
 

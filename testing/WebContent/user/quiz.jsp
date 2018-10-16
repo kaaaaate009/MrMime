@@ -10,7 +10,13 @@
 	String subject;
 	static int i = 0, max;
 	static int score = 0;
-	
+
+	public class que {
+		String question, option1, option2, option3, option4;
+		char answer;
+		int flag, qid;
+	}
+
 	String qr;
 	String redirect;
 	static int doneque[];
@@ -18,73 +24,87 @@
 <%
 	Class.forName("com.mysql.jdbc.Driver");
 
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mcq", "root", "admin");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 
 	Statement st = con.createStatement();
 	PreparedStatement ps;
 
 	double ran;
 	max = Integer.parseInt(request.getParameter("noq"));
-	doneque=new int[max];
+	doneque = new int[max];
 	subject = request.getParameter("sub");
-	qr = "select count(*) as cnt from " + subject;
+	qr = "select count(*) as cnt from questions where subject='" + subject + "'";
 	ps = con.prepareStatement(qr);
 	rs = ps.executeQuery();
 	rs.next();
 	int total = rs.getInt("cnt");
-	System.out.println("total: "+total);
-	while (true) {
-		ran = (int) (Math.random() * ((total - 1) + 1)) + 1;
-		System.out.println("Ran: "+ran);
-		int flag = 0;
-		System.out.println("i: "+i);
-		for (int j = 0; j < i; j++) {
-			if (ran == doneque[j]) {
-				flag = 1;
-				break;
+	System.out.println("total: " + total);
+
+	if ((que[]) session.getAttribute("questions") == null) 
+	{
+		subject = request.getParameter("sub");
+		qr = "select * from questions where subject ='" + subject + "'";
+		ps = con.prepareStatement(qr);
+		rs = ps.executeQuery();
+		que ques[] = new que[total];
+		while (rs.next()) 
+		{
+			while (true) 
+			{
+				ran = (int) (Math.random() * ((total - 1) + 1)) + 1;
+				System.out.println("Ran: " + ran);
+				int flag = 0;
+				System.out.println("i: " + i);
+				for (int j = 0; j < i; j++) 
+				{
+					if (ran == doneque[j]) 
+					{
+						flag = 1;
+						break;
+					}
+				}
+				if (flag == 0 || i == 0)
+					break;
 			}
-
+			doneque[i++]=(int)ran;
+			ques[i].question = rs.getString("question");
+			ques[i].option1 = rs.getString("option1");
+			ques[i].option2 = rs.getString("option2");
+			ques[i].option3 = rs.getString("option3");
+			ques[i].option4 = rs.getString("option4");
+			ques[i].qid = rs.getInt("qid");
 		}
-
-		if (flag == 0 || i == 0)
-			break;
+		session.setAttribute("questions", ques);
+	} //logic for question retrieval
+	else 
+	{
+		que ques[] = new que[total];
+		ques = (que[]) session.getAttribute("questions");
 	}
-	System.out.println("i: "+i);
-	
-	doneque[i++] = (int) ran;
-	subject = request.getParameter("sub");
 
-	qr = "select * from " + subject + " where qid=" + ran;
-	ps = con.prepareStatement(qr);
-	rs = ps.executeQuery();
-	rs.next();
-	quid = rs.getString("qid");
-	ques = rs.getString("que");
-	op1 = rs.getString("option1");
-	op2 = rs.getString("option2");
-	op3 = rs.getString("option3");
-	op4 = rs.getString("option4");
+	//
+	//
+	//rs = ps.executeQuery();
+	//rs.next();
+	//quid = rs.getString("qid");
+	//ques = ;
+	//op1 = rs.getString("option1");
+	//op2 = rs.getString("option2");
+	//op3 = rs.getString("option3");
+	//op4 = rs.getString("option4");
 %>
 <%
-		String temp = request.getParameter("questionid");
-		if (temp != null) {
+	String temp = request.getParameter("questionid");
+	if (temp != null) {
 
-			int queid = Integer.parseInt(temp);
-			String subans = request.getParameter("answer");
-			Statement st2 = con.createStatement();
-			subject = request.getParameter("sub");
-			
-			String qr2 = "select count(*) as cnt from " + subject + " where qid =" + queid + " and ans = '" + subans
-					+ "'";
-			ps = con.prepareStatement(qr2);
-			rs = ps.executeQuery();
-			rs.next();
-			temp = rs.getString("cnt");
-			score += Integer.parseInt(temp);
+		int queid = Integer.parseInt(temp);
+		String subans = request.getParameter("answer");
 
-		}
-	%>
-<title>MCQ Quiz on <%=subject %></title>
+		score += Integer.parseInt(temp);
+
+	}
+%>
+<title>MCQ Quiz on <%=subject%></title>
 </head>
 <body style="background-color: #24292e;">
 	<div class="mcqs">
