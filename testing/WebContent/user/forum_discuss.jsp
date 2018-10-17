@@ -166,7 +166,6 @@
 		<div class="jumbotron">
 			<p>
 				<%=rs2.getString("answer")%>
-
 			</p>
 		</div>
 		<%

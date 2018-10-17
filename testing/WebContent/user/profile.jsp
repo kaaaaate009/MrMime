@@ -258,7 +258,7 @@
 					<ul class="nav nav-tabs" id="myTab">
 						<li class="active"><a href="#home" data-toggle="tab">Test
 								results</a></li>
-						<li><a href="#messages" data-toggle="tab">My Questions</a></li>						
+						<li><a href="#messages" data-toggle="tab">My Questions</a></li>
 						<li><a href="#settings" data-toggle="tab">Reset Password</a></li>
 					</ul>
 
@@ -395,6 +395,7 @@
 										<tr>
 											<td><%=(rs.getString("date_time"))%></td>
 											<td><a href="forum.jsp"><%=(rs.getString("question"))%></a></td>
+											<td><a href="../controller/forum/delete_forum_user.jsp?cred=<%= rs.getInt("q_id")%>">Delete</a></td>
 										</tr>
 										<%
 											}
