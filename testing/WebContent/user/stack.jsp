@@ -86,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="stack">
+        <div class="stack"style="text-align: justify">
             <div class="header">
             
                 <h2>Stack</h2>

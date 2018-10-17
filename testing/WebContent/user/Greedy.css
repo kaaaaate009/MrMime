@@ -13,6 +13,7 @@ html,body {
 /*greedy Div Begins*/
 .greedy {
     padding-left: 5%;
+    padding-right: 5%;
     font-family: 'Varela Round', sans-serif;
 }
 .greedy .header {
@@ -60,7 +61,7 @@ html,body {
 }
 /*Tablets*/
 @media only screen and (min-width:768px){
-    .greedy .header {
+    .greedy.header {
         padding-top: 12%;
     }    
 }

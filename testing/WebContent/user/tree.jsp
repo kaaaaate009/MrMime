@@ -86,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="tree">
+        <div class="tree"style="text-align: justify">
             <div class="header">
             
                 <h2>Trees</h2>
