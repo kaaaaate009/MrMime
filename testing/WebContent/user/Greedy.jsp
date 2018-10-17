@@ -39,6 +39,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+        <style>div.greedy{text-align:justify}</style>
     </head>
     <body>
         <!--NavBar-->
@@ -69,7 +70,18 @@
 					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
 							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
 				</ul>
-			
+				<!--<div class = "search">
+                        <form class="navbar-form navbar-right">
+                            <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search algranth">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>-->
 			</div>
 		</div>
 	</nav>
@@ -111,6 +123,7 @@
                 </p>
             </div>
         </div>
+       
        
         <!--Footer-->
         <div class="jumbotron footer row">
@@ -164,7 +177,15 @@
                                 <div class="col-sm-offset-3 col-sm-6">
                                     <center><button type="submit" class="btn btn-primary btn-block">Sign in</button></center>
                                 </div>
-                                
+                                <hr class="signin-hr">
+                                <div class="col-sm-offset-1 col-sm-5 loginbutt">
+                                    <center><a class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span>Sign in with Facebook</a>
+                                    </center>
+                                </div>
+                                <div class="col-sm-5 loginbutt">
+                                    <center><a class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>Sign in with Google</a>
+                                    </center>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -172,7 +193,317 @@
             </div>
         </div>
         
-     
+        <!--Algorithms Modal-->
+        <!--
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Algorithm</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        -->
+        <!--Searching Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_searching" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Searching Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Sorting Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_sorting" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Sorting Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Strings Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_strings" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">String Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Greedy Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_greedy" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Greedy Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Graph Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_graph" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Graph Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--DP Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_dp" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Dynamic Programming Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Constructive Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_constructive" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Constructive Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--BM Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_bm" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header"> 
+                            <center><h4 class="modal-title">Bit Manipulation Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Recursion Modal-->
+        <div class="sub-modal">
+            <div class="modal fade" id="algo_modal_recursion" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Recursive Algorithms</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+       
+        <!--DS Modal-->
+        <!--
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Data Structure</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        -->
+        <!--Arrays Modal-->
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal_arrays" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Arrays</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Linked Lists Modal-->
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal_ll" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Linked Lists</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Stack Modal-->
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal_stack" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Stack</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Queue Modal-->
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal_queue" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Queue</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Trees Modal-->
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal_trees" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Trees</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <!--Graph Modal-->
+        <div class="ds-modal">
+            <div class="modal fade" id="ds_modal_graphs" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Graphs</h4></center>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <a href="#"><button type="button" class="btn btn-default" style="float: left">Read More</button></a>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+        </div>        
 
     </body>
 </html>

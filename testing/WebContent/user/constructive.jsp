@@ -75,7 +75,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="const">
+        <div class="const" style="text-align:justify">
             <div class="header">
                 <h2>Constructive Algorithms</h2>
                 <hr>
@@ -99,9 +99,9 @@ It's just like some proofs in math: there are non-constructive ones which show t
 <hr>
 
 <p style="font-size :25px;	">Constructive Algorithms Examples:</p>
-<p style="font-size :25px;	">	1..Company Acquisitions 
+<p style="font-size :25px;	">	1.Company Acquisitions 
 <p style="font-size :25px;	">	2.Sequence Transformation 
-	<p style="font-size :25px;	">3.Euler tour 
+<p style="font-size :25px;  ">  3.Euler tour 
 <p style="font-size :25px;	">	4.Array Product 
 <p style="font-size :25px;	">	5.Tree Reconstruction 
 <p style="font-size :25px;	">	6.Non-Coprime Partition 

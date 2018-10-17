@@ -86,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="ll">
+        <div class="ll" style="text-align: justify">
             <div class="header">
             
                 <h2>Linked Lists</h2>

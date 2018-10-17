@@ -86,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="array">
+        <div class="array" style="text-align:justify">
             <div class="header">
             
                 <h2>Arrays</h2>

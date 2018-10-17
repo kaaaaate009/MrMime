@@ -86,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="queue">
+        <div class="queue" style="text-align: justify">
             <div class="header">
             
                 <h2>Queue</h2>
