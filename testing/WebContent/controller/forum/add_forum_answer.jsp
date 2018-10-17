@@ -25,6 +25,7 @@
 						}
 						db.connect();
 						System.out.println("-----CONNECTED TO DATABASE-----");
+						System.out.println(request.getParameter("cred"));
 
 						String qr = "insert into forum_answer(answer,q_id,usr_id)values('"
 								+ request.getParameter("description") + "','" + request.getParameter("cred") + "','"

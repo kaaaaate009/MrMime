@@ -74,10 +74,10 @@
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
 <%!ResultSet rs = null;
-		int i;
-		static String newusername,newpassword,submittedpassword,useremail,username,useroldpass;
-		String qr1,qr2;
-		PreparedStatement ps1,ps2;%>
+	int i;
+	static String newusername, newpassword, submittedpassword, useremail, username, useroldpass;
+	String qr1, qr2;
+	PreparedStatement ps1, ps2;%>
 </head>
 <body>
 	<!--NavBar-->
@@ -91,9 +91,9 @@
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					
+
 				</div>
-				
+
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<!--<li class="active"><a href="#">Home</a></li>-->
@@ -153,69 +153,63 @@
 		</nav>
 	</jsp:useBean>
 	<%
-			if (request.getParameter("cred") != null) {
+		if (request.getParameter("cred") != null) {
 	%>
 	<script type="text/javascript">
 	   			 var msg = "<%=request.getParameter("cred")%>";
-			alert(msg);
-		</script>
+		alert(msg);
+	</script>
 	<%
-			}
+		}
 	%>
 
 	<%
-				try {
-						db.connect();
-						Class.forName("com.mysql.jdbc.Driver");
-	
-						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-						System.out.println("-----CONNECTED TO DATABASE-----");
-						String userid = (String) session.getAttribute("userid");
-						qr1="select * from user_details where email_id='" + userid + "'";
-						ps1=con.prepareStatement(qr1);
-						rs=ps1.executeQuery();
-						while (rs.next()) {
-							username = rs.getString("username");
-							useroldpass = rs.getString("pwd");
-							useremail = rs.getString("email_id");
-						}
-						
-						newusername=request.getParameter("username");
-						newpassword=request.getParameter("newpassword");
-						submittedpassword=request.getParameter("oldpassword");
-						System.out.println(newusername);
-						System.out.println(newpassword);
-						System.out.println(submittedpassword);
-						System.out.println(useroldpass);
-						db.close();
-						if(newpassword!=null)
-						{
-							
-							if(useroldpass.equals(submittedpassword))
-							{
-								Class.forName("com.mysql.jdbc.Driver");
-	
-								con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-	
-								Statement st1 = con.createStatement();
-	
-								System.out.println("Tried changing password");
-								qr2="update user_details set username= '"+ newusername + "', pwd= '"+newpassword+"' where email_id = '"+ userid + "'" ;
-								ps2=con.prepareStatement(qr2);
-								i=ps2.executeUpdate();
-								response.sendRedirect("profile.jsp?cred=Password+changed+successfully");
-							}
-							else
-							{	
-								response.sendRedirect("profile.jsp?cred=Password+change+unsuccessful");
-							}
-							
-						}
-					} catch (Exception ex) {
-						out.println("Unable to connect to database " + ex);
-					}
-			
-			%>
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+			System.out.println("-----CONNECTED TO DATABASE-----");
+			String userid = (String) session.getAttribute("userid");
+			qr1 = "select * from user_details where email_id='" + userid + "'";
+			ps1 = con.prepareStatement(qr1);
+			rs = ps1.executeQuery();
+			while (rs.next()) {
+				username = rs.getString("username");
+				useroldpass = rs.getString("pwd");
+				useremail = rs.getString("email_id");
+			}
+
+			newusername = request.getParameter("username");
+			newpassword = request.getParameter("newpassword");
+			submittedpassword = request.getParameter("oldpassword");
+			System.out.println(newusername);
+			System.out.println(newpassword);
+			System.out.println(submittedpassword);
+			System.out.println(useroldpass);
+			if (newpassword != null) {
+
+				if (useroldpass.equals(submittedpassword)) {
+					Class.forName("com.mysql.jdbc.Driver");
+
+					con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+
+					Statement st1 = con.createStatement();
+
+					System.out.println("Tried changing password");
+					qr2 = "update user_details set username= '" + newusername + "', pwd= '" + newpassword
+							+ "' where email_id = '" + userid + "'";
+					ps2 = con.prepareStatement(qr2);
+					i = ps2.executeUpdate();
+					response.sendRedirect("profile.jsp?cred=Password+changed+successfully");
+				} else {
+					response.sendRedirect("profile.jsp?cred=Password+change+unsuccessful");
+				}
+
+			}
+		} catch (Exception ex) {
+			out.println("Unable to connect to database " + ex);
+		}
+	%>
 
 
 	<hr>
@@ -234,9 +228,9 @@
 					<ul class="list-group">
 						<li class="list-group-item text-muted">Profile</li>
 						<li class="list-group-item text-right"><span
-							class="pull-left"><strong>Name</strong></span><%=username %></li>
+							class="pull-left"><strong>Name</strong></span><%=username%></li>
 						<li class="list-group-item text-right"><span
-							class="pull-left"><strong>Email</strong></span><%=useremail %></li>
+							class="pull-left"><strong>Email</strong></span><%=useremail%></li>
 
 
 					</ul>
@@ -264,7 +258,7 @@
 					<ul class="nav nav-tabs" id="myTab">
 						<li class="active"><a href="#home" data-toggle="tab">Test
 								results</a></li>
-						<li><a href="#messages" data-toggle="tab">My Questions</a></li>
+						<li><a href="#messages" data-toggle="tab">My Questions</a></li>						
 						<li><a href="#settings" data-toggle="tab">Reset Password</a></li>
 					</ul>
 
@@ -283,28 +277,27 @@
 									<tbody>
 
 										<%
-	                	Class.forName("com.mysql.jdbc.Driver");
-	                	
-	                	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-	                	PreparedStatement ps1;
-	                	String userid = (String) session.getAttribute("userid");
-	                	String qr1="select * from quizreport where userid = '"+userid+"'";
-	                	ps1=con.prepareStatement(qr1);
-	                	rs=ps1.executeQuery();
-	                	while(rs.next())
-	                	{
-	                		%>
+											Class.forName("com.mysql.jdbc.Driver");
+
+											Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+											PreparedStatement ps1;
+											String userid = (String) session.getAttribute("userid");
+											String qr1 = "select * from quizreport where userid = '" + userid + "'";
+											ps1 = con.prepareStatement(qr1);
+											rs = ps1.executeQuery();
+											while (rs.next()) {
+										%>
 										<tr>
-											<td><%=rs.getString("subject") %></td>
-											<td><%=rs.getInt("score") %></td>
-											<td><%=rs.getInt("attempted") %></td>
-											<td><%=(double)((double)rs.getInt("score")/(double)rs.getInt("attempted"))*100 %></td>
+											<td><%=rs.getString("subject")%></td>
+											<td><%=rs.getInt("score")%></td>
+											<td><%=rs.getInt("attempted")%></td>
+											<td><%=(double) ((double) rs.getInt("score") / (double) rs.getInt("attempted")) * 100%></td>
 											<!-- >td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td-->
 											<!-- >td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td-->
 										</tr>
 										<%
-	                		}
-	                    %>
+											}
+										%>
 
 										<!-- >tr>
 											<td colspan="12" class="hiddenRow"><div
@@ -388,25 +381,24 @@
 									<tbody id="items">
 
 										<%
-	                		Class.forName("com.mysql.jdbc.Driver");
-		                	
-		                	Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-		                	PreparedStatement ps2;
-		                	String userid1 = (String) session.getAttribute("userid");
-		                	String qr2="select * from forum_question where usr_id = '"+userid1+"'";
-		                	System.out.println("UserID: "+userid1);
-		                	ps1=con.prepareStatement(qr2);
-		                	rs=ps1.executeQuery();
-		                	while(rs.next())
-		                	{
-	                	%>
+											Class.forName("com.mysql.jdbc.Driver");
+
+											Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+											PreparedStatement ps2;
+											String userid1 = (String) session.getAttribute("userid");
+											String qr2 = "select * from forum_question where usr_id = '" + userid1 + "'";
+											System.out.println("UserID: " + userid1);
+											ps1 = con.prepareStatement(qr2);
+											rs = ps1.executeQuery();
+											while (rs.next()) {
+										%>
 										<tr>
-											<td><%=(rs.getString("date_time")) %></td>
+											<td><%=(rs.getString("date_time"))%></td>
 											<td><a href="forum.jsp"><%=(rs.getString("question"))%></a></td>
 										</tr>
-										<% 
-	                     	}	
-		                %>
+										<%
+											}
+										%>
 
 
 

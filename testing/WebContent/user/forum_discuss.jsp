@@ -28,7 +28,7 @@
 
 <%!ResultSet rs, rs2, rs3 = null;
 	int id;
-	int i;
+	int i, q;
 	String qr;%>
 </head>
 <body>
@@ -75,7 +75,10 @@
 										System.out.println("-----CONNECTED TO DATABASE-----");
 										String var = (String) session.getAttribute("userid");
 										rs = db.execSQL("select username from user_details where email_id='" + var + "'");
-
+										rs2 = db.execSQL("select * from forum_question where q_id=" + request.getParameter("cred"));
+										while (rs2.next()) {
+											id = rs2.getInt("q_id");
+										}
 										while (rs.next()) {
 						%>
 						<li><a href="profile.jsp"> <%=rs.getString("username")%>
@@ -152,7 +155,8 @@
 			<p>
 				<%=rs.getString("question")%>
 				<%=rs.getString("date_time")%>
-
+				<br>
+				<%=rs.getString("description")%>
 			</p>
 		</div>
 

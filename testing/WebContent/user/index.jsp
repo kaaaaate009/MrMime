@@ -87,7 +87,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
 					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
-							class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+							class="glyphicon glyphicon-log-in"></span> Register</a></li>
 				</ul>
 				<!--<div class = "search">
                         <form class="navbar-form navbar-right">
