@@ -77,6 +77,7 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
 					<!--<li class="active"><a href="#">Home</a></li>-->
+					<li><a href="index.jsp">Home</a></li>
 					<li><a href="howtostart.jsp">How To Start</a></li>
 					<li><a href="getStarted.jsp">Get Started</a></li>
 					<li><a href="algorithm.jsp">Algorithms</a></li>
@@ -108,7 +109,7 @@
 		if (request.getParameter("cred") != null) {
 	%>
 	<script type="text/javascript">
-   			 var msg = "<%=request.getParameter("cred")%>";
+   			 var msg="<%=request.getParameter("cred")%>";
 		alert(msg);
 	</script>
 	<%
@@ -118,12 +119,12 @@
 	<div class="jumbotron">
 		<div class="register">
 			<center>
-				<h3>Log In</h3>
+				<h3>Admin Log In</h3>
 				<br>
 			</center>
-			<form action="../controller/login_register/login.jsp"
+			<form action="../controller/login_register/admin/login.jsp"
 				method="post" class="form-horizontal">
-				
+
 				<br>
 				<div class="form-group">
 					<label class="control-label col-sm-4" for="email"></label>
@@ -153,7 +154,7 @@
 						<div class="subButton">
 							<div class="col-xs-3">
 								<button type="submit" class="btn btn-primary btn-block"
-									name="btn_login">Log In and Start Coding!</button>
+									name="btn_login">Log In</button>
 							</div>
 						</div>
 					</div>
@@ -161,190 +162,12 @@
 			</form>
 		</div>
 	</div>
-	<!--Features-->
-	<div class="jumbotron ">
-		<div class="features">
-			<div class="row">
-				<div>
-					<center>
-						<h2>The Wikipedia for algorithms</h2>
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3">
-							<!--<img src="algo.png">-->
-						</div>
-						<div class="col-sm-3">
-							<h3>Get an in-depth understanding of logic behind each line
-								of code.</h3>
-						</div>
-						<div class="col-sm-3"></div>
-					</center>
-				</div>
-			</div>
-			<hr class="features-hr">
-		</div>
-		<div class="features">
-			<div class="row">
-				<div>
-					<center>
-						<h2>Practice from a vast array of problems</h2>
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3">
-							<!--<img src="algo.png">-->
-						</div>
-						<div class="col-sm-3">
-							<h3>
-								Find a detailed explanation to every problem, accompanied by its
-								most efficient solution.<br> <br>Each problem
-								categorised on the basis of the algorithmic paradigm it is based
-								on.
-							</h3>
-						</div>
-						<div class="col-sm-3"></div>
-					</center>
-				</div>
-			</div>
-			<hr class="features-hr">
-		</div>
-		<div class="features">
-			<div class="row">
-				<div>
-					<center>
-						<h2>Learn and help others learn</h2>
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3"></div>
-						<div class="col-sm-3">
-							<h3>
-								Contribute to our ever expanding library.<br> <br>Submit
-								your unique solutions or articles and earn Karma!
-							</h3>
-						</div>
-						<div class="col-sm-3"></div>
-					</center>
-				</div>
-			</div>
-			<hr class="features-hr">
-		</div>
-		<div class="features">
-			<div class="row">
-				<div>
-					<center>
-						<h2>Join the ALGranth Community</h2>
-						<h3>Become an ALGranth Guru</h3>
-					</center>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--Quotes-->
-	<div class="jumbotron">
-		<div class="quotes">
-			<div class="row">
-				<div class="col-md-5">
-					<center>
-						<h3>"Everyone should know how to program a computer, because
-							it teaches you how to think."</h3>
-					</center>
-					<center>
-						<h3>- STEVE JOBS</h3>
-					</center>
-				</div>
-				<div class="vertical-line"></div>
-				<div class="col-md-5">
-					<center>
-						<h3>"Programming is a skillset acquired by practice and
-							example rather than from books."</h3>
-					</center>
-					<center>
-						<h3>- ALAN TURING</h3>
-					</center>
-				</div>
-			</div>
-		</div>
-		<div class="quotes-mobile">
-			<div>
-				<center>
-					<h3>"Everyone should know how to program a computer, because
-						it teaches you how to think."</h3>
-				</center>
-				<center>
-					<h3>- STEVE JOBS</h3>
-				</center>
-			</div>
-			<br>
-			<hr class="quotes-hr">
-			<br>
-			<div>
-				<center>
-					<h3>"Programming is a skillset acquired by practice and
-						example rather than from books."</h3>
-				</center>
-				<center>
-					<h3>- ALAN TURING</h3>
-				</center>
-			</div>
-		</div>
 
-		<div class="quotes-tablet">
-			<div>
-				<center>
-					<h3>"Everyone should know how to program a computer, because
-						it teaches you how to think."</h3>
-				</center>
-				<center>
-					<h3>- STEVE JOBS</h3>
-				</center>
-			</div>
-			<br>
-			<hr class="quotes-hr">
-			<br>
-			<div>
-				<center>
-					<h3>"Programming is a skillset acquired by practice and
-						example rather than from books."</h3>
-				</center>
-				<center>
-					<h3>- ALAN TURING</h3>
-				</center>
-			</div>
-		</div>
-
-	</div>
-	<!--Footer-->
-	<div class="jumbotron">
-		<div class="footer row">
-			<div class="col-sm-1 "></div>
-			<div class="col-sm-2">
-				<h4 class="footerheadpad">Algranth</h4>
-				<ul class="ulfooter">
-					<li><a href=#>Home</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-2">
-				<h4 class="footerheadpad">About</h4>
-				<ul class="ulfooter">
-					<li><a href=#>About Us</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-2">
-				<h4 class="footerheadpad">Help</h4>
-				<ul class="ulfooter">
-					<li><a href="getStarted.jsp">Get Started</a></li>
-					<li><a href=#>Contact Us</a></li>
-				</ul>
-			</div>
-			<div class="row footercopyright">
-				<center>
-					<span class="col-sm-6">&copy; 2018 Best Mini Project of IT,
-						All Rights Reserved.</span>
-				</center>
-			</div>
-		</div>
-	</div>
 	<!-- Modal -->
 	<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
-			
+
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<center>
@@ -352,19 +175,19 @@
 					</center>
 				</div>
 				<div class="modal-body">
-					<form action="../controller/login_register/register.jsp"
+					<form action="../controller/login_register/admin/register.jsp"
 						class="form-horizontal">
 						<div class="form-group">
-					<label class="control-label col-sm-4" for="name"></label>
-					<div class="col-sm-offset-3 col-sm-6">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-user"></i></span> <input type="text"
-								class="form-control" id="name" placeholder="Name"
-								name="username">
+							<label class="control-label col-sm-4" for="name"></label>
+							<div class="col-sm-offset-3 col-sm-6">
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="glyphicon glyphicon-user"></i></span> <input type="text"
+										class="form-control" id="name" placeholder="Name"
+										name="username">
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<div class="input-group">
@@ -372,6 +195,17 @@
 										class="glyphicon glyphicon-envelope"></i></span> <input type="email"
 										class="form-control" id="email" placeholder="Email ID "
 										name="email_id">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-4" for="name"></label>
+							<div class="col-sm-offset-3 col-sm-6">
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="glyphicon glyphicon-user"></i></span> <input type="text"
+										class="form-control" id="name" placeholder="Security Code"
+										name="code">
 								</div>
 							</div>
 						</div>
@@ -385,7 +219,7 @@
 								</div>
 							</div>
 						</div>
-					<!--  	<div class="form-group">
+						<!--  	<div class="form-group">
 							<div class="col-sm-offset-1 col-sm-10">
 								<div class="checkbox">
 									<center>

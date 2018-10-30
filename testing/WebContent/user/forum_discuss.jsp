@@ -29,7 +29,7 @@
 <%!ResultSet rs, rs2, rs3 = null;
 	int id;
 	int i, q;
-	String qr;%>
+	String qr, uname;%>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -52,6 +52,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li class="active"><a href="forum.jsp">Forum</a></li>
+					<li><a href="admin_index.jsp">Admin Portal</a></li>
 				</ul>
 
 				<%
@@ -149,12 +150,18 @@
 					while (rs.next()) {
 						int q = rs.getInt("q_id");
 						rs2 = db2.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
-								+ "' = a.q_id");
+								+ "'= a.q_id");
+						rs3 = db2.execSQL("select * from user_details where email_id='" + rs.getString("usr_id") + "'");
+
+						while (rs3.next()) {
+							uname = rs3.getString("username");
+						}
 		%>
 		<div class="jumbotron">
 			<p>
 				<%=rs.getString("question")%>
 				<%=rs.getString("date_time")%>
+				<%=uname%>
 				<br>
 				<%=rs.getString("description")%>
 			</p>
