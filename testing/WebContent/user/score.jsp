@@ -71,19 +71,18 @@ body {
 <%	
 	Class.forName("com.mysql.jdbc.Driver");
 	
-	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mcq", "root", "admin");
+	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 
 	String temp= request.getParameter("questionid");
 	
 	if (temp != null)
 	{
-		
+		session.setAttribute("qlist", null);
 		int queid = Integer.parseInt(temp);
 		String subans = request.getParameter("answer");
 		Statement st2 = con.createStatement();
 		subject= request.getParameter("subject");
-		String qr2 = "select count(*) as cnt from " + subject + " where qid =" + queid + " and ans = '" + subans +"'";
-
+		String qr2 = "select count(*) as cnt from questions where qid =" + queid + " and answer = '" + subans +"'";
 		rs = st2.executeQuery(qr2);
 		rs.next();
 		temp= rs.getString("cnt");
@@ -96,7 +95,7 @@ body {
 		Connection con2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 		qr="insert into quizreport (userid,subject,attempted, score) values ( '"+userid+"','"+subject+"','"+max+"','"+score+"')";
 		ps=con2.prepareStatement(qr);
-		ps.executeUpdate();
+		//ps.executeUpdate();
 	}
 %>
 <body style="background-color: #24292e;">

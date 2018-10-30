@@ -22,7 +22,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="forumMain.css">
+<link rel="stylesheet" href="profile.css">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round"
 	rel="stylesheet">
 <link rel="stylesheet"
@@ -78,8 +78,7 @@
 		if (request.getParameter("cred") != null) {
 	%>
 	<script type="text/javascript">
-	   	var msg = "<%=request.getParameter("cred")%>
-		";
+	   	var msg = "<%=request.getParameter("cred")%>";
 		alert(msg);
 	</script>
 	<%
@@ -93,8 +92,8 @@
 
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 			System.out.println("-----CONNECTED TO DATABASE-----");
-			String userid = (String) session.getAttribute("userid");
-			qr1 = "select * from user_details where username='" + userid + "'";
+			String userid = (String) session.getAttribute("adminid");
+			qr1 = "select * from admin_details where email_id='" + userid + "'";
 			ps1 = con.prepareStatement(qr1);
 			rs = ps1.executeQuery();
 			while (rs.next()) {
@@ -113,16 +112,16 @@
 
 					con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 
-					Statement st1 = con.createStatement();
+					//Statement st1 = con.createStatement();
 
 					System.out.println("Tried changing password");
 					qr2 = "update admin_details set username= '" + newusername + "', pwd= '" + newpassword
 							+ "' where email_id = '" + userid + "'";
 					ps2 = con.prepareStatement(qr2);
 					i = ps2.executeUpdate();
-					response.sendRedirect("profile.jsp?cred=Password+changed+successfully");
+					response.sendRedirect("adminpanel.jsp?cred=Password+changed+successfully");
 				} else {
-					response.sendRedirect("profile.jsp?cred=Password+change+unsuccessful");
+					response.sendRedirect("adminpanel.jsp?cred=Password+change+unsuccessful");
 				}
 
 			}
@@ -151,11 +150,14 @@
 							<jsp:setProperty name="db2" property="*" />
 							<%
 								try {
-
-										db.connect();
+									Class.forName("com.mysql.jdbc.Driver");
+									Connection con;
+									con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+										//db.connect();
 										System.out.println("-----CONNECTED TO DATABASE-----");
 										String var = (String) session.getAttribute("adminid");
-										rs2 = db2.execSQL("select username from admin_details where email_id='" + var + "'");
+										ps1=con.prepareStatement("select username from admin_details where email_id='" + var + "'");
+										rs2 = ps1.executeQuery();
 
 										while (rs2.next()) {
 							%>
@@ -163,8 +165,9 @@
 								class="pull-left"><strong>Username</strong></span><%=rs2.getString("username")%></li>
 							<%
 								}
-										db2.close();
+										//db2.close();
 									} catch (Exception ex) {
+										ex.printStackTrace();
 										out.println("Unable to connect to database " + ex);
 									}
 							%>
@@ -351,7 +354,7 @@
 
 
 							<hr>
-							<form class="form" action="profile.jsp" method="get"
+							<form class="form" action="adminpanel.jsp" method="get"
 								id="changepasswordform">
 								<div class="form-group">
 
