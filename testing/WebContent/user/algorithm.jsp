@@ -97,6 +97,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
+					<li><a href="admin_index.jsp">Admin Portal</a></li>
 				</ul>
 				<%
 					if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {

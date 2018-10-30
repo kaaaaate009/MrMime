@@ -28,8 +28,8 @@
 
 <%!ResultSet rs, rs2, rs3 = null;
 	int id;
-	int i;
-	String qr;%>
+	int i, q;
+	String qr, uname;%>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -52,6 +52,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li class="active"><a href="forum.jsp">Forum</a></li>
+					<li><a href="admin_index.jsp">Admin Portal</a></li>
 				</ul>
 
 				<%
@@ -75,7 +76,10 @@
 										System.out.println("-----CONNECTED TO DATABASE-----");
 										String var = (String) session.getAttribute("userid");
 										rs = db.execSQL("select username from user_details where email_id='" + var + "'");
-
+										rs2 = db.execSQL("select * from forum_question where q_id=" + request.getParameter("cred"));
+										while (rs2.next()) {
+											id = rs2.getInt("q_id");
+										}
 										while (rs.next()) {
 						%>
 						<li><a href="profile.jsp"> <%=rs.getString("username")%>
@@ -146,13 +150,20 @@
 					while (rs.next()) {
 						int q = rs.getInt("q_id");
 						rs2 = db2.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
-								+ "' = a.q_id");
+								+ "'= a.q_id");
+						rs3 = db2.execSQL("select * from user_details where email_id='" + rs.getString("usr_id") + "'");
+
+						while (rs3.next()) {
+							uname = rs3.getString("username");
+						}
 		%>
 		<div class="jumbotron">
 			<p>
 				<%=rs.getString("question")%>
 				<%=rs.getString("date_time")%>
-
+				<%=uname%>
+				<br>
+				<%=rs.getString("description")%>
 			</p>
 		</div>
 
@@ -162,7 +173,6 @@
 		<div class="jumbotron">
 			<p>
 				<%=rs2.getString("answer")%>
-
 			</p>
 		</div>
 		<%

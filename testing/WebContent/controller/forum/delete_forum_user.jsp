@@ -18,29 +18,24 @@
 		<jsp:setProperty name="db" property="*" />
 		<%
 			try {
-					
-					if (request.getParameter("btn_reg") != null) {
-						if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
-							response.sendRedirect("../../user/index.jsp?cred=You+are+not+logged+in");
-						}
+					if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
+						response.sendRedirect("../../user/index.jsp?cred=You+are+not+logged+in");
+					}
 						db.connect();
 						System.out.println("-----CONNECTED TO DATABASE-----");
-						System.out.println(request.getParameter("cred"));
-						String sqlDate = (new java.util.Date()).toString();
-						String qr = "insert into forum_answer(answer,q_id,usr_id,date_time)values('"
-								+ request.getParameter("description") + "','" + request.getParameter("cred") + "','"
-								+ session.getAttribute("userid") + "','" + sqlDate +"')";
+						String qr="delete from forum_question where q_id="+request.getParameter("cred");
 						i = db.updateSQL(qr);
+						
 						if (i > 0) {
-							System.out.println("-----Posted-----");
-							response.sendRedirect("../../user/forum_discuss.jsp?cred=" + request.getParameter("cred"));
+							System.out.println("-----Deletd-----");
+							response.sendRedirect("../../user/profile.jsp?cred=Deleted");
+
 						} else {
 							System.out.println("-----Failed to Post-----");
-							response.sendRedirect("../../user/forum_discuss.jsp?cred=" + request.getParameter("cred"));
+							response.sendRedirect("../../user/profile.jsp?cred=Failed to Delete");
 						}
 
 						db.close();
-					}
 				} catch (Exception ex) {
 					out.println("Unable to connect to database " + ex);
 				}

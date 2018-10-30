@@ -50,6 +50,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li class="active"><a href="forum.jsp">Forum</a></li>
+					<li><a href="admin_index.jsp">Admin Portal</a></li>
 				</ul>
 				<%
 					if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {
@@ -150,7 +151,7 @@
 
 					db2.connect();
 					System.out.println("-----CONNECTED TO DATABASE-----");
-					rs = db2.execSQL("select * from forum_question");
+					rs = db2.execSQL("select * from forum_question order by date_time");
 
 					while (rs.next()) {
 						int q = rs.getInt("q_id");
@@ -161,6 +162,7 @@
 			<p>
 				<a href="forum_discuss.jsp?cred=<%=rs.getString("q_id")%>"><%=rs.getString("question")%></a>
 				<br>
+				<%=rs.getString("usr_id")%>
 				<%=rs.getString("date_time")%>
 			</p>
 		</div>

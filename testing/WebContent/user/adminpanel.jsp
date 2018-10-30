@@ -8,26 +8,26 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*"%>
-<%!ResultSet rs = null;
-		int i;
-		static String newusername,newpassword,submittedpassword,useremail,username,useroldpass;
-		String qr1,qr2;
-		PreparedStatement ps1,ps2;
-%>
+<%!ResultSet rs = null, rs2 = null;
+	int i;
+	static String newusername, newpassword, submittedpassword, useremail, username, useroldpass;
+	String qr1, qr2;
+	PreparedStatement ps1, ps2;%>
 <title>Admin Panel</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<script src="../css/jquery.min.js"></script>
-<script src="../css/bootstrap.min.js"></script>
-<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="forumMain.css">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu|Varela+Round"
+	rel="stylesheet">
 <link rel="stylesheet"
 	href="bootstrap-social-gh-pages/bootstrap-social.css">
-<!-- link rel="stylesheet" href=../font-awesome/css/font-awesome.min.css"-->
-
-<link
-	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-	rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 	<!--NavBar-->
@@ -41,42 +41,21 @@
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="getStarted.jsp"><img
-						src="homepageLogo1.png"></a> <a class="navbar-brand-mobile"
-						href="getStarted.jsp"><img src="homepageLogo1.png"></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
-					
-					<ul class="nav navbar-nav navbar-right ">
-
+					<ul class="nav navbar-nav navbar-right">
 						<%
-							try {
-
-									db.connect();
-									System.out.println("-----CONNECTED TO DATABASE-----");
-									String var = (String) session.getAttribute("userid");
-									rs = db.execSQL("select username from admin_details where username='" + var + "'");
-
-									while (rs.next()) {
-						%>
-						<li><a href="profile.jsp"> <%=rs.getString("username")%>
-						</a></li>
-
-						<%
-							}
-									db.close();
-								} catch (Exception ex) {
-									out.println("Unable to connect to database " + ex);
-								}
+							if ((session.getAttribute("adminid") == null) || (session.getAttribute("adminid") == "")) {
+									response.sendRedirect("admin_index.jsp?cred=You are not Logged In");
+								} else {
 						%>
 
-
-
-
-						<li><a href="../controller/login_register/logout.jsp"><span
+						<li><a href="../controller/login_register/admin/logout.jsp"><span
 								class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
 					</ul>
-
+					<%
+						}
+					%>
 					<!--<div class = "search">
                         <form class="navbar-form navbar-right">
                             <div class="input-group">
@@ -96,67 +75,61 @@
 		</nav>
 	</jsp:useBean>
 	<%
-			if (request.getParameter("cred") != null) {
+		if (request.getParameter("cred") != null) {
 	%>
 	<script type="text/javascript">
-	   			 var msg = "<%=request.getParameter("cred")%>";
-			alert(msg);
-		</script>
+	   	var msg = "<%=request.getParameter("cred")%>
+		";
+		alert(msg);
+	</script>
 	<%
-			}
+		}
 	%>
 
 	<%
-				try {
-						db.connect();
-						Class.forName("com.mysql.jdbc.Driver");
-	
-						Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-						System.out.println("-----CONNECTED TO DATABASE-----");
-						String userid = (String) session.getAttribute("userid");
-						qr1="select * from admin_details where username='" + userid + "'";
-						ps1=con.prepareStatement(qr1);
-						rs=ps1.executeQuery();
-						while (rs.next()) {
-							username = rs.getString("username");
-							useroldpass = rs.getString("pwd");						}
-						
-						newusername=request.getParameter("username");
-						newpassword=request.getParameter("newpassword");
-						submittedpassword=request.getParameter("oldpassword");
-						System.out.println(newusername);
-						System.out.println(newpassword);
-						System.out.println(submittedpassword);
-						System.out.println(useroldpass);
-						db.close();
-						if(newpassword!=null)
-						{
-							
-							if(useroldpass.equals(submittedpassword))
-							{
-								Class.forName("com.mysql.jdbc.Driver");
-	
-								con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-	
-								Statement st1 = con.createStatement();
-	
-								System.out.println("Tried changing password");
-								qr2="update admin_details set username= '"+ newusername + "', pwd= '"+newpassword+"' where email_id = '"+ userid + "'" ;
-								ps2=con.prepareStatement(qr2);
-								i=ps2.executeUpdate();
-								response.sendRedirect("profile.jsp?cred=Password+changed+successfully");
-							}
-							else
-							{	
-								response.sendRedirect("profile.jsp?cred=Password+change+unsuccessful");
-							}
-							
-						}
-					} catch (Exception ex) {
-						out.println("Unable to connect to database " + ex);
-					}
-			
-			%>
+		try {
+			db.connect();
+			Class.forName("com.mysql.jdbc.Driver");
+
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+			System.out.println("-----CONNECTED TO DATABASE-----");
+			String userid = (String) session.getAttribute("userid");
+			qr1 = "select * from user_details where username='" + userid + "'";
+			ps1 = con.prepareStatement(qr1);
+			rs = ps1.executeQuery();
+			while (rs.next()) {
+				username = rs.getString("username");
+				useroldpass = rs.getString("pwd");
+			}
+
+			newusername = request.getParameter("username");
+			newpassword = request.getParameter("newpassword");
+			submittedpassword = request.getParameter("oldpassword");
+			db.close();
+			if (newpassword != null) {
+
+				if (useroldpass.equals(submittedpassword)) {
+					Class.forName("com.mysql.jdbc.Driver");
+
+					con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+
+					Statement st1 = con.createStatement();
+
+					System.out.println("Tried changing password");
+					qr2 = "update admin_details set username= '" + newusername + "', pwd= '" + newpassword
+							+ "' where email_id = '" + userid + "'";
+					ps2 = con.prepareStatement(qr2);
+					i = ps2.executeUpdate();
+					response.sendRedirect("profile.jsp?cred=Password+changed+successfully");
+				} else {
+					response.sendRedirect("profile.jsp?cred=Password+change+unsuccessful");
+				}
+
+			}
+		} catch (Exception ex) {
+			out.println("Unable to connect to database " + ex);
+		}
+	%>
 
 
 	<hr>
@@ -174,10 +147,28 @@
 
 					<ul class="list-group">
 						<li class="list-group-item text-muted">Admin Profile</li>
-						<li class="list-group-item text-right"><span
-							class="pull-left"><strong>Userame</strong></span><%=username %></li>
+						<jsp:useBean id="db2" class="database.db" scope="request">
+							<jsp:setProperty name="db2" property="*" />
+							<%
+								try {
 
+										db.connect();
+										System.out.println("-----CONNECTED TO DATABASE-----");
+										String var = (String) session.getAttribute("adminid");
+										rs2 = db2.execSQL("select username from admin_details where email_id='" + var + "'");
 
+										while (rs2.next()) {
+							%>
+							<li class="list-group-item text-right"><span
+								class="pull-left"><strong>Username</strong></span><%=rs2.getString("username")%></li>
+							<%
+								}
+										db2.close();
+									} catch (Exception ex) {
+										out.println("Unable to connect to database " + ex);
+									}
+							%>
+						</jsp:useBean>
 					</ul>
 					<!-- >ul class="list-group">
 						<li class="list-group-item text-right"><span
@@ -223,28 +214,27 @@
 									<tbody>
 
 										<%
-	                	Class.forName("com.mysql.jdbc.Driver");
-	                	
-	                	Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-	                	PreparedStatement ps1;
-	                	String qr1="select * from quizreport order by userid";
-	                	ps1=con.prepareStatement(qr1);
-	                	rs=ps1.executeQuery();
-	                	while(rs.next())
-	                	{
-	                		%>
+											Class.forName("com.mysql.jdbc.Driver");
+
+											Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+											PreparedStatement ps1;
+											String qr1 = "select * from quizreport order by userid";
+											ps1 = con.prepareStatement(qr1);
+											rs = ps1.executeQuery();
+											while (rs.next()) {
+										%>
 										<tr>
-											<td><%=rs.getString("userid") %></td>
-											<td><%=rs.getString("subject") %></td>
-											<td><%=rs.getInt("score") %></td>
-											<td><%=rs.getInt("attempted") %></td>
-											<td><%=(double)((double)rs.getInt("score")/(double)rs.getInt("attempted"))*100 %></td>
+											<td><%=rs.getString("userid")%></td>
+											<td><%=rs.getString("subject")%></td>
+											<td><%=rs.getInt("score")%></td>
+											<td><%=rs.getInt("attempted")%></td>
+											<td><%=(double) ((double) rs.getInt("score") / (double) rs.getInt("attempted")) * 100%></td>
 											<!-- >td><button type="button" data-toggle="modal" data-target="#edit" data-uid="1" class="update btn btn-warning btn-sm"><span class="glyphicon glyphicon-pencil"></span></button></td-->
 											<!-- >td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td-->
 										</tr>
 										<%
-	                		}
-	                    %>
+											}
+										%>
 
 										<!-- >tr>
 											<td colspan="12" class="hiddenRow"><div
@@ -272,9 +262,6 @@
 
 												</div></td>
 										</tr-->
-
-
-
 									</tbody>
 
 								</table>
@@ -312,6 +299,7 @@
 								</div>
 							</div-->
 
+
 							<hr>
 
 						</div>
@@ -329,25 +317,27 @@
 									<tbody id="items">
 
 										<%
-	                		Class.forName("com.mysql.jdbc.Driver");
-		                	
-		                	Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-		                	PreparedStatement ps2;
-		                	String question = (String) session.getAttribute("userid");
-		                	String qr2="select * from forum_question order by usr_id";
-		                	ps1=con.prepareStatement(qr2);
-		                	rs=ps1.executeQuery();
-		                	while(rs.next())
-		                	{
-	                	%>
+											Class.forName("com.mysql.jdbc.Driver");
+
+											Connection con1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+											PreparedStatement ps2;
+											String question = (String) session.getAttribute("userid");
+											String qr2 = "select * from forum_question order by usr_id";
+											ps1 = con.prepareStatement(qr2);
+											rs = ps1.executeQuery();
+											while (rs.next()) {
+										%>
 										<tr>
-											<td><%=rs.getString("date_time") %>></td>
-											<td><%=rs.getString("usr_id") %>
-											<td><%=rs.getString("question") %></td>
+											<td><%=rs.getString("date_time")%></td>
+											<td><%=rs.getString("usr_id")%>
+											<td><%=rs.getString("question")%></td>
+											<td><a
+												href="../controller/forum/delete_forum_admin.jsp?cred=<%=rs.getInt("q_id")%>">Delete</a></td>
+
 										</tr>
-										<% 
-	                     	}	
-		                %>
+										<%
+											}
+										%>
 
 
 

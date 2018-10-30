@@ -83,6 +83,7 @@
 					<li><a href="data_structures.jsp">Data Structures</a></li>
 					<li><a href="problems.jsp">MCQs</a></li>
 					<li><a href="forum.jsp">Forum</a></li>
+					<li><a href="admin_index.jsp">Admin Portal</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right ">
 					<li><a href="#" data-toggle="modal" data-target="#myModal"><span
@@ -117,11 +118,12 @@
 	<div class="jumbotron">
 		<div class="register">
 			<center>
-				<h3>Login</h3>
+				<h3>Log In</h3>
 				<br>
 			</center>
 			<form action="../controller/login_register/login.jsp"
-				method="get" class="form-horizontal">				
+				method="post" class="form-horizontal">
+				
 				<br>
 				<div class="form-group">
 					<label class="control-label col-sm-4" for="email"></label>
@@ -151,7 +153,7 @@
 						<div class="subButton">
 							<div class="col-xs-3">
 								<button type="submit" class="btn btn-primary btn-block"
-									name="btn_login">Login and Start Coding!</button>
+									name="btn_login">Log In and Start Coding!</button>
 							</div>
 						</div>
 					</div>
@@ -373,7 +375,6 @@
 								</div>
 							</div>
 						</div>
-						
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-6">
 								<div class="input-group">
