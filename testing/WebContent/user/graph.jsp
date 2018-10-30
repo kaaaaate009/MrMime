@@ -86,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="graph">
+        <div class="graph" style="text-align: justify">
             <div class="header">
             
                 <h2>Graphs</h2>

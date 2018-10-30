@@ -75,7 +75,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="bit">
+        <div class="bit" style="text-align: justify; margin-right: 5%">
             <div class="header">
                 <h2>Bit Manipulation Algorithms</h2>
                 <hr>

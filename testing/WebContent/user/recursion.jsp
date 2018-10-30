@@ -75,7 +75,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="recur">
+        <div class="recur" style="text-align:justify">
             <div class="header">
                 <h2>Recursive Algorithms</h2>
                 <hr>

@@ -39,6 +39,7 @@
         <meta name="msapplication-navbutton-color" content="#24292e">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#24292e">
+         <style>div.graph{text-align:justify}</style>
     </head>
     <body>
         <!--NavBar-->
@@ -85,7 +86,7 @@
 		</div>
 	</nav>
         <!-- Algorithms -->
-        <div class="graph">
+        <div class="graph" style="margin-right: 5%">
             <div class="header">
                 <h2>Graph Theory Algorithms</h2>
                 <hr>

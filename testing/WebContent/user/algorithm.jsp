@@ -70,6 +70,9 @@
 <%!ResultSet rs = null;
 	int i;
 	String qr;%>
+	
+	        <style>div.algorithm{text-align:justify}</style>
+	
 </head>
 <body>
 	<!--NavBar-->
