@@ -1,218 +1,240 @@
-html,body {
-    overflow-x: hidden;
-    background-color: white;
+html, body {
+	overflow-x: hidden;
+	background-color: white;
 }
 
 .jumbotron {
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 
 /*algorithm Div Begins*/
 .algorithm {
-    padding-left: 5%;
-    font-family: 'Varela Round', sans-serif;
+	padding-left: 5%;
+	font-family: 'Varela Round', sans-serif;
 }
+
 .algorithm .header {
-    padding-top: 8%;
+	padding-top: 8%;
 }
+
 .sub-hr {
-    border-top: 1px solid #8c8b8b;
-    margin-right: 5%;
+	border-top: 1px solid #8c8b8b;
+	margin-right: 5%;
 }
+
 .grid {
-    padding-right: 5%;
-    margin-bottom: 5%;
-    display:flow-root;
+	padding-right: 5%;
+	margin-bottom: 5%;
+	display: flow-root;
 }
+
 .grid .grid-column {
-    margin-right: 8%;
+	margin-right: 8%;
 }
+
 .grid .grid-element {
-    min-height: 80px;
-    max-height: 80px;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    margin-bottom: 5%;
+	min-height: 80px;
+	max-height: 80px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	margin-bottom: 5%;
 }
+
 .grid .grid-element:hover {
-    border: 1px solid black;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+	border: 1px solid black;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 8px 6px -6px #999;
+	-moz-box-shadow: 0 8px 6px -6px #999;
+	box-shadow: 0 8px 6px -6px #999;
 }
+
 .grid .element-hr {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width: 90%;
-    border-top: 1px dashed darkgray;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	width: 90%;
+	border-top: 1px dashed darkgray;
 }
 
 /*algorithm Div for mobile devices begins */
 /*Smartphones*/
-@media only screen and (max-width:767px){
-    .algorithm .header {
-        padding-top: 60px;
-    }
+@media only screen and (max-width:767px) {
+	.algorithm .header {
+		padding-top: 60px;
+	}
 }
 /*Tablets*/
-@media only screen and (min-width:768px){
-    .algorithm .header {
-        padding-top: 12%;
-    }    
+@media only screen and (min-width:768px) {
+	.algorithm .header {
+		padding-top: 12%;
+	}
 }
 /*Desktop Screens*/
-@media only screen and (min-width:1024px){
-    .algorithm .header {
-        padding-top: 8%;
-    }
+@media only screen and (min-width:1024px) {
+	.algorithm .header {
+		padding-top: 8%;
+	}
 }
 /*algorithm Div for mobile devices ends*/
 .grid a {
-    color:black;
-    text-decoration: none;
-}
-.sub-modal {
-    font-family: 'Varela Round', sans-serif;
-}
-.sub-modal .modal-header {
-    background-color: #24292e;
-    color: white !important;
-}
-.sub-modal .modal-footer {
-    margin: 0px;
+	color: black;
+	text-decoration: none;
 }
 
+.sub-modal {
+	font-family: 'Varela Round', sans-serif;
+}
+
+.sub-modal .modal-header {
+	background-color: #24292e;
+	color: white !important;
+}
+
+.sub-modal .modal-footer {
+	margin: 0px;
+}
 
 /*algorithm Div Ends*/
 
-
 /*Navbar Begins*/
 .nav {
-    min-height: 80px;
+	min-height: 80px;
 }
+
 .navbar-brand {
-    line-height: 60px;
-    height: 60px;
-    padding-top: 8%;
-    padding-bottom: 8%;
+	line-height: 60px;
+	height: 60px;
+	padding-top: 8%;
+	padding-bottom: 8%;
 }
+
 .navbar-brand-mobile {
-    display: none;
+	display: none;
 }
+
 .navbar-nav li a {
-    line-height: 60px;
-    height: 60px;
-    padding-top: 10px;
-    color: white !important;
+	line-height: 60px;
+	height: 60px;
+	padding-top: 10px;
+	color: white !important;
 }
+
 .navbar-nav li a:hover {
-    color: #bcbec1 !important;
+	color: #bcbec1 !important;
 }
+
 .input-group {
-    padding-top: 6%;
+	padding-top: 6%;
 }
+
 .navbar-default {
-    background-color: #24292e;
-    border-color: black;
+	background-color: #24292e;
+	border-color: black;
 }
-.navbar-nav .active a{
-    background-color: #191c20 !important;
-    min-height: 80px;
+
+.navbar-nav .active a {
+	background-color: #191c20 !important;
+	min-height: 80px;
 }
 /*Navbar for Mobile Devices Begins*/
 /*Smartphones*/
 @media only screen and (max-width:767px) {
-    .navbar-brand{
-        display: none;
-    }
-    .navbar-brand-mobile {
-        display: block;
-    }
+	.navbar-brand {
+		display: none;
+	}
+	.navbar-brand-mobile {
+		display: block;
+	}
 }
 /*Tablets*/
 @media only screen and (min-width:768px) {
-    .search {
-        float: right;
-        width: 10%;
-    }
+	.search {
+		float: right;
+		width: 10%;
+	}
 }
 /*Desktop Screens*/
 @media only screen and (min-width:1024px) {
-    .search {
-        display: block;
-    }
+	.search {
+		display: block;
+	}
 }
 /*Navbar for Mobile Devices Ends*/
 
 /*Navbar Ends*/
 
 /*Sign In Modal Begins*/
-.loginbutt{
-    margin-top: 3%;
+.loginbutt {
+	margin-top: 3%;
 }
+
 .modal-header {
-    padding-top: 3%;
-    padding-bottom: 3%;
-    color: black;
-    border-color: gainsboro;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	color: black;
+	border-color: gainsboro;
 }
+
 .modal-body {
-    padding-top: 5%;
-    border-color: gainsboro;
+	padding-top: 5%;
+	border-color: gainsboro;
 }
-.signin-hr{
-    margin-top: 10%;
-    margin-bottom: 2%;
-    border-top: 1px solid #8c8b8b;
-    width: 80%;
+
+.signin-hr {
+	margin-top: 10%;
+	margin-bottom: 2%;
+	border-top: 1px solid #8c8b8b;
+	width: 80%;
 }
+
 .modal-body .input-group {
-    padding: 0px;
-    margin: 0px;
+	padding: 0px;
+	margin: 0px;
 }
 /*Sign In Modal Ends*/
 
 /*Footer Jumbotron Begins*/
 .footer {
-    background-color: #24292e !important;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: black;
-    margin-top: 1px;
+	background-color: #24292e !important;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	background-color: black;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: black;
+	margin-top: 1px;
+}
 
-}
 .fa:hover {
-    opacity: 0.7;
-    color: white;
-    text-decoration: none !important;
+	opacity: 0.7;
+	color: white;
+	text-decoration: none !important;
 }
+
 .footer-text {
-    margin-left: 1%;
-    margin-right: 1%;
-    font-family: 'Ubuntu', sans-serif;
-    font-size:15px;
-    color:#EEE;
+	margin-left: 1%;
+	margin-right: 1%;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	color: #EEE;
 }
-.footer .footerheadpad{
-	text-align:center;
-    color:#EEE;
-    font-family: 'Ubuntu', sans-serif;
+
+.footer .footerheadpad {
+	text-align: center;
+	color: #EEE;
+	font-family: 'Ubuntu', sans-serif;
 }
-.footercopyright{
-    font-size: 90%;
-    padding-top: 1px;
-    padding-bottom: 10px;
-    padding-left: 40%;
-    color:#EEE;
+
+.footercopyright {
+	font-size: 90%;
+	padding-top: 1px;
+	padding-bottom: 10px;
+	padding-left: 40%;
+	color: #EEE;
 }
 
 /*Footer Jumbotron Ends*/
@@ -220,34 +242,44 @@ html,body {
 
 /*Smartphones*/
 @media only screen and (max-width:767px) {
-    .footer{
-        text-align: center;
-        padding-right: 10%;
-    }
-    .footer-span{
-        text-align: center;
-        padding-left: 15%;
-    }
-    .footerheadpad{
-        padding-right:8%;
-    }
-    .footer-text{
-        padding-left:1px;
-    }
-    .footericonpad{
-        padding-left: 10%;
-        padding-top: 2%;
-    }
-    .footercopyright{
-        padding-left:17%;
-        padding-top:3%;
-    }
+	.footer {
+		text-align: center;
+		padding-right: 10%;
+	}
+	.footer-span {
+		text-align: center;
+		padding-left: 15%;
+	}
+	.footerheadpad {
+		padding-right: 8%;
+	}
+	.footer-text {
+		padding-left: 1px;
+	}
+	.footericonpad {
+		padding-left: 10%;
+		padding-top: 2%;
+	}
+	.footercopyright {
+		padding-left: 17%;
+		padding-top: 3%;
+	}
 }
+
 .nicebutton {
 	background-color: #336699;
 	height: 40px;
 	width: 80px;
 	border: 1px solid #24292e;
+	border-radius: 5px;
+	color: white;
+}
+
+.nicebutton1 {
+	background-color: #336699;
+	border: 1px solid #24292e;
+	height: 40px;
+	width: 250px;
 	border-radius: 5px;
 	color: white;
 }

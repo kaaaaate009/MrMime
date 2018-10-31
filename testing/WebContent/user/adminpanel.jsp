@@ -78,7 +78,8 @@
 		if (request.getParameter("cred") != null) {
 	%>
 	<script type="text/javascript">
-	   	var msg = "<%=request.getParameter("cred")%>";
+	   	var msg = "<%=request.getParameter("cred")%>
+		";
 		alert(msg);
 	</script>
 	<%
@@ -150,13 +151,13 @@
 							<jsp:setProperty name="db2" property="*" />
 							<%
 								try {
-									Class.forName("com.mysql.jdbc.Driver");
-									Connection con;
-									con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
+										Class.forName("com.mysql.jdbc.Driver");
+										Connection con;
+										con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 										//db.connect();
 										System.out.println("-----CONNECTED TO DATABASE-----");
 										String var = (String) session.getAttribute("adminid");
-										ps1=con.prepareStatement("select username from admin_details where email_id='" + var + "'");
+										ps1 = con.prepareStatement("select username from admin_details where email_id='" + var + "'");
 										rs2 = ps1.executeQuery();
 
 										while (rs2.next()) {
@@ -171,7 +172,7 @@
 										out.println("Unable to connect to database " + ex);
 									}
 							%>
-							
+
 						</jsp:useBean>
 					</ul>
 					<!-- >ul class="list-group">
@@ -190,6 +191,11 @@
 
 					</ul-->
 
+					<form action="QuizUpdate.jsp">
+						<div class="form-group">
+							<button class="nicebutton1" type="submit">Add Questions to Question Bank</button>
+						</div>
+					</form>
 
 				</div>
 				<!--/col-3-->
