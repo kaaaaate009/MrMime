@@ -171,6 +171,7 @@
 										out.println("Unable to connect to database " + ex);
 									}
 							%>
+							
 						</jsp:useBean>
 					</ul>
 					<!-- >ul class="list-group">
