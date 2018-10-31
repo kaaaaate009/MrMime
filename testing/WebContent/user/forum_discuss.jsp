@@ -100,20 +100,10 @@
 				<%
 					}
 				%>
-				<form class="navbar-form navbar-right">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search">
-						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
-					</div>
-				</form>
 			</div>
 		</div>
 	</nav>
-	<div class="jumbotron">
+	<div class="box" style="margin-top:10%; padding-top:3%">
 		<form action="../controller/forum/add_forum_answer.jsp?cred=<%=id%>"
 			method="post" class="form-horizontal">
 			<div class="form-group">
@@ -149,7 +139,7 @@
 
 					while (rs.next()) {
 						int q = rs.getInt("q_id");
-						rs2 = db2.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
+						rs2 = db2.execSQL("select distinct answer, a.usr_id from forum_answer a , forum_question q where '" + q
 								+ "'= a.q_id");
 						rs3 = db2.execSQL("select * from user_details where email_id='" + rs.getString("usr_id") + "'");
 
@@ -158,22 +148,24 @@
 						}
 		%>
 		<div class="jumbotron">
-			<p>
+			<div class="question">
 				<%=rs.getString("question")%>
 				<%=rs.getString("date_time")%>
 				<%=uname%>
 				<br>
 				<%=rs.getString("description")%>
-			</p>
+			</div>
 		</div>
 
 		<%
 			while (rs2.next()) {
 		%>
 		<div class="jumbotron">
-			<p>
+			<div class="question">
 				<%=rs2.getString("answer")%>
-			</p>
+				<div class="username">
+				<%=rs2.getString("usr_id") %></div>
+			</div>
 		</div>
 		<%
 			}

@@ -114,3 +114,49 @@ html,body {
     width: 90%;
     border-top: 1px dashed darkgray;
 }
+.question
+{
+			color: #24292e;
+			font-size: 20px;
+			margin-left:10%;
+			border-bottom: 1px solid lightgray;
+			margin-right: 10%;
+			padding-top: 3%;
+			padding-bottom: 2%;
+}
+.box
+{
+		background-color: white;
+    	border: 1px solid lightgray;
+    	border-radius: 10px;
+		margin-left: 10%;
+		margin-right: 12%;
+}
+.option{
+	margin: 1%;
+	padding: 5px;
+	border: 1px solid lightgray;
+}
+.nicebutton
+{
+	background-color: #336699;
+	height: 40px;
+	width: 80px;
+	border: 1px solid #24292e;
+	border-radius : 5px;
+	color: white;
+}
+.nicebutton:active
+{
+	transform: translateY(3px);
+	background-color: #24292e;
+}
+.nicebutton:hover
+{
+	background-color: #4488bb;
+}
+.username
+{
+	font-size: 16px;
+	font-style: italic;
+}

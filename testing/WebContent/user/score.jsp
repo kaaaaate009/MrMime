@@ -93,9 +93,9 @@ body {
 		int max=Integer.parseInt(request.getParameter("noq"));
 		String userid = (String) session.getAttribute("userid");
 		Connection con2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
-		qr="insert into quizreport (userid,subject,attempted, score) values ( '"+userid+"','"+subject+"','"+max+"','"+score+"')";
+		qr="insert into quizreport (user_email,subject,attempted, score) values ( '"+userid+"','"+subject+"','"+max+"','"+score+"')";
 		ps=con2.prepareStatement(qr);
-		//ps.executeUpdate();
+		ps.executeUpdate();
 	}
 %>
 <body style="background-color: #24292e;">

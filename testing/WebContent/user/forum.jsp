@@ -94,21 +94,13 @@
 				<%
 					}
 				%>
-				<form class="navbar-form navbar-right">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search">
-						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
-					</div>
-				</form>
+				
 			</div>
 		</div>
 
 	</nav>
 	<div class="jumbotron">
+	<div class="box" ">
 		<form action="../controller/forum/add_forum.jsp" method="post"
 			class="form-horizontal">
 			<div class="form-group">
@@ -142,6 +134,7 @@
 				</div>
 			</div>
 		</form>
+		</div>
 	</div>
 
 	<jsp:useBean id="db2" class="database.db" scope="request">
@@ -158,14 +151,14 @@
 						rs2 = db2.execSQL("select distinct answer from forum_answer a , forum_question q where '" + q
 								+ "' = a.q_id");
 		%>
-		<div class="jumbotron">
-			<p>
+			
+			<div class ="question">
 				<a href="forum_discuss.jsp?cred=<%=rs.getString("q_id")%>"><%=rs.getString("question")%></a>
 				<br>
 				<%=rs.getString("usr_id")%>
 				<%=rs.getString("date_time")%>
-			</p>
-		</div>
+			</div>
+			
 
 		<%
 			}

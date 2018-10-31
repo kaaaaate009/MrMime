@@ -89,6 +89,7 @@
 	
 	<button type="submit" style="margin-left: 40px ;" class="nicebutton" name="submit">Submit</button>
 	<input type="reset" class="nicebutton" value="Clear Form">
+	<a href="adminpanel.jsp"><input class="nicebutton" style="width: 150px; text-align:center" value="Go back to panel"></a>
 	</div>
 	</form></div>
 	

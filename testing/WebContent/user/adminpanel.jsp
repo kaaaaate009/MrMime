@@ -228,13 +228,13 @@
 
 											Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 											PreparedStatement ps1;
-											String qr1 = "select * from quizreport order by userid";
+											String qr1 = "select * from quizreport order by user_email";
 											ps1 = con.prepareStatement(qr1);
 											rs = ps1.executeQuery();
 											while (rs.next()) {
 										%>
 										<tr>
-											<td><%=rs.getString("userid")%></td>
+											<td><%=rs.getString("user_email")%></td>
 											<td><%=rs.getString("subject")%></td>
 											<td><%=rs.getInt("score")%></td>
 											<td><%=rs.getInt("attempted")%></td>

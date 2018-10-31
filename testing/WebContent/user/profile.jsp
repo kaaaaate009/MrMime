@@ -283,7 +283,7 @@
 											Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/algranth", "root", "admin");
 											PreparedStatement ps1;
 											String userid = (String) session.getAttribute("userid");
-											String qr1 = "select * from quizreport where userid = '" + userid + "'";
+											String qr1 = "select * from quizreport where user_email = '" + userid + "'";
 											ps1 = con.prepareStatement(qr1);
 											rs = ps1.executeQuery();
 											while (rs.next()) {
